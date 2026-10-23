@@ -1,0 +1,15 @@
+Valores do Card "Pratos Mais Vendidos": 
+
+Combo Mega = 140
+Batata Suprema = 100
+Refri Cola = 90
+Hambúrguer Simples = 70
+Combo Duplo = 50
+
+
+Valores do Card "Status Geral dos Pedidos": 
+Preparando = 10
+Prontos = 5
+Em Rota = 6
+Entregues = 4
+Cancelados = 15

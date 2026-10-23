@@ -1,0 +1,553 @@
+{
+  "categorias": [
+    {
+      "id": 1,
+      "name": "Tecnologia da Informação"
+    },
+    {
+      "id": 2,
+      "name": "Desenvolvimento"
+    },
+    {
+      "id": 3,
+      "name": "Infraestrutura e Segurança"
+    }
+  ],
+  "medalhas": [
+    {
+      "id": 1,
+      "tipo": "ouro",
+      "data": "segunda-feira, 15 de Julho de '2019",
+      "pais": "Brasil"
+    },
+    {
+      "id": 2,
+      "tipo": "prata",
+      "data": "quarta-feira, 18 de Setembro de '2019",
+      "pais": "Japão"
+    },
+    {
+      "id": 3,
+      "tipo": "bronze",
+      "data": "sábado, 23 de Novembro de '2019",
+      "pais": "Alemanha"
+    },
+    {
+      "id": 4,
+      "tipo": "ouro",
+      "data": "terça-feira, 11 de Fevereiro de '2020",
+      "pais": "Estados Unidos"
+    },
+    {
+      "id": 5,
+      "tipo": "prata",
+      "data": "domingo, 29 de Março de '2020",
+      "pais": "França"
+    },
+    {
+      "id": 6,
+      "tipo": "bronze",
+      "data": "sexta-feira, 17 de Julho de '2020",
+      "pais": "Brasil"
+    },
+    {
+      "id": 7,
+      "tipo": "ouro",
+      "data": "quarta-feira, 10 de Fevereiro de '2021",
+      "pais": "Coreia do Sul"
+    },
+    {
+      "id": 8,
+      "tipo": "prata",
+      "data": "segunda-feira, 22 de Março de '2021",
+      "pais": "Canadá"
+    },
+    {
+      "id": 9,
+      "tipo": "bronze",
+      "data": "domingo, 8 de Agosto de '2021",
+      "pais": "Itália"
+    },
+    {
+      "id": 10,
+      "tipo": "ouro",
+      "data": "quinta-feira, 13 de Janeiro de '2022",
+      "pais": "Reino Unido"
+    },
+    {
+      "id": 11,
+      "tipo": "prata",
+      "data": "terça-feira, 24 de Maio de '2022",
+      "pais": "Austrália"
+    },
+    {
+      "id": 12,
+      "tipo": "bronze",
+      "data": "sábado, 17 de Setembro de '2022",
+      "pais": "Brasil"
+    },
+    {
+      "id": 13,
+      "tipo": "ouro",
+      "data": "quarta-feira, 8 de Fevereiro de '2023",
+      "pais": "China"
+    },
+    {
+      "id": 14,
+      "tipo": "prata",
+      "data": "domingo, 19 de Março de '2023",
+      "pais": "Espanha"
+    },
+    {
+      "id": 15,
+      "tipo": "bronze",
+      "data": "sexta-feira, 14 de Abril de '2023",
+      "pais": "México"
+    },
+    {
+      "id": 16,
+      "tipo": "ouro",
+      "data": "segunda-feira, 12 de Junho de '2023",
+      "pais": "Países Baixos"
+    },
+    {
+      "id": 17,
+      "tipo": "prata",
+      "data": "sábado, 22 de Julho de '2023",
+      "pais": "Suécia"
+    },
+    {
+      "id": 18,
+      "tipo": "bronze",
+      "data": "quarta-feira, 6 de Setembro de '2023",
+      "pais": "Argentina"
+    },
+    {
+      "id": 19,
+      "tipo": "ouro",
+      "data": "quinta-feira, 18 de Janeiro de '2024",
+      "pais": "Suíça"
+    },
+    {
+      "id": 20,
+      "tipo": "prata",
+      "data": "domingo, 25 de Fevereiro de '2024",
+      "pais": "Noruega"
+    },
+    {
+      "id": 21,
+      "tipo": "bronze",
+      "data": "terça-feira, 16 de Abril de '2024",
+      "pais": "Portugal"
+    },
+    {
+      "id": 22,
+      "tipo": "ouro",
+      "data": "sexta-feira, 31 de Maio de '2024",
+      "pais": "Brasil"
+    },
+    {
+      "id": 23,
+      "tipo": "prata",
+      "data": "segunda-feira, 8 de Julho de '2024",
+      "pais": "Dinamarca"
+    },
+    {
+      "id": 24,
+      "tipo": "bronze",
+      "data": "sábado, 21 de Setembro de '2024",
+      "pais": "Finlândia"
+    },
+    {
+      "id": 25,
+      "tipo": "ouro",
+      "data": "terça-feira, 14 de Janeiro de '2025",
+      "pais": "Índia"
+    },
+    {
+      "id": 26,
+      "tipo": "prata",
+      "data": "quinta-feira, 20 de Março de '2025",
+      "pais": "Singapura"
+    },
+    {
+      "id": 27,
+      "tipo": "bronze",
+      "data": "domingo, 18 de Maio de '2025",
+      "pais": "África do Sul"
+    },
+    {
+      "id": 28,
+      "tipo": "ouro",
+      "data": "quarta-feira, 23 de Julho de '2025",
+      "pais": "Polônia"
+    },
+    {
+      "id": 29,
+      "tipo": "prata",
+      "data": "sexta-feira, 12 de Setembro de '2025",
+      "pais": "Áustria"
+    },
+    {
+      "id": 30,
+      "tipo": "bronze",
+      "data": "domingo, 16 de Novembro de '2025",
+      "pais": "Nova Zelândia"
+    }
+  ],
+  "escolas": [
+    {
+      "id": 1,
+      "name": "Senai São Caetano Do Sul"
+    },
+    {
+      "id": 2,
+      "name": "Senai Brás"
+    },
+    {
+      "id": 3,
+      "name": "Senai Jaú"
+    },
+    {
+      "id": 4,
+      "name": "Senai São José dos Campos"
+    },
+    {
+      "id": 5,
+      "name": "Senai Campinas"
+    },
+    {
+      "id": 6,
+      "name": "Senai Santo André"
+    },
+    {
+      "id": 7,
+      "name": "Senai Ribeirão Preto"
+    },
+    {
+      "id": 8,
+      "name": "Senai Sorocaba"
+    },
+    {
+      "id": 9,
+      "name": "Senai Bauru"
+    },
+    {
+      "id": 10,
+      "name": "Senai Taubaté"
+    }
+  ],
+  "competidores": [
+    {
+      "id": 1,
+      "email": "john.doe@example.com",
+      "password": "$2a$10$PJjHQp1.8hhnVu7Zwhzx/uDeVOPvyyL6e695wAhWE766KexWvLLN.",
+      "name": "John Doe",
+      "birthdate": "1990-01-01",
+      "phone": "(31) 96666-6666",
+      "modalidadeId": 1,
+      "escolaId": 1,
+      "avatarId": 1
+    },
+    {
+      "id": 2,
+      "email": "maria.silva@example.com",
+      "password": "$2a$10$ulkdFyLnt9JDL9E9DFvpv.yDoKEVlOWMehUpGxag2kDu7FH2gNiYe",
+      "name": "Maria Silva",
+      "birthdate": "1998-05-20",
+      "phone": "(11) 91234-5678",
+      "modalidadeId": 2,
+      "escolaId": 2,
+      "avatarId": 1
+    },
+    {
+      "id": 3,
+      "email": "paulo.oliveira@example.com",
+      "password": "$2a$10$3Ew65LbPNEa0s42FPOXz7u579J.SSwMsY3RZ1D4HNvtGJm9mFwpSK",
+      "name": "Paulo Oliveira",
+      "birthdate": "1995-11-11",
+      "phone": "(21) 99876-5432",
+      "modalidadeId": 3,
+      "escolaId": 3,
+      "avatarId": 1
+    },
+    {
+      "id": 4,
+      "email": "ana.pereira@example.com",
+      "password": "$2a$10$SBeW2Dvp3I0hEzkbZ48CKez52YqmpRA31twMHn/TaNpHE1jNouN7.",
+      "name": "Ana Pereira",
+      "birthdate": "2000-03-15",
+      "phone": "(31) 97777-7777",
+      "modalidadeId": 4,
+      "escolaId": 4,
+      "avatarId": 1
+    },
+    {
+      "id": 5,
+      "email": "novo.competidor@example.com",
+      "password": "$2a$10$s65i1KaNGPwboGf/KXzYI.cZ/gAQ4hjG4O6fDflZ2kzIuaiUIaS2G",
+      "name": "Novo Competidor",
+      "birthdate": "2000-01-01",
+      "phone": "(11) 98765-4321",
+      "modalidadeId": 1,
+      "escolaId": 1,
+      "avatarId": 1
+    }
+  ],
+  "modalidades": [
+    {
+      "id": 1,
+      "title": "Cloud Computing",
+      "summary": "Infraestrutura, serviços e soluções em nuvem.",
+      "description": "Projetos de computação em nuvem, arquitetura distribuída e serviços escaláveis.",
+      "imageId": 2,
+      "categoriaId": 1,
+      "totalLikes": 4,
+      "totalVagas": 20,
+      "vagasPreenchidas": 15
+    },
+    {
+      "id": 2,
+      "title": "Cybersecurity",
+      "summary": "Proteção de sistemas, dados e redes digitais.",
+      "description": "Desafios de segurança cibernética, análise de riscos e defesa de ambientes digitais.",
+      "imageId": 3,
+      "categoriaId": 3,
+      "totalLikes": 1,
+      "totalVagas": 15,
+      "vagasPreenchidas": 10
+    },
+    {
+      "id": 3,
+      "title": "Mobile Apps",
+      "summary": "Criação de aplicativos para dispositivos móveis.",
+      "description": "Desenvolvimento de aplicativos móveis úteis, acessíveis e preparados para diferentes plataformas.",
+      "imageId": 4,
+      "categoriaId": 2,
+      "totalLikes": 123,
+      "totalVagas": 30,
+      "vagasPreenchidas": 28
+    },
+    {
+      "id": 4,
+      "title": "Web Tech",
+      "summary": "Tecnologias para experiências web modernas.",
+      "description": "Aplicações web responsivas, performáticas e conectadas a serviços digitais.",
+      "imageId": 5,
+      "categoriaId": 2,
+      "totalLikes": 99,
+      "totalVagas": 25,
+      "vagasPreenchidas": 22
+    }
+  ],
+  "comentarios": [
+    {
+      "id": 1,
+      "modalidadeId": 1,
+      "authorId": 1,
+      "content": "Excelente tema para projetos escaláveis.",
+      "createdAt": "2026-09-03T12:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "modalidadeId": 1,
+      "authorId": 3,
+      "content": "Gostei da abordagem sobre serviços em nuvem.",
+      "createdAt": "2026-09-03T12:20:00.000Z"
+    },
+    {
+      "id": 3,
+      "modalidadeId": 1,
+      "authorId": 5,
+      "content": "Seria interessante comparar provedores diferentes.",
+      "createdAt": "2026-09-03T12:40:00.000Z"
+    },
+    {
+      "id": 4,
+      "modalidadeId": 2,
+      "authorId": 2,
+      "content": "Segurança é essencial em qualquer produto digital.",
+      "createdAt": "2026-09-03T13:00:00.000Z"
+    },
+    {
+      "id": 5,
+      "modalidadeId": 2,
+      "authorId": 4,
+      "content": "Quero ver mais exemplos de prevenção.",
+      "createdAt": "2026-09-03T13:20:00.000Z"
+    },
+    {
+      "id": 6,
+      "modalidadeId": 2,
+      "authorId": 1,
+      "content": "Ótima oportunidade para aprender sobre riscos.",
+      "createdAt": "2026-09-03T13:40:00.000Z"
+    },
+    {
+      "id": 7,
+      "modalidadeId": 3,
+      "authorId": 3,
+      "content": "Aplicativos com boa usabilidade fazem diferença.",
+      "createdAt": "2026-09-03T14:00:00.000Z"
+    },
+    {
+      "id": 8,
+      "modalidadeId": 3,
+      "authorId": 5,
+      "content": "Gostaria de explorar soluções multiplataforma.",
+      "createdAt": "2026-09-03T14:20:00.000Z"
+    },
+    {
+      "id": 9,
+      "modalidadeId": 3,
+      "authorId": 2,
+      "content": "Acessibilidade também deveria ser um critério.",
+      "createdAt": "2026-09-03T14:40:00.000Z"
+    },
+    {
+      "id": 10,
+      "modalidadeId": 4,
+      "authorId": 4,
+      "content": "Web Tech reúne muitas possibilidades criativas.",
+      "createdAt": "2026-09-03T15:00:00.000Z"
+    },
+    {
+      "id": 11,
+      "modalidadeId": 4,
+      "authorId": 1,
+      "content": "Performance e responsividade são fundamentais.",
+      "createdAt": "2026-09-03T15:20:00.000Z"
+    },
+    {
+      "id": 12,
+      "modalidadeId": 4,
+      "authorId": 2,
+      "content": "Quero conferir os projetos publicados aqui.",
+      "createdAt": "2026-09-03T15:40:00.000Z"
+    }
+  ],
+  "likes": [
+    {
+      "id": 1,
+      "modalidadeId": 1,
+      "competidorId": 1,
+      "createdAt": "2026-09-03T12:01:00.000Z"
+    },
+    {
+      "id": 2,
+      "modalidadeId": 1,
+      "competidorId": 2,
+      "createdAt": "2026-09-03T12:02:00.000Z"
+    },
+    {
+      "id": 3,
+      "modalidadeId": 1,
+      "competidorId": 3,
+      "createdAt": "2026-09-03T12:03:00.000Z"
+    },
+    {
+      "id": 4,
+      "modalidadeId": 1,
+      "competidorId": 5,
+      "createdAt": "2026-09-03T12:04:00.000Z"
+    },
+    {
+      "id": 5,
+      "modalidadeId": 2,
+      "competidorId": 1,
+      "createdAt": "2026-09-03T13:01:00.000Z"
+    },
+    {
+      "id": 6,
+      "modalidadeId": 2,
+      "competidorId": 2,
+      "createdAt": "2026-09-03T13:02:00.000Z"
+    },
+    {
+      "id": 7,
+      "modalidadeId": 2,
+      "competidorId": 4,
+      "createdAt": "2026-09-03T13:03:00.000Z"
+    },
+    {
+      "id": 8,
+      "modalidadeId": 2,
+      "competidorId": 5,
+      "createdAt": "2026-09-03T13:04:00.000Z"
+    },
+    {
+      "id": 9,
+      "modalidadeId": 3,
+      "competidorId": 1,
+      "createdAt": "2026-09-03T14:01:00.000Z"
+    },
+    {
+      "id": 10,
+      "modalidadeId": 3,
+      "competidorId": 3,
+      "createdAt": "2026-09-03T14:02:00.000Z"
+    },
+    {
+      "id": 11,
+      "modalidadeId": 3,
+      "competidorId": 4,
+      "createdAt": "2026-09-03T14:03:00.000Z"
+    },
+    {
+      "id": 12,
+      "modalidadeId": 4,
+      "competidorId": 2,
+      "createdAt": "2026-09-03T15:01:00.000Z"
+    },
+    {
+      "id": 13,
+      "modalidadeId": 4,
+      "competidorId": 3,
+      "createdAt": "2026-09-03T15:02:00.000Z"
+    },
+    {
+      "id": 14,
+      "modalidadeId": 4,
+      "competidorId": 4,
+      "createdAt": "2026-09-03T15:03:00.000Z"
+    },
+    {
+      "id": 15,
+      "modalidadeId": 4,
+      "competidorId": 5,
+      "createdAt": "2026-09-03T15:04:00.000Z"
+    }
+  ],
+  "uploads": [
+    {
+      "id": 1,
+      "filename": "defaultUser.jpg",
+      "originalname": "defaultUser.jpg",
+      "createdAt": "2026-09-03T12:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "filename": "cloud-computing.jpg",
+      "originalname": "cloud-computing.jpg",
+      "createdAt": "2026-09-03T12:00:00.000Z"
+    },
+    {
+      "id": 3,
+      "filename": "cybersecurity.jpg",
+      "originalname": "cybersecurity.jpg",
+      "createdAt": "2026-09-03T12:00:00.000Z"
+    },
+    {
+      "id": 4,
+      "filename": "mobile-apps.jpg",
+      "originalname": "mobile-apps.jpg",
+      "createdAt": "2026-09-03T12:00:00.000Z"
+    },
+    {
+      "id": 5,
+      "filename": "web-tech.jpg",
+      "originalname": "web-tech.jpg",
+      "createdAt": "2026-09-03T12:00:00.000Z"
+    }
+  ]
+}

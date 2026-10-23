@@ -1,0 +1,52 @@
+[
+  {
+    "nome": "Mariana Costa",
+    "comentario": "Entrega rápida e comida muito saborosa!",
+    "avaliacao": 5
+  },
+  {
+    "nome": "Carlos Eduardo",
+    "comentario": "Pedido chegou quentinho e bem embalado.",
+    "avaliacao": 4
+  },
+  {
+    "nome": "Fernanda Lima",
+    "comentario": "Ótimo atendimento e prazo cumprido.",
+    "avaliacao": 5
+  },
+  {
+    "nome": "Bruno Oliveira",
+    "comentario": "A comida estava boa, mas demorou um pouco.",
+    "avaliacao": 3
+  },
+  {
+    "nome": "Juliana Alves",
+    "comentario": "Experiência excelente. Voltarei a pedir.",
+    "avaliacao": 5
+  },
+  {
+    "nome": "Rafael Mendes",
+    "comentario": "Pedido veio correto e muito bem apresentado.",
+    "avaliacao": 4
+  },
+  {
+    "nome": "Patrícia Souza",
+    "comentario": "A entrega foi rápida, mas a comida chegou fria.",
+    "avaliacao": 2
+  },
+  {
+    "nome": "Lucas Ferreira",
+    "comentario": "Muito saboroso. Recomendo!",
+    "avaliacao": 5
+  },
+  {
+    "nome": "Amanda Silva",
+    "comentario": "Bom custo-benefício e entrega dentro do prazo.",
+    "avaliacao": 4
+  },
+  {
+    "nome": "Gustavo Barbosa",
+    "comentario": "Atendimento excelente e pedido impecável.",
+    "avaliacao": 5
+  }
+]

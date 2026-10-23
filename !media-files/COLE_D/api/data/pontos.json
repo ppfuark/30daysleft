@@ -1,0 +1,32 @@
+{
+  "frota_coleta_comum": [
+    {
+      "caminhao_id": "CAM-01",
+      "motorista": "Carlos Silva",
+      "turno": "Tarde",
+      "posicao_atual": { "lat": -22.1070, "lng": -50.1730 },
+      "itinerario_ruas": [
+        "R. Japão",
+        "R. Manoel Rafael da Cruz",
+        "R. Eng. Freire",
+        "R. Joaquim de Almeida Pina"
+      ]
+    }
+  ],
+  "pontos_coleta_seletiva": [
+    {
+      "id": 34,
+      "logradouro": "R. Japão, 1055",
+      "material": "Plástico",
+      "nivel_ocupacao": 85,
+      "coordenadas": { "lat": -22.1085, "lng": -50.1742 }
+    },
+    {
+      "id": 31,
+      "logradouro": "R. Manoel Rafael da Cruz",
+      "material": "Papel",
+      "nivel_ocupacao": 30,
+      "coordenadas": { "lat": -22.1090, "lng": -50.1750 }
+    }
+  ]
+}

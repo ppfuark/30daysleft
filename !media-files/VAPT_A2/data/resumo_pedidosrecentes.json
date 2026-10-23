@@ -1,0 +1,49 @@
+{
+  "resumo": {
+    "pedidosHoje": 16,
+    "prontosRetirada": 3,
+    "entregasAndamento": 4
+  },
+  "pedidosRecentes": [
+    {
+      "id": 87234,
+      "cliente": "Mariana Costa",
+      "status": "Novo"
+    },
+    {
+      "id": 87233,
+      "cliente": "Rafael Mendes",
+      "status": "Novo"
+    },
+    {
+      "id": 87232,
+      "cliente": "Juliana Alves",
+      "status": "Novo"
+    },
+    {
+      "id": 87231,
+      "cliente": "Carlos Eduardo",
+      "status": "Em preparo"
+    },
+    {
+      "id": 87230,
+      "cliente": "Fernanda Lima",
+      "status": "Em preparo"
+    },
+    {
+      "id": 87229,
+      "cliente": "Gustavo Barbosa",
+      "status": "Em preparo"
+    },
+    {
+      "id": 87228,
+      "cliente": "Giovanna Silva",
+      "status": "Pronto"
+    },
+    {
+      "id": 87227,
+      "cliente": "Bruno Oliveira",
+      "status": "Pronto"
+    }
+  ]
+}

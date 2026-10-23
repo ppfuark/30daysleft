@@ -1,0 +1,60 @@
+Cartão 1
+ Imagem: media-files/imagens produtos/combo-burguer.png
+ Etiqueta de Status: Disponível
+ Título: Combo Mega Burger
+ Categoria: LANCHES
+ Descrição: Hambúrguer artesanal 200g, queijo cheddar duplo, bacon crocante, alface, tomate e molho...
+ Valor: R$ 35,90
+ Botões: Editar, Pausar
+
+
+
+Cartão 2
+ Imagem: media-files/imagens produtos/batata-frita-suprema.png
+ Etiqueta de Status: Disponível
+ Título: Batata Frita Suprema
+ Categoria: ACOMPANHAMENTOS
+ Descrição: Porção grande de batatas rústicas com cheddar derretido e pedaços de bacon
+ Valor: R$ 18,50
+ Botões: Editar, Pausar
+
+
+
+Cartão 3
+ Imagem: media-files/imagens produtos/refri-cola.png
+ Etiqueta de Status: Disponível
+ Título: Refrigerante Cola
+ Categoria: BEBIDAS
+ Descrição: Bebida gelada servida no copo de 500ml com gelo e limão
+ Valor: R$ 8,00
+ Botões: Editar, Pausar
+
+
+Cartão 4 
+ Imagem: media-files/imagens produtos/salada-mix-fresca.png
+ Etiqueta de Status: Disponível
+ Título: Salada Mix Fresca
+ Categoria: SAUDÁVEL
+ Descrição: Mix de folhas verdes, tomate cereja, cenoura ralada e tiras de frango grelhado
+ Valor: R$ 24,90
+ Botões: Editar, Pausar
+
+
+
+Cartão 5 
+ Imagem: media-files/imagens produtos/combo-duplo-classico.png
+ Etiqueta de Status: Disponível
+ Título: Combo Duplo Classico
+ Categoria: LANCHES
+ Descrição: Compo duplo classico saboroso
+ Valor: R$ 70,00
+ Botões: Editar, Pausar
+
+Cartão 6
+ Imagem: media-files/imagens produtos/sorvete-baunilha.png
+ Etiqueta de Status: Disponível
+ Título: Sorvete de Baunilha
+ Categoria: SOBREMESAS
+ Descrição: Sorvete clássico sabor baunilha
+ Valor: R$ 14,50
+ Botões: Editar, Pausar

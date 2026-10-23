@@ -1,0 +1,39 @@
+============================
+  TELA DE LEMBRETES – TEXTOS
+============================
+
+--- BARRA SUPERIOR ---
+Título: Meus Lembretes
+Botão: Voltar
+
+--- TÍTULO DA SEÇÃO ---
+Lembretes Ativos
+
+--- LISTA DE LEMBRETES ATIVOS ---
+
+Lembrete 1:
+  Título: Coleta Orgânica
+  Horário: 07:30
+  Estado inicial: Ativo (Toggle On)
+
+Lembrete 2:
+  Título: Coleta Reciclável
+  Horário: 08:00
+  Estado inicial : Ativo (Toggle On)
+
+Lembrete 3:
+  Título: Separar Resíduos
+  Horário: 21:00
+  Estado inicial: Inativo (Toggle Off)
+
+--- BOTÃO FLUTUANTE (FAB) ---
+Ícone: +
+Ação: Adicionar novo lembrete
+
+--- MODAL / ÁREA DE NOVO LEMBRETE ---
+Título do modal: Novo Lembrete
+Campo de input (título): Nome do lembrete
+Campo de input (horário): Horário
+Botão salvar: Salvar
+Feedback de salvamento: Salvando...
+Duração do feedback: 2 segundos

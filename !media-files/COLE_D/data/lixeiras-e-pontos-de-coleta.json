@@ -1,0 +1,238 @@
+{
+    "lixeiras_publicas_coleta_comum": [
+        {
+            "id": 1001,
+            "nome": "Lixeira pública - 1001",
+            "logradouro": "Rua Osvaldo Lelis",
+            "referencia": "Trecho entre Rua Senador Rodolfo Miranda e João da Costa Vieira.",
+            "coordenadas": {
+                "lat": -22.1074444,
+                "lng": -50.172956
+            },
+            "tipos_residuo_aceitos": [
+                "Orgânico"
+            ],
+            "nivel_ocupacao": 20
+        },
+        {
+            "id": 1002,
+            "nome": "Lixeira pública - 1002",
+            "logradouro": "João da Costa Vieira",
+            "referencia": "Trecho entre Rua Osvaldo Lelis e Rua Durval de Carvalho e Silva.",
+            "coordenadas": {
+                "lat": -22.1082086,
+                "lng": -50.1729761
+            },
+            "tipos_residuo_aceitos": [
+                "Rejeitos"
+            ],
+            "nivel_ocupacao": 49
+        },
+        {
+            "id": 1003,
+            "nome": "Lixeira pública - 1003",
+            "logradouro": "Rua Durval de Carvalho e Silva",
+            "referencia": "Trecho entre João da Costa Vieira e Rua Doutor Luiz Miranda.",
+            "coordenadas": {
+                "lat": -22.1086247,
+                "lng": -50.1743086
+            },
+            "tipos_residuo_aceitos": [
+                "Outros"
+            ],
+            "nivel_ocupacao": 50
+        },
+        {
+            "id": 1004,
+            "nome": "Lixeira pública - 1004",
+            "logradouro": "Rua Doutor Luiz Miranda",
+            "referencia": "Trecho entre Rua Durval de Carvalho e Silva e Rua Julio da Costa Barros.",
+            "coordenadas": {
+                "lat": -22.1091551,
+                "lng": -50.1744516
+            },
+            "tipos_residuo_aceitos": [
+                "Orgânico",
+                "Rejeitos"
+            ],
+            "nivel_ocupacao": 51
+        },
+        {
+            "id": 1005,
+            "nome": "Lixeira pública - 1005",
+            "logradouro": "Rua Julio da Costa Barros",
+            "referencia": "Trecho entre Rua Doutor Luiz Miranda e Rua Senador Rodolfo Miranda.",
+            "coordenadas": {
+                "lat": -22.1088428,
+                "lng": -50.1753049
+            },
+            "tipos_residuo_aceitos": [
+                "Rejeitos",
+                "Outros"
+            ],
+            "nivel_ocupacao": 90
+        },
+        {
+            "id": 1006,
+            "nome": "Lixeira pública - 1006",
+            "logradouro": "Rua Senador Rodolfo Miranda",
+            "referencia": "Trecho entre Rua Julio da Costa Barros e Rua Osvaldo Lelis.",
+            "coordenadas": {
+                "lat": -22.1074313,
+                "lng": -50.174943
+            },
+            "tipos_residuo_aceitos": [
+                "Orgânico",
+                "Rejeitos",
+                "Outros"
+            ],
+            "nivel_ocupacao": 100
+        }
+    ],
+    "pontos_coleta_seletiva": [
+        {
+            "id": 35,
+            "nome": "Ponto de coleta - 35",
+            "logradouro": "Rua Osvaldo Lelis",
+            "referencia": "Trecho entre Rua Senador Rodolfo Miranda e João da Costa Vieira.",
+            "coordenadas": {
+                "lat": -22.1076527,
+                "lng": -50.1727385
+            },
+            "material": "Metal",
+            "nivel_ocupacao": 0
+        },
+        {
+            "id": 36,
+            "nome": "Ponto de coleta - 36",
+            "logradouro": "Rua Osvaldo Lelis",
+            "referencia": "Trecho entre Rua Senador Rodolfo Miranda e João da Costa Vieira.",
+            "coordenadas": {
+                "lat": -22.1079447,
+                "lng": -50.1727054
+            },
+            "material": "Vidro",
+            "nivel_ocupacao": 49
+        },
+        {
+            "id": 37,
+            "nome": "Ponto de coleta - 37",
+            "logradouro": "João da Costa Vieira",
+            "referencia": "Trecho entre Rua Osvaldo Lelis e Rua Durval de Carvalho e Silva.",
+            "coordenadas": {
+                "lat": -22.1082442,
+                "lng": -50.1735079
+            },
+            "material": "Papel",
+            "nivel_ocupacao": 50
+        },
+        {
+            "id": 38,
+            "nome": "Ponto de coleta - 38",
+            "logradouro": "João da Costa Vieira",
+            "referencia": "Trecho entre Rua Osvaldo Lelis e Rua Durval de Carvalho e Silva.",
+            "coordenadas": {
+                "lat": -22.1081808,
+                "lng": -50.1740504
+            },
+            "material": "Plástico",
+            "nivel_ocupacao": 51
+        },
+        {
+            "id": 34,
+            "nome": "Ponto de coleta - 34",
+            "logradouro": "Rua Durval de Carvalho e Silva",
+            "referencia": "Trecho entre João da Costa Vieira e Rua Doutor Luiz Miranda.",
+            "coordenadas": {
+                "lat": -22.1085,
+                "lng": -50.1742
+            },
+            "material": "Plástico",
+            "nivel_ocupacao": 85
+        },
+        {
+            "id": 39,
+            "nome": "Ponto de coleta - 39",
+            "logradouro": "Rua Durval de Carvalho e Silva",
+            "referencia": "Trecho entre João da Costa Vieira e Rua Doutor Luiz Miranda.",
+            "coordenadas": {
+                "lat": -22.1089793,
+                "lng": -50.1743934
+            },
+            "material": "Metal",
+            "nivel_ocupacao": 89
+        },
+        {
+            "id": 31,
+            "nome": "Ponto de coleta - 31",
+            "logradouro": "Rua Doutor Luiz Miranda",
+            "referencia": "Trecho entre Rua Durval de Carvalho e Silva e Rua Julio da Costa Barros.",
+            "coordenadas": {
+                "lat": -22.109,
+                "lng": -50.175
+            },
+            "material": "Papel",
+            "nivel_ocupacao": 30
+        },
+        {
+            "id": 40,
+            "nome": "Ponto de coleta - 40",
+            "logradouro": "Rua Doutor Luiz Miranda",
+            "referencia": "Trecho entre Rua Durval de Carvalho e Silva e Rua Julio da Costa Barros.",
+            "coordenadas": {
+                "lat": -22.1090819,
+                "lng": -50.1748584
+            },
+            "material": "Vidro",
+            "nivel_ocupacao": 90
+        },
+        {
+            "id": 41,
+            "nome": "Ponto de coleta - 41",
+            "logradouro": "Rua Julio da Costa Barros",
+            "referencia": "Trecho entre Rua Doutor Luiz Miranda e Rua Senador Rodolfo Miranda.",
+            "coordenadas": {
+                "lat": -22.1083495,
+                "lng": -50.1753513
+            },
+            "material": "Papel",
+            "nivel_ocupacao": 91
+        },
+        {
+            "id": 42,
+            "nome": "Ponto de coleta - 42",
+            "logradouro": "Rua Julio da Costa Barros",
+            "referencia": "Trecho entre Rua Doutor Luiz Miranda e Rua Senador Rodolfo Miranda.",
+            "coordenadas": {
+                "lat": -22.1078468,
+                "lng": -50.1752903
+            },
+            "material": "Plástico",
+            "nivel_ocupacao": 100
+        },
+        {
+            "id": 43,
+            "nome": "Ponto de coleta - 43",
+            "logradouro": "Rua Senador Rodolfo Miranda",
+            "referencia": "Trecho entre Rua Julio da Costa Barros e Rua Osvaldo Lelis.",
+            "coordenadas": {
+                "lat": -22.1073703,
+                "lng": -50.1742729
+            },
+            "material": "Metal",
+            "nivel_ocupacao": 65
+        },
+        {
+            "id": 44,
+            "nome": "Ponto de coleta - 44",
+            "logradouro": "Rua Senador Rodolfo Miranda",
+            "referencia": "Trecho entre Rua Julio da Costa Barros e Rua Osvaldo Lelis.",
+            "coordenadas": {
+                "lat": -22.1074109,
+                "lng": -50.1735901
+            },
+            "material": "Vidro",
+            "nivel_ocupacao": 20
+        }
+    ]
+}

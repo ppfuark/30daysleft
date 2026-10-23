@@ -1,0 +1,77 @@
+Dados para a Grid de Cartões de Pedido (6 Pedidos):
+
+Cartão 1
+
+Topo: Número do pedido "#1042" à esquerda; Etiqueta indicadora de tempo "Há 5 min" com borda à direita.
+
+Etiqueta de Status: "PREPARANDO" (estilo com tons laranjas).
+
+Dados do Cliente: "Ana Ribeiro" em negrito; badge indicando "DELIVERY".
+
+Resumo de Itens: Título "ITENS:", lista contendo "1x Combo Mega, 1x Refri".
+
+Total da compra: Título "TOTAL", valor "R$ 43,90" em negrito; botão indicando a ação "Avançar".
+
+
+Cartão 2
+
+Topo: Número do pedido "#1041" à esquerda; Etiqueta indicadora de tempo "Há 12 min" com borda à direita.
+
+Etiqueta de Status: "PRONTO P/ COLETA" (estilo com tons verdes).
+
+Dados do Cliente: "Carlos Silva" em negrito; badge indicando "RETIRADA".
+
+Resumo de Itens: Título "ITENS:", lista contendo "2x Batata Suprema".
+
+Total da compra: Título "TOTAL", valor "R$ 37,00" em negrito; botão indicando a ação "Finalizar".
+
+
+Cartão 3 
+
+Topo: Número do pedido "#1040" à esquerda; Etiqueta indicadora de tempo "Há 18 min" com borda à direita.
+
+Etiqueta de Status: "EM ROTA" (estilo com tons azuis).
+
+Dados do Cliente: "Mariana Costa" em negrito; badge indicando "DELIVERY".
+
+Resumo de Itens: Título "ITENS:", lista contendo "1x Hambúrguer Artesanal, 1x Suco Natural".
+
+Total da compra: Título "TOTAL", valor "R$ 35,50" em negrito; botão indicando a ação "Entregue".
+
+
+Cartão 4 
+
+Topo: Número do pedido "#1039" à esquerda; Etiqueta indicadora de tempo "Há 25 min" com borda à direita.
+
+Etiqueta de Status: "EM ROTA" (estilo com tons azuis).
+
+Dados do Cliente: "João Souza" em negrito; badge indicando "DELIVERY".
+
+Resumo de Itens: Título "ITENS:", lista contendo "1x Pizza Calabresa, 1x Guaraná 2L".
+
+Total da compra: Título "TOTAL", valor "R$ 58,00" em negrito; botão indicando a ação "Entregue".
+
+
+Cartão 5
+
+Topo: Número do pedido "#1038" à esquerda; Etiqueta indicadora de tempo "Há 32 min" com borda à direita.
+
+Etiqueta de Status: "PREPARANDO" (estilo com tons laranjas).
+
+Dados do Cliente: "Lucas Mendes" em negrito; badge indicando "RETIRADA".
+
+Resumo de Itens: Título "ITENS:", lista contendo "2x Sanduíche Natural, 2x Água de Coco".
+
+Total da compra: Título "TOTAL", valor "R$ 28,00" em negrito; botão indicando a ação "Pronto".
+
+
+Cartão 6
+Topo: Número do pedido "#1037" à esquerda; Etiqueta indicadora de tempo "Há 45 min" com borda à direita.
+
+Etiqueta de Status: "PRONTO P/ COLETA" (estilo com tons verdes).
+
+Dados do Cliente: "Fernanda Lima" em negrito; badge indicando "RETIRADA".
+
+Resumo de Itens: Título "ITENS:", lista contendo "1x Combo Executivo, 1x Pudim".
+
+Total da compra: Título "TOTAL", valor "R$ 49,90" em negrito; botão indicando a ação "Finalizar".

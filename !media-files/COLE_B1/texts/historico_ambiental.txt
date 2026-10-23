@@ -1,0 +1,98 @@
+============================
+  TELA HISTÓRICO AMBIENTAL – TEXTOS
+============================
+
+--- BARRA SUPERIOR ---
+Título: Histórico Ambiental
+Botão: Voltar
+Ícone: Filtro
+
+--- CARD PRINCIPAL ---
+Título do card: Seu Desempenho Ambiental
+Nível: Nível Esmeralda
+
+Título: Total Reciclado
+Título: Pontuação
+Título: Meta mensal
+
+--- BOTÕES DE FILTRO ---
+Semana | Mês | Ano
+
+--- SEÇÃO DE GRÁFICOS ---
+Título: Estatísticas de Descarte
+Tipo 1: Gráfico de barras
+Tipo 2: Gráfico circular
+Legenda gráfico circular: Circular
+
+============================
+  DADOS POR PERÍODO
+============================
+
+--- SEMANA ---
+Total Reciclado: 12,5 Kg
+Pontuação: 340 pts
+Meta mensal: 60%
+
+Gráfico de barras (Descarte por tipo – semana):
+  Plástico:  4,2 Kg
+  Papel:     3,1 Kg
+  Metal:     2,8 Kg
+  Vidro:     1,5 Kg
+  Orgânico:  0,9 Kg
+
+Gráfico circular (distribuição %):
+  Plástico:  34%
+  Papel:     25%
+  Metal:     22%
+  Vidro:     12%
+  Orgânico:   7%
+
+Economia estimada de CO₂: 3,8 Kg CO₂
+Resíduo mais descartado: Plástico – 4,2 Kg
+Coletas Realizadas: 5
+
+--- MÊS ---
+Total Reciclado: 48,7 Kg
+Pontuação: 1.240 pts
+Meta mensal: 85%
+
+Gráfico de barras (Descarte por tipo – mês):
+  Plástico:  16,5 Kg
+  Papel:     12,2 Kg
+  Metal:     10,0 Kg
+  Vidro:      6,0 Kg
+  Orgânico:   4,0 Kg
+
+Gráfico circular (distribuição %):
+  Plástico:  34%
+  Papel:     25%
+  Metal:     21%
+  Vidro:     12%
+  Orgânico:   8%
+
+Economia estimada de CO₂: 14,6 Kg CO₂
+Resíduo mais descartado: Plástico – 16,5 Kg
+Coletas Realizadas: 14
+
+--- ANO ---
+Total Reciclado: 312,4 Kg
+Pontuação: 8.750 pts
+Meta mensal: 72%
+
+Gráfico de barras (Descarte por tipo – ano):
+  Plástico: 106,2 Kg
+  Papel:     78,1 Kg
+  Metal:     64,5 Kg
+  Vidro:     38,8 Kg
+  Orgânico:  24,8 Kg
+
+Gráfico circular (distribuição %):
+  Plástico:  34%
+  Papel:     25%
+  Metal:     21%
+  Vidro:     12%
+  Orgânico:   8%
+
+Economia estimada de CO₂: 93,7 Kg CO₂
+Resíduo mais descartado: Plástico – 106,2 Kg
+Coletas Realizadas: 89

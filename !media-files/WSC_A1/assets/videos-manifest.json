@@ -1,0 +1,13 @@
+{
+  "formato": "video/mp4",
+  "resolucao": "1280x720",
+  "duracaoSegundos": 5,
+  "audio": false,
+  "modalidades": {
+    "08": ["videos/08-01.mp4", "videos/08-02.mp4"],
+    "17": ["videos/17-01.mp4", "videos/17-02.mp4"],
+    "50": ["videos/50-01.mp4", "videos/50-02.mp4"],
+    "53": ["videos/53-01.mp4", "videos/53-02.mp4"],
+    "54": ["videos/54-01.mp4", "videos/54-02.mp4"]
+  }
+}

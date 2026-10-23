@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="utf-8"?>
+<coletas versao="1.0" dados_exemplo="true">
+  <coleta id="COL-0001" usuario_id="1">
+    <data_hora>2026-10-01T08:00:00-03:00</data_hora>
+    <ponto_coleta_id>34</ponto_coleta_id>
+    <material>Plástico</material>
+    <estado_item>Limpo/Seco</estado_item>
+    <peso_kg>0.100</peso_kg>
+    <pontos_gerados>10</pontos_gerados>
+  </coleta>
+  <coleta id="COL-0002" usuario_id="1">
+    <data_hora>2026-10-01T08:05:00-03:00</data_hora>
+    <ponto_coleta_id>31</ponto_coleta_id>
+    <material>Papel</material>
+    <estado_item>Limpo/Seco</estado_item>
+    <peso_kg>0.100</peso_kg>
+    <pontos_gerados>10</pontos_gerados>
+  </coleta>
+  <coleta id="COL-0003" usuario_id="1">
+    <data_hora>2026-10-01T08:10:00-03:00</data_hora>
+    <ponto_coleta_id>34</ponto_coleta_id>
+    <material>Plástico</material>
+    <estado_item>Limpo/Seco</estado_item>
+    <peso_kg>0.100</peso_kg>
+    <pontos_gerados>10</pontos_gerados>
+  </coleta>
+  <coleta id="COL-0004" usuario_id="1">
+    <data_hora>2026-10-02T08:00:00-03:00</data_hora>
+    <ponto_coleta_id>31</ponto_coleta_id>
+    <material>Papel</material>
+    <estado_item>Limpo/Seco</estado_item>
+    <peso_kg>0.100</peso_kg>
+    <pontos_gerados>10</pontos_gerados>
+  </coleta>
+  <coleta id="COL-0005" usuario_id="1">
+    <data_hora>2026-10-02T08:05:00-03:00</data_hora>
+    <ponto_coleta_id>34</ponto_coleta_id>
+    <material>Plástico</material>
+    <estado_item>Limpo/Seco</estado_item>
+    <peso_kg>0.100</peso_kg>
+    <pontos_gerados>10</pontos_gerados>
+  </coleta>
+  <coleta id="COL-0006" usuario_id="1">
+    <data_hora>2026-10-02T08:10:00-03:00</data_hora>
+    <ponto_coleta_id>31</ponto_coleta_id>
+    <material>Papel</material>
+    <estado_item>Limpo/Seco</estado_item>
+    <peso_kg>0.100</peso_kg>
+    <pontos_gerados>10</pontos_gerados>
+  </coleta>
+  <coleta id="COL-0007" usuario_id="1">
+    <data_hora>2026-10-03T08:00:00-03:00</data_hora>
+    <ponto_coleta_id>34</ponto_coleta_id>
+    <material>Plástico</material>
+    <estado_item>Limpo/Seco</estado_item>
+    <peso_kg>0.100</peso_kg>
+    <pontos_gerados>10</pontos_gerados>
+  </coleta>
+  <coleta id="COL-0008" usuario_id="1">
+    <data_hora>2026-10-03T08:05:00-03:00</data_hora>
+    <ponto_coleta_id>31</ponto_coleta_id>
+    <material>Papel</material>
+    <estado_item>Limpo/Seco</estado_item>
+    <peso_kg>0.100</peso_kg>
+    <pontos_gerados>10</pontos_gerados>
+  </coleta>
+  <coleta id="COL-0009" usuario_id="1">
+    <data_hora>2026-10-03T08:10:00-03:00</data_hora>
+    <ponto_coleta_id>34</ponto_coleta_id>
+    <material>Plástico</material>
+    <estado_item>Limpo/Seco</estado_item>
+    <peso_kg>0.100</peso_kg>
+    <pontos_gerados>10</pontos_gerados>
+  </coleta>
+  <coleta id="COL-0010" usuario_id="1">
+    <data_hora>2026-10-04T08:00:00-03:00</data_hora>
+    <ponto_coleta_id>31</ponto_coleta_id>
+    <material>Papel</material>
+    <estado_item>Limpo/Seco</estado_item>
+    <peso_kg>0.100</peso_kg>
+    <pontos_gerados>10</pontos_gerados>
+  </coleta>
+  <coleta id="COL-0011" usuario_id="1">
+    <data_hora>2026-10-04T08:05:00-03:00</data_hora>
+    <ponto_coleta_id>34</ponto_coleta_id>
+    <material>Plástico</material>
+    <estado_item>Limpo/Seco</estado_item>
+    <peso_kg>0.100</peso_kg>
+    <pontos_gerados>10</pontos_gerados>
+  </coleta>
+  <coleta id="COL-0012" usuario_id="1">
+    <data_hora>2026-10-04T08:10:00-03:00</data_hora>
+    <ponto_coleta_id>31</ponto_coleta_id>
+    <material>Papel</material>
+    <estado_item>Limpo/Seco</estado_item>
+    <peso_kg>0.100</peso_kg>
+    <pontos_gerados>10</pontos_gerados>
+  </coleta>
+  <coleta id="COL-0013" usuario_id="1">
+    <data_hora>2026-10-05T08:00:00-03:00</data_hora>
+    <ponto_coleta_id>34</ponto_coleta_id>
+    <material>Plástico</material>
+    <estado_item>Limpo/Seco</estado_item>
+    <peso_kg>0.100</peso_kg>
+    <pontos_gerados>10</pontos_gerados>
+  </coleta>
+  <coleta id="COL-0014" usuario_id="1">
+    <data_hora>2026-10-05T08:05:00-03:00</data_hora>
+    <ponto_coleta_id>31</ponto_coleta_id>
+    <material>Papel</material>
+    <estado_item>Limpo/Seco</estado_item>
+    <peso_kg>0.100</peso_kg>
+    <pontos_gerados>10</pontos_gerados>
+  </coleta>
+  <coleta id="COL-0015" usuario_id="1">
+    <data_hora>2026-10-05T08:10:00-03:00</data_hora>
+    <ponto_coleta_id>34</ponto_coleta_id>
+    <material>Plástico</material>
+    <estado_item>Limpo/Seco</estado_item>
+    <peso_kg>0.100</peso_kg>
+    <pontos_gerados>10</pontos_gerados>
+  </coleta>
+  <coleta id="COL-0016" usuario_id="1">
+    <data_hora>2026-10-06T08:00:00-03:00</data_hora>
+    <ponto_coleta_id>31</ponto_coleta_id>
+    <material>Papel</material>
+    <estado_item>Limpo/Seco</estado_item>
+    <peso_kg>0.100</peso_kg>
+    <pontos_gerados>10</pontos_gerados>
+  </coleta>
+  <coleta id="COL-0017" usuario_id="1">
+    <data_hora>2026-10-06T08:05:00-03:00</data_hora>
+    <ponto_coleta_id>34</ponto_coleta_id>
+    <material>Plástico</material>
+    <estado_item>Limpo/Seco</estado_item>
+    <peso_kg>0.100</peso_kg>
+    <pontos_gerados>10</pontos_gerados>
+  </coleta>
+  <coleta id="COL-0018" usuario_id="1">
+    <data_hora>2026-10-06T08:10:00-03:00</data_hora>
+    <ponto_coleta_id>31</ponto_coleta_id>
+    <material>Papel</material>
+    <estado_item>Limpo/Seco</estado_item>
+    <peso_kg>0.100</peso_kg>
+    <pontos_gerados>10</pontos_gerados>
+  </coleta>
+  <coleta id="COL-0019" usuario_id="1">
+    <data_hora>2026-10-07T08:00:00-03:00</data_hora>
+    <ponto_coleta_id>34</ponto_coleta_id>
+    <material>Plástico</material>
+    <estado_item>Limpo/Seco</estado_item>
+    <peso_kg>0.100</peso_kg>
+    <pontos_gerados>10</pontos_gerados>
+  </coleta>
+  <coleta id="COL-0020" usuario_id="1">
+    <data_hora>2026-10-07T08:05:00-03:00</data_hora>
+    <ponto_coleta_id>31</ponto_coleta_id>
+    <material>Papel</material>
+    <estado_item>Limpo/Seco</estado_item>
+    <peso_kg>0.100</peso_kg>
+    <pontos_gerados>10</pontos_gerados>
+  </coleta>
+  <coleta id="COL-0021" usuario_id="1">
+    <data_hora>2026-10-07T08:10:00-03:00</data_hora>
+    <ponto_coleta_id>34</ponto_coleta_id>
+    <material>Plástico</material>
+    <estado_item>Limpo/Seco</estado_item>
+    <peso_kg>0.100</peso_kg>
+    <pontos_gerados>10</pontos_gerados>
+  </coleta>
+  <coleta id="COL-0022" usuario_id="1">
+    <data_hora>2026-10-08T08:00:00-03:00</data_hora>
+    <ponto_coleta_id>31</ponto_coleta_id>
+    <material>Papel</material>
+    <estado_item>Limpo/Seco</estado_item>
+    <peso_kg>0.100</peso_kg>
+    <pontos_gerados>10</pontos_gerados>
+  </coleta>
+  <coleta id="COL-0023" usuario_id="1">
+    <data_hora>2026-10-08T08:05:00-03:00</data_hora>
+    <ponto_coleta_id>34</ponto_coleta_id>
+    <material>Plástico</material>
+    <estado_item>Limpo/Seco</estado_item>
+    <peso_kg>0.100</peso_kg>
+    <pontos_gerados>10</pontos_gerados>
+  </coleta>
+  <coleta id="COL-0024" usuario_id="1">
+    <data_hora>2026-10-08T08:10:00-03:00</data_hora>
+    <ponto_coleta_id>31</ponto_coleta_id>
+    <material>Papel</material>
+    <estado_item>Limpo/Seco</estado_item>
+    <peso_kg>0.100</peso_kg>
+    <pontos_gerados>10</pontos_gerados>
+  </coleta>
+  <coleta id="COL-0025" usuario_id="1">
+    <data_hora>2026-10-09T08:00:00-03:00</data_hora>
+    <ponto_coleta_id>34</ponto_coleta_id>
+    <material>Plástico</material>
+    <estado_item>Limpo/Seco</estado_item>
+    <peso_kg>0.100</peso_kg>
+    <pontos_gerados>10</pontos_gerados>
+  </coleta>
+  <coleta id="COL-0026" usuario_id="1">
+    <data_hora>2026-10-09T08:05:00-03:00</data_hora>
+    <ponto_coleta_id>31</ponto_coleta_id>
+    <material>Papel</material>
+    <estado_item>Limpo/Seco</estado_item>
+    <peso_kg>0.100</peso_kg>
+    <pontos_gerados>10</pontos_gerados>
+  </coleta>
+  <coleta id="COL-0027" usuario_id="1">
+    <data_hora>2026-10-09T08:10:00-03:00</data_hora>
+    <ponto_coleta_id>34</ponto_coleta_id>
+    <material>Plástico</material>
+    <estado_item>Limpo/Seco</estado_item>
+    <peso_kg>0.100</peso_kg>
+    <pontos_gerados>10</pontos_gerados>
+  </coleta>
+  <coleta id="COL-0028" usuario_id="1">
+    <data_hora>2026-10-10T08:00:00-03:00</data_hora>
+    <ponto_coleta_id>31</ponto_coleta_id>
+    <material>Papel</material>
+    <estado_item>Limpo/Seco</estado_item>
+    <peso_kg>0.100</peso_kg>
+    <pontos_gerados>10</pontos_gerados>
+  </coleta>
+  <coleta id="COL-0029" usuario_id="1">
+    <data_hora>2026-10-10T08:05:00-03:00</data_hora>
+    <ponto_coleta_id>34</ponto_coleta_id>
+    <material>Plástico</material>
+    <estado_item>Limpo/Seco</estado_item>
+    <peso_kg>0.100</peso_kg>
+    <pontos_gerados>10</pontos_gerados>
+  </coleta>
+  <coleta id="COL-0030" usuario_id="1">
+    <data_hora>2026-10-10T08:10:00-03:00</data_hora>
+    <ponto_coleta_id>31</ponto_coleta_id>
+    <material>Papel</material>
+    <estado_item>Limpo/Seco</estado_item>
+    <peso_kg>0.100</peso_kg>
+    <pontos_gerados>10</pontos_gerados>
+  </coleta>
+  <coleta id="COL-0031" usuario_id="1">
+    <data_hora>2026-10-11T08:00:00-03:00</data_hora>
+    <ponto_coleta_id>34</ponto_coleta_id>
+    <material>Plástico</material>
+    <estado_item>Limpo/Seco</estado_item>
+    <peso_kg>0.100</peso_kg>
+    <pontos_gerados>10</pontos_gerados>
+  </coleta>
+  <coleta id="COL-0032" usuario_id="1">
+    <data_hora>2026-10-11T08:05:00-03:00</data_hora>
+    <ponto_coleta_id>31</ponto_coleta_id>
+    <material>Papel</material>
+    <estado_item>Limpo/Seco</estado_item>
+    <peso_kg>0.100</peso_kg>
+    <pontos_gerados>10</pontos_gerados>
+  </coleta>
+  <coleta id="COL-0033" usuario_id="1">
+    <data_hora>2026-10-11T08:10:00-03:00</data_hora>
+    <ponto_coleta_id>34</ponto_coleta_id>
+    <material>Plástico</material>
+    <estado_item>Limpo/Seco</estado_item>
+    <peso_kg>0.100</peso_kg>
+    <pontos_gerados>10</pontos_gerados>
+  </coleta>
+  <coleta id="COL-0034" usuario_id="1">
+    <data_hora>2026-10-12T08:00:00-03:00</data_hora>
+    <ponto_coleta_id>31</ponto_coleta_id>
+    <material>Papel</material>
+    <estado_item>Limpo/Seco</estado_item>
+    <peso_kg>0.100</peso_kg>
+    <pontos_gerados>10</pontos_gerados>
+  </coleta>
+  <coleta id="COL-0035" usuario_id="1">
+    <data_hora>2026-10-12T08:05:00-03:00</data_hora>
+    <ponto_coleta_id>34</ponto_coleta_id>
+    <material>Plástico</material>
+    <estado_item>Limpo/Seco</estado_item>
+    <peso_kg>0.100</peso_kg>
+    <pontos_gerados>10</pontos_gerados>
+  </coleta>
+  <coleta id="COL-0036" usuario_id="1">
+    <data_hora>2026-10-12T08:10:00-03:00</data_hora>
+    <ponto_coleta_id>31</ponto_coleta_id>
+    <material>Papel</material>
+    <estado_item>Limpo/Seco</estado_item>
+    <peso_kg>0.100</peso_kg>
+    <pontos_gerados>10</pontos_gerados>
+  </coleta>
+  <coleta id="COL-0037" usuario_id="1">
+    <data_hora>2026-10-13T08:00:00-03:00</data_hora>
+    <ponto_coleta_id>34</ponto_coleta_id>
+    <material>Plástico</material>
+    <estado_item>Limpo/Seco</estado_item>
+    <peso_kg>0.100</peso_kg>
+    <pontos_gerados>10</pontos_gerados>
+  </coleta>
+  <coleta id="COL-0038" usuario_id="1">
+    <data_hora>2026-10-13T08:05:00-03:00</data_hora>
+    <ponto_coleta_id>31</ponto_coleta_id>
+    <material>Papel</material>
+    <estado_item>Limpo/Seco</estado_item>
+    <peso_kg>0.100</peso_kg>
+    <pontos_gerados>10</pontos_gerados>
+  </coleta>
+  <coleta id="COL-0039" usuario_id="1">
+    <data_hora>2026-10-13T08:10:00-03:00</data_hora>
+    <ponto_coleta_id>34</ponto_coleta_id>
+    <material>Plástico</material>
+    <estado_item>Limpo/Seco</estado_item>
+    <peso_kg>0.100</peso_kg>
+    <pontos_gerados>10</pontos_gerados>
+  </coleta>
+  <coleta id="COL-0040" usuario_id="1">
+    <data_hora>2026-10-14T08:00:00-03:00</data_hora>
+    <ponto_coleta_id>31</ponto_coleta_id>
+    <material>Papel</material>
+    <estado_item>Limpo/Seco</estado_item>
+    <peso_kg>0.100</peso_kg>
+    <pontos_gerados>10</pontos_gerados>
+  </coleta>
+  <coleta id="COL-0041" usuario_id="1">
+    <data_hora>2026-10-14T08:05:00-03:00</data_hora>
+    <ponto_coleta_id>34</ponto_coleta_id>
+    <material>Plástico</material>
+    <estado_item>Limpo/Seco</estado_item>
+    <peso_kg>0.100</peso_kg>
+    <pontos_gerados>10</pontos_gerados>
+  </coleta>
+  <coleta id="COL-0042" usuario_id="1">
+    <data_hora>2026-10-14T08:10:00-03:00</data_hora>
+    <ponto_coleta_id>31</ponto_coleta_id>
+    <material>Papel</material>
+    <estado_item>Limpo/Seco</estado_item>
+    <peso_kg>0.100</peso_kg>
+    <pontos_gerados>10</pontos_gerados>
+  </coleta>
+  <coleta id="COL-0043" usuario_id="1">
+    <data_hora>2026-10-15T08:00:00-03:00</data_hora>
+    <ponto_coleta_id>34</ponto_coleta_id>
+    <material>Plástico</material>
+    <estado_item>Limpo/Seco</estado_item>
+    <peso_kg>0.100</peso_kg>
+    <pontos_gerados>10</pontos_gerados>
+  </coleta>
+  <coleta id="COL-0044" usuario_id="1">
+    <data_hora>2026-10-15T08:05:00-03:00</data_hora>
+    <ponto_coleta_id>31</ponto_coleta_id>
+    <material>Papel</material>
+    <estado_item>Limpo/Seco</estado_item>
+    <peso_kg>0.100</peso_kg>
+    <pontos_gerados>10</pontos_gerados>
+  </coleta>
+  <coleta id="COL-0045" usuario_id="1">
+    <data_hora>2026-10-15T08:10:00-03:00</data_hora>
+    <ponto_coleta_id>34</ponto_coleta_id>
+    <material>Plástico</material>
+    <estado_item>Limpo/Seco</estado_item>
+    <peso_kg>0.100</peso_kg>
+    <pontos_gerados>10</pontos_gerados>
+  </coleta>
+  <coleta id="COL-0046" usuario_id="2">
+    <data_hora>2026-10-16T08:00:00-03:00</data_hora>
+    <ponto_coleta_id>31</ponto_coleta_id>
+    <material>Papel</material>
+    <estado_item>Limpo/Seco</estado_item>
+    <peso_kg>0.100</peso_kg>
+    <pontos_gerados>10</pontos_gerados>
+  </coleta>
+  <coleta id="COL-0047" usuario_id="3">
+    <data_hora>2026-10-16T08:10:00-03:00</data_hora>
+    <ponto_coleta_id>34</ponto_coleta_id>
+    <material>Plástico</material>
+    <estado_item>Sujo</estado_item>
+    <peso_kg>0.100</peso_kg>
+    <pontos_gerados>5</pontos_gerados>
+  </coleta>
+  <coleta id="COL-0048" usuario_id="4">
+    <data_hora>2026-10-16T08:20:00-03:00</data_hora>
+    <ponto_coleta_id>31</ponto_coleta_id>
+    <material>Papel</material>
+    <estado_item>Limpo/Seco</estado_item>
+    <peso_kg>0.100</peso_kg>
+    <pontos_gerados>10</pontos_gerados>
+  </coleta>
+  <coleta id="COL-0049" usuario_id="5">
+    <data_hora>2026-10-17T08:00:00-03:00</data_hora>
+    <ponto_coleta_id>34</ponto_coleta_id>
+    <material>Plástico</material>
+    <estado_item>Sujo</estado_item>
+    <peso_kg>0.100</peso_kg>
+    <pontos_gerados>5</pontos_gerados>
+  </coleta>
+  <coleta id="COL-0050" usuario_id="6">
+    <data_hora>2026-10-17T08:10:00-03:00</data_hora>
+    <ponto_coleta_id>31</ponto_coleta_id>
+    <material>Papel</material>
+    <estado_item>Limpo/Seco</estado_item>
+    <peso_kg>0.100</peso_kg>
+    <pontos_gerados>10</pontos_gerados>
+  </coleta>
+  <coleta id="COL-0051" usuario_id="7">
+    <data_hora>2026-10-17T08:20:00-03:00</data_hora>
+    <ponto_coleta_id>34</ponto_coleta_id>
+    <material>Plástico</material>
+    <estado_item>Sujo</estado_item>
+    <peso_kg>0.100</peso_kg>
+    <pontos_gerados>5</pontos_gerados>
+  </coleta>
+  <coleta id="COL-0052" usuario_id="8">
+    <data_hora>2026-10-18T08:00:00-03:00</data_hora>
+    <ponto_coleta_id>31</ponto_coleta_id>
+    <material>Papel</material>
+    <estado_item>Limpo/Seco</estado_item>
+    <peso_kg>0.100</peso_kg>
+    <pontos_gerados>10</pontos_gerados>
+  </coleta>
+  <coleta id="COL-0053" usuario_id="9">
+    <data_hora>2026-10-18T08:10:00-03:00</data_hora>
+    <ponto_coleta_id>34</ponto_coleta_id>
+    <material>Plástico</material>
+    <estado_item>Sujo</estado_item>
+    <peso_kg>0.100</peso_kg>
+    <pontos_gerados>5</pontos_gerados>
+  </coleta>
+  <coleta id="COL-0054" usuario_id="10">
+    <data_hora>2026-10-18T08:20:00-03:00</data_hora>
+    <ponto_coleta_id>31</ponto_coleta_id>
+    <material>Papel</material>
+    <estado_item>Limpo/Seco</estado_item>
+    <peso_kg>0.100</peso_kg>
+    <pontos_gerados>10</pontos_gerados>
+  </coleta>
+</coletas>

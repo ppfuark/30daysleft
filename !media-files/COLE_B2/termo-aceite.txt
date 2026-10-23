@@ -1,0 +1,22 @@
+TERMO DE USO E POLÍTICA DE PRIVACIDADE
+
+AVISO LEGAL E DE CONTEXTO:
+Este documento constitui um material fictício e simplificado, elaborado exclusivamente para fins de avaliação prática em ambiente de prova/desafio técnico. Não possui validade jurídica, contratual ou regulatória definitiva perante órgãos legais ou autoridades competentes.
+
+1. FINALIDADE E ESCOPO DOS DADOS
+No fluxo da aplicação simulada, os dados cadastrais solicitados (incluindo nome do responsável, razão social, e-mail institucional, telefone de contato e endereço operacional) destinam-se unicamente a viabilizar a prototipação das funcionalidades de cadastro, autenticação e gerenciamento de ordens/coletas. Informações operacionais (como tipo de material, estimativa de peso, data e janela de horário) têm o objetivo restrito de compor os fluxos de agendamento e triagem do sistema avaliado.
+
+2. TRATAMENTO, ARMAZENAMENTO E SEGURANÇA NA AVALIAÇÃO
+- Todos os dados inseridos, exibidos ou manipulados durante o teste são considerados fictícios.
+- As interfaces e rotinas desenvolvidas operam em modo de demonstração técnica e sandbox acadêmico/avaliativo, não realizando transmissão externa ou retenção definitiva de informações críticas.
+- Orienta-se expressamente que os avaliadores e participantes NÃO utilizem senhas pessoais reais, dados bancários verdadeiros ou informações confidenciais durante a navegação.
+
+3. ADAPTAÇÃO E CONFORMIDADE PARA PRODUÇÃO
+Para eventuais versões futuras destinadas a publicação comercial ou produção em larga escala, será obrigatória a revisão integral deste instrumento por profissionais jurídicos especializados, estabelecendo:
+a) As bases legais aplicáveis para cada categoria de dados tratada;
+b) Políticas formais de retenção, expurgo e descarte seguro de dados;
+c) Mecanismos de governança, resposta a incidentes e garantia de direitos dos titulares;
+d) Cumprimento integral das diretrizes de proteção de dados vigentes (LGPD).
+
+4. CANAL DE ATENDIMENTO E SUPORTE
+Dúvidas técnicas, solicitações ou esclarecimentos pertinentes à execução deste teste devem ser encaminhados diretamente à coordenação/responsável pela aplicação da prova. O canal oficial corporativo de privacidade (DPO/Encarregado) será estabelecido formalmente na etapa de homologação do produto final.

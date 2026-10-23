@@ -1,0 +1,753 @@
+[
+  {
+    "id": 1,
+    "nome": "SENAI Barra Funda",
+    "endereco": "Rua Tagipuru, 242 - Barra Funda - São Paulo/SP, 01156-000",
+    "latitude": "-23.529431306260154",
+    "longitude": "-46.66480989880769l"
+  },
+  {
+    "id": 2,
+    "nome": "SENAI Barueri",
+    "endereco": "Alameda Wagih Salles Nemer, 124 - Centro - Barueri/SP, 06401-134",
+    "latitude": "-23.509390966023062", 
+    "longitude": "-46.86595956922899"
+  },
+  {
+    "id": 3,
+    "nome": "SENAI Bom Retiro - Biotecnologia",
+    "endereco": "Rua Anhaia, 1321 - Bom Retiro - São Paulo/SP, 01130-000",
+    "latitude": "-23.519066754261726",
+    "longitude": "-46.64784422323935"
+
+  },
+  {
+    "id": 4,
+    "nome": "SENAI Brás",
+    "endereco": "Rua Monsenhor Andrade, 298 - Brás - São Paulo/SP, 03008-000",
+    "latitude": "-23.54277090388682",
+    "longitude": "-46.62084841135455",
+    "modalidades": [
+         "08",
+         "17"
+      ]
+  },
+  {
+    "id": 5,
+    "nome": "SENAI Brás - Têxtil e Moda",
+    "endereco": "Rua Correia de Andrade, 232 - Brás - São Paulo/SP, 03008-020",
+    "latitude": "-23.542362217414595",
+    "longitude": "-46.61931475900561"
+  },
+  {
+    "id": 6,
+    "nome": "SENAI Cambuci - Equipamentos Biomédicos",
+    "endereco": "Rua Muniz de Souza, 3 - Aclimação - São Paulo/SP, 01534-001",
+    "latitude": "-23.563376589238",
+    "longitude": "-46.62303176090126"
+  },
+  {
+    "id": 7,
+    "nome": "SENAI Cotia",
+    "endereco": "Rua Direita, 955 - Vila Santo Antônio - Cotia/SP, 06708-280",
+    "latitude": "-23.59093417069511",
+    "longitude": "-46.846175300006614"
+  },
+  {
+    "id": 8,
+    "nome": "SENAI Diadema",
+    "endereco": "Rua Guatemala, 19 - Jardim Canhema - Diadema/SP, 09941-140",
+    "latitude": "-23.6793496483207",
+    "longitude": "-46.610586373453096",
+    "modalidades": [
+         "17"
+      ]
+  },
+  {
+    "id": 9,
+    "nome": "SENAI Guarulhos",
+    "endereco": "Av. Dr. Renato de Andrade Maia, 601 - Jardim Paraventi - Guarulhos/SP, 07114-000",
+    "latitude": "-23.45688666171709",
+    "longitude": "-46.52681318833331"
+  },
+  {
+    "id": 10,
+    "nome": "SENAI Guarulhos - Dutra",
+    "endereco": "Av. Carmela Dutra, 380 - Jardim Presidente Dutra - Guarulhos/SP, 07170-150",
+    "latitude": "-23.433377456399693",
+    "longitude": "-46.432356729827625"
+  },
+  {
+    "id": 11,
+    "nome": "SENAI Ipiranga - Automobilística",
+    "endereco": "Rua Moreira de Godói, 226 - Ipiranga - São Paulo/SP, 04266-060",
+    "latitude": "-23.592057936274756",
+    "longitude": "-46.611064776311075"
+  },
+  {
+    "id": 12,
+    "nome": "SENAI Ipiranga - Refrigeração",
+    "endereco": "Rua Mil Oitocentos e Vinte e Dois, 76 - Ipiranga - São Paulo/SP, 04216-000",
+    "latitude": "-23.58565486226501",
+    "longitude": " -46.5989639149115"
+  },
+  {
+    "id": 13,
+    "nome": "SENAI Jandira",
+    "endereco": "Rua Elton Silva, 905 - Centro - Jandira/SP, 06600-025",
+    "latitude": "-23.52848318736551",
+    "longitude": "-46.89807759630188"
+  },
+  {
+    "id": 14,
+    "nome": "SENAI Leopoldina",
+    "endereco": "Rua Jaguaré Mirim, 71 - Vila Leopoldina - São Paulo/SP, 05311-020",
+    "latitude": "-23.526598949035602",
+    "longitude": "-46.73656636402588",
+    "modalidades": [
+         "17"
+      ]
+  },
+  {
+    "id": 15,
+    "nome": "SENAI Mauá",
+    "endereco": "Rua Luiz Lacava, 202 - Vila Bocaina - Mauá/SP, 09310-080",
+    "latitude": "-23.667938779468418",
+    "longitude": "-46.457969489154706",
+    "modalidades": [
+         "17"
+      ]
+  },
+  {
+    "id": 16,
+    "nome": "SENAI Mogi das Cruzes",
+    "endereco": "Rua Dom Antônio Cândido de Alvarenga, 353 - Centro - Mogi das Cruzes/SP, 08780-070",
+    "latitude": "-23.52279120195926", 
+    "longitude": "-46.185132159212415"
+  },
+  {
+    "id": 17,
+    "nome": "SENAI Mooca",
+    "endereco": "Rua Oratório, 215 - Mooca - São Paulo/SP, 03117-000",
+    "latitude": "-23.556408138767193",
+    "longitude": "-46.59824015500643",
+    "modalidades": [
+         "17"
+      ]    
+  },
+  {
+    "id": 18,
+    "nome": "SENAI Mooca - Gráfica",
+    "endereco": "Rua Bresser, 2315 - Mooca - São Paulo/SP, 03162-030",
+    "latitude": "-23.54863883495705", 
+    "longitude": "-46.59995787329612"
+  },
+  {
+    "id": 19,
+    "nome": "SENAI Osasco",
+    "endereco": "Rua Ari Barroso, 305 - Presidente Altino - Osasco/SP, 06216-901",
+    "latitude": "-23.52571132747549",
+    "longitude": "-46.77158211475435",
+    "modalidades": [
+         "08",
+         "09"
+      ]
+  },
+  {
+    "id": 20,
+    "nome": "SENAI Pirituba",
+    "endereco": "Rua Jerônimo Telles Jr. - Pirituba - São Paulo/SP, 05154-010",
+    "latitude": "-23.501418146110286",
+    "longitude": "-46.7509314266685"
+  },
+  {
+    "id": 21,
+    "nome": "SENAI Santana de Parnaíba",
+    "endereco": "Estrada Tenente Marques, 5300 - Fazendinha - Santana de Parnaíba/SP, 06529-001",
+    "latitude": "-23.407086567345317",
+    "longitude": "-46.87645055851779"
+  },
+  {
+    "id": 22,
+    "nome": "SENAI Santo Amaro",
+    "endereco": "Rua Amador Bueno, 504 - Santo Amaro - São Paulo/SP, 04752-000",
+    "latitude": "-23.652084399483424",
+    "longitude": "-46.712747847080735"
+  },
+  {
+    "id": 23,
+    "nome": "SENAI Santo Amaro - Suíço-Brasileira",
+    "endereco": "Rua Bento Branco de Andrade Filho, 379 - Santo Amaro - São Paulo/SP, 04757-000",
+    "latitude": "-23.648149236499197",
+    "longitude": "-46.72172506929784"
+  },
+  {
+    "id": 24,
+    "nome": "SENAI Santo André",
+    "endereco": "Av. Santos Dumont, 300 - Ipiranguinha - Santo André/SP, 09015-320",
+    "latitude": "-23.665525444733404",
+    "longitude": "-46.51857141806316",
+    "modalidades": [
+         "17"
+      ]
+  },
+  {
+    "id": 25,
+    "nome": "SENAI São Bernardo do Campo",
+    "endereco": "Av. Pereira Barreto, 456 - Centro - São Bernardo do Campo/SP, 09751-000",
+    "latitude": "-23.694304018700606",
+    "longitude": "-46.54993621696262",
+    "modalidades": [
+         "08",
+         "09",
+         "17"
+      ]
+  },
+  {
+    "id": 26,
+    "nome": "SENAI São Bernardo do Campo - Mercedes Benz",
+    "endereco": "Av. Alfred Jurzykowski, 562 - Pauliceia - São Bernardo do Campo/SP, 09880-050",
+    "latitude": "-23.660198516524257",
+    "longitude": "-46.57768008001411"
+  },
+  {
+    "id": 27,
+    "nome": "SENAI São Caetano do Sul - Cyber e IA",
+    "endereco": "Rua Niteroi, 180 - Centro - São Caetano do Sul/SP, 09510-200",
+    "latitude": "-23.614965457967248",
+    "longitude": "-46.57045201288987",
+    "modalidades": [
+         "08",
+         "09",
+         "17"
+      ]
+  },
+  {
+    "id": 28,
+    "nome": "SENAI São Caetano do Sul - Mecatrônica",
+    "endereco": "Rua Boa Vista, 825 - Boa Vista - São Caetano do Sul/SP, 09572-300",
+    "latitude": "-23.64415707352622",
+    "longitude": "-46.557229150180675"
+  },
+  {
+    "id": 29,
+    "nome": "SENAI Suzano",
+    "endereco": "Rua Ignácio Garcia, 321 - Cidade Edson - Suzano/SP, 08665-120",
+    "latitude": "-23.556513862010725",
+    "longitude": "-46.313129602415856",
+    "modalidades": [
+         "08",
+         "09"
+      ]
+  },
+  {
+    "id": 30,
+    "nome": "SENAI Tatuapé - Construção Civil",
+    "endereco": "Rua Padre Antonio de Sá, 333 - Tatuapé - São Paulo/SP, 03066-010",
+    "latitude": "-23.536182788139353",
+    "longitude": " -46.5750460882831"
+  },
+  {
+    "id": 31,
+    "nome": "SENAI Tatuapé - Manutenção",
+    "endereco": "Rua São Jorge, 634 - Tatuapé - São Paulo/SP, 03087-000",
+    "latitude": "-23.527399112087334",
+    "longitude": "-46.56517550183482"
+  },
+  {
+    "id": 32,
+    "nome": "SENAI Vila Alpina",
+    "endereco": "Rua Aracati Mirim, 115 - Vila Alpina - São Paulo/SP, 03227-160",
+    "latitude": "-23.58520597140113",
+    "longitude": "-46.56734877934414"
+  },
+  {
+    "id": 33,
+    "nome": "SENAI Vila Anastácio - CPTM",
+    "endereco": "Av. Raimundo Pereira de Magalhães, 1000 - Vila Anastácio - São Paulo/SP, 05092-040",
+    "latitude": "-23.511405407666857",
+    "longitude": "-46.713386990384194"
+  },
+  {
+    "id": 34,
+    "nome": "SENAI Vila Mariana - Conectividade",
+    "endereco": "Rua Gandavo, 550 - Vila Mariana - São Paulo/SP, 04023-001",
+    "latitude": "-23.591150132481715",
+    "longitude": "-46.64429113431486",
+    "modalidades": [
+         "17"
+      ]
+  },
+  {
+    "id": 35,
+    "nome": "SENAI Alumínio",
+    "endereco": "Av. Eng. Antônio de Castro Figueirôa, 60 - Vila Santa Luzia - Alumínio/SP, 18126-209",
+    "latitude": "-23.53175510957687",
+    "longitude": "-47.252881030854965",
+    "modalidades": [
+         "08"
+      ]
+  },
+  {
+    "id": 36,
+    "nome": "SENAI Americana",
+    "endereco": "Av. Brasil, 2801 - Parque Residencial Nardini - Americana/SP, 13468-390",
+    "latitude": "-22.75363008565322",
+    "longitude": "-47.35138527312257",
+    "modalidades": [
+         "08"
+      ]
+  },
+  {
+    "id": 37,
+    "nome": "SENAI Araçatuba",
+    "endereco": "Rua Bartolomeu de Gusmão, 150 - Aviação - Araçatuba/SP, 16055-550",
+    "latitude": "-21.193658803468605",
+    "longitude": "-50.426843670948564"
+  },
+  {
+    "id": 38,
+    "nome": "SENAI Araraquara",
+    "endereco": "Rua Hugo Negrini, 60 - Quitandinha - Araraquara/SP, 14800-028",
+    "latitude": "-21.806552485391084",
+    "longitude": "-48.19125504721173"
+  },
+  {
+    "id": 39,
+    "nome": "SENAI Araras",
+    "endereco": "Av. Ignacio Zurita Neto, 1025 - Jardim das Flores - Araras/SP, 13607-207",
+    "latitude": "-22.357495293626762",
+    "longitude": "-47.36533270948985"
+  },
+  {
+    "id": 40,
+    "nome": "SENAI Bauru",
+    "endereco": "Rua Virgílio Malta, 11/22 - Centro - Bauru-SP, 17015-220",
+    "latitude": "-22.32828352042263",
+    "longitude": "-49.073353221708615"
+  },
+  {
+    "id": 41,
+    "nome": "SENAI Birigui",
+    "endereco": "Av. João Cernach, 2180 - Vila Xavier - Birigui/SP, 16203-004",
+    "latitude": "-21.28609202110967",
+    "longitude": "-50.336033752676144"
+  },
+  {
+    "id": 42,
+    "nome": "SENAI Botucatu",
+    "endereco": "Av. Dr. Jaime de Almeida Pinto, 1332 - Jardim Reflorenda - Botucatu/SP, 18605-318",
+    "latitude": "-22.90997501469345", 
+    "longitude": "-48.43997321474852"
+  },
+  {
+    "id": 43,
+    "nome": "SENAI Bragança Paulista",
+    "endereco": "Av. Ernesto Vaz De Lima, 570 - Jardim Morumbi - Bragança Paulista/SP, 12926-215",
+    "latitude": "-21.286113984607333",
+    "longitude": "-50.33628718496714"
+  },
+  {
+    "id": 44,
+    "nome": "SENAI Campinas - R. Mange",
+    "endereco": "Rua Pastor Cícero Canuto de Lima, 71 - São Bernardo - Campinas/SP, 13036-210",
+    "latitude": "-22.913859781780445",
+    "longitude": "-47.067369880515784",
+    "modalidades": [
+         "08",
+         "17"
+      ]
+  },
+  {
+    "id": 45,
+    "nome": "SENAI Campinas - Zerbini",
+    "endereco": "Av. da Saudade, 125 - Ponte Preta - Campinas/SP, 13041-670",
+    "latitude": "-22.914087725412543",
+    "longitude": "-47.059149175349155"
+  },
+  {
+    "id": 46,
+    "nome": "SENAI Campo Limpo Paulista",
+    "endereco": "Av. Adherbal da Costa Moreira, 456 - Jardim América - Campo Limpo Paulista/SP, 13231-190",
+    "latitude": "-23.203109181793415",
+    "longitude": "-46.78092425333601"
+  },
+  {
+    "id": 47,
+    "nome": "SENAI Cruzeiro",
+    "endereco": "Rua São Tomas, 01 - Jardim São José - Cruzeiro/SP, 12703-290",
+    "latitude": "-22.58886190251888",
+    "longitude": "-44.97591583060314",
+    "modalidades": [
+         "08",
+         "08",
+         "17"
+      ]
+  },
+  {
+    "id": 48,
+    "nome": "SENAI Cubatão",
+    "endereco": "Praça da Bíblia, 1 - Centro - Cubatão/SP, 11510-300",
+    "latitude": "-23.882457808878947",
+    "longitude": "-46.42183580702885"
+  },
+  {
+    "id": 49,
+    "nome": "SENAI Franca",
+    "endereco": "Av. Presidente Vargas, 2500 - Jardim Petraglia - Franca/SP, 14402-000",
+    "latitude": "-20.517106673471478",
+    "longitude": "-47.379977928072414",
+    "modalidades": [
+         "17"
+      ]
+  },
+  {
+    "id": 50,
+    "nome": "SENAI Indaiatuba",
+    "endereco": "Rua Senai, 129 - Fazenda Pimenta - Indaiatuba/SP, 13347-680",
+    "latitude": "-23.143345301348287",
+    "longitude": "-47.21888338375722",
+    "modalidades": [
+         "17"
+      ]
+  },
+  {
+    "id": 51,
+    "nome": "SENAI Iracemápolis",
+    "endereco": "Rua Camilo Ferrari, 765 - Distrito Industrial - Iracemápolis/SP, 13495-000",
+    "latitude": "-22.57733985728447",
+    "longitude": "-47.49488248466549"
+  },
+  {
+    "id": 52,
+    "nome": "SENAI Itatiba",
+    "endereco": "Rua Alfredo Massaretti, 191 - Centro - Itatiba/SP, 13251-360",
+    "latitude": "-22.999726079657904",
+    "longitude": "-46.83460615625774"
+  },
+  {
+    "id": 53,
+    "nome": "SENAI Itu",
+    "endereco": "Av. Goiás, 139 - Centro - Itu/SP, 13301-370",
+    "latitude": "-23.259356597807532",
+    "longitude": "-47.2949710338654"
+  },
+  {
+    "id": 54,
+    "nome": "SENAI Jacareí",
+    "endereco": "Rua Antônio Fogaça de Almeida, 355 - Jardim América - Jacareí/SP, 12322-030",
+    "latitude": "-23.316274104009054",
+    "longitude": "-45.984500855853",
+    "modalidades": [
+         "17"
+      ]
+  },
+  {
+    "id": 55,
+    "nome": "SENAI Jaguariúna",
+    "endereco": "Rua Anésia Venturini Zani, 62 - Centro - Jaguariúna/SP, 13911-014",
+    "latitude": "-22.702898504010783",
+    "longitude": "-46.99352131983263",
+    "modalidades": [
+         "08"
+      ]
+  },
+  {
+    "id": 56,
+    "nome": "SENAI Jaú",
+    "endereco": "Rua Lions Clube, 240 - Jardim Netinho Prado - Jaú/SP, 17208-086",
+    "latitude": "-22.2837678738836",
+    "longitude": "-48.552618018629964",
+    "modalidades": [
+         "09",
+         "17"
+      ]
+  },
+  {
+    "id": 57,
+    "nome": "SENAI Jundiaí",
+    "endereco": "Rua Eng. Roberto Mange, 95 - Anhangabaú - Jundiaí/SP, 13208-200",
+    "latitude": "-23.194808841725937",
+    "longitude": "-46.891098257720216"
+  },
+  {
+    "id": 58,
+    "nome": "SENAI Lençóis Paulista",
+    "endereco": "Rua Aristeu Rodrigues Sampaio, 271 - Jardim das Nações - Lençóis Paulista/SP, 18685-730",
+    "latitude": "-22.57322730403165",
+    "longitude": "-48.81835742915747",
+    "modalidades": [
+         "09"
+      ]
+  },
+  {
+    "id": 59,
+    "nome": "SENAI Limeira",
+    "endereco": "Praça Prof. Antonio de Queiroz, 72 - Jardim Mercedes - Limeira/SP, 13480-251",
+    "latitude": "-22.570770467690707",
+    "longitude": "-47.40348931985326",
+    "modalidades": [
+         "08",
+         "09",
+         "17"
+      ]
+  },
+  {
+    "id": 60,
+    "nome": "SENAI Mairinque",
+    "endereco": "Av. Dr. José Maria Whitaker, 735 - Jardim Cruzeiro - Mairinque/SP, 18120-080",
+    "latitude": "-23.546073711592534",
+    "longitude": "-47.192534982147016"
+  },
+  {
+    "id": 61,
+    "nome": "SENAI Marília",
+    "endereco": "Av. Sampaio Vidal, 1079 - Centro - Marília/SP, 17500-022",
+    "latitude": "-22.213389234077",
+    "longitude": "-49.949810746101726",
+    "modalidades": [
+         "08",
+         "17"
+      ]
+  },
+  {
+    "id": 62,
+    "nome": "SENAI Matão",
+    "endereco": "Av. Ibitinga, 621 - Jardim Buscardi - Matão/SP, 15991-205",
+    "latitude": "-21.613773460752217",
+    "longitude": "-48.35121064317568"
+  },
+  {
+    "id": 63,
+    "nome": "SENAI Mirassol",
+    "endereco": "Rua Campos Sales, 1998 - Centro - Mirassol/SP, 15130-000",
+    "latitude": "-20.819573750511385",
+    "longitude": "-49.509941752377664"
+  },
+  {
+    "id": 64,
+    "nome": "SENAI Mogi Guaçu",
+    "endereco": "Rua Cambé, 140 - Ipê II - Mogi Guaçu/SP, 13846-080",
+    "latitude": "-22.342542144702847",
+    "longitude": "-46.95093464177707"
+  },
+  {
+    "id": 65,
+    "nome": "SENAI Ourinhos",
+    "endereco": "Rua Vitório Christoni, 1500 - Vila São Luiz - Ourinhos/SP, 19911-200",
+    "latitude": "-22.962474334370533",
+    "longitude": "-49.88217020088346"
+  },
+  {
+    "id": 66,
+    "nome": "SENAI Paulínia",
+    "endereco": "Av. Engenheiro Roberto Mange, 710 - Alto de Pinheiros - Paulínia/SP, 13145-324",
+    "latitude": "-22.744035564578205",
+    "longitude": "-47.16762159052988"
+  },
+  {
+    "id": 67,
+    "nome": "SENAI Pindamonhangaba",
+    "endereco": "Av. Abel Correa Guimarães, 971 - Jardim Resende - Pindamonhangaba/SP, 12422-441",
+    "latitude": "-22.936029485060487",
+    "longitude": "-45.47436614504154",
+    "modalidades": [
+         "08"
+      ]
+  },
+  {
+    "id": 68,
+    "nome": "SENAI Piracicaba - Centro",
+    "endereco": "Rua Dom Pedro II, 1474 - Centro - Piracicaba/SP, 13419-210",
+    "latitude": "-22.730542586519224",
+    "longitude": "-47.642686680395734",
+    "modalidades": [
+         "09",
+         "17"
+      ]
+  },
+  {
+    "id": 69,
+    "nome": "SENAI Piracicaba - Vila",
+    "endereco": "Av. Marechal Castelo Branco, 1000 - Jardim Primavera - Piracicaba/SP, 13412-010",
+    "latitude": "-22.691733437586365",
+    "longitude": "-47.650413298223334"
+  },
+  {
+    "id": 70,
+    "nome": "SENAI Pompeia",
+    "endereco": "Av. Fundação Shunji Nishimura, 605 - Distrito Industrial Jairo Antonio Zambon - Pompeia/SP, 17586-200",
+    "latitude": "-22.11068674652646",
+    "longitude": "-50.19675181902746",
+    "modalidades": [
+         "08",
+         "17"
+      ]
+  },
+  {
+    "id": 71,
+    "nome": "SENAI Presidente Prudente",
+    "endereco": "Rua Roberto Mange, 151 - Jardim Marupiara - Presidente Prudente/SP, 19060-030",
+    "latitude": "-22.12046756404059",
+    "longitude": "-51.40527749626502",
+    "modalidades": [
+         "09",
+         "17"
+      ]
+  },
+  {
+    "id": 72,
+    "nome": "SENAI Rafard",
+    "endereco": "Av. Dr. José Soares de Faria, 422 - Centro - Rafard/SP, 13370-000",
+    "latitude": "-22.120507321497335", 
+    "longitude": "-51.40532041105435"
+  },
+  {
+    "id": 73,
+    "nome": "SENAI Registro",
+    "endereco": "Av. Saburo Kameyama, 1005 - Agrochá - Registro/SP, 11900-000",
+    "latitude": "-24.52158722858605",
+    "longitude": "-47.82961000511445",
+    "modalidades": [
+         "17"
+      ]
+  },
+  {
+    "id": 74,
+    "nome": "SENAI Ribeirão Preto",
+    "endereco": "Rua Capitão Salomão, 1813 - Campos Elíseos - Ribeirão Preto/SP, 14085-430",
+    "latitude": "-21.17026598017141",
+    "longitude": " -47.799371963304104",
+    "modalidades": [
+         "08",
+         "17"
+      ]
+  },
+  {
+    "id": 75,
+    "nome": "SENAI Rio Claro",
+    "endereco": "Av. Quarenta e Seis, 661 - Jardim Primavera - Rio Claro/SP, 13504-050",
+    "latitude": "-22.390363833197615",
+    "longitude": "-47.567062749565764"
+  },
+  {
+    "id": 76,
+    "nome": "SENAI Santa Bárbara d'Oeste",
+    "endereco": "Rua Vereador Sergio Leopoldino Alves, 500 - Cidade Industrial - Santa Bárbara d'Oeste/SP, 13456-166",
+    "latitude": "-22.75766279473441",
+    "longitude": " -47.38286871885759",
+    "modalidades": [
+         "17"
+      ]
+  },
+  {
+    "id": 77,
+    "nome": "SENAI Santos",
+    "endereco": "Av. Senador Feijo, 421 - Vila Matias - Santos/SP, 11015-505",
+    "latitude": "-23.944577799211817",
+    "longitude": "-46.32555623109158"
+  },
+  {
+    "id": 78,
+    "nome": "SENAI São Carlos",
+    "endereco": "Rua Cândido Padim, 25 - Vila Prado - São Carlos/SP, 13574-320",
+    "latitude": "-22.023162145307282",
+    "longitude": "-47.89660225738329"
+  },
+  {
+    "id": 79,
+    "nome": "SENAI São João da Boa Vista",
+    "endereco": "Av. Brasília, 1021 - Perpétuo Socorro - São João da Boa Vista/SP, 13870-590",
+    "latitude": "-21.975821316062504",
+    "longitude": "-46.7913425036613"
+  },
+  {
+    "id": 80,
+    "nome": "SENAI São José do Rio Preto",
+    "endereco": "Rua Antonio de Godoy, 5405 - Vila São José - São José do Rio Preto/SP, 15090-025",
+    "latitude": "-20.827802866983326",
+    "longitude": "-49.39369165403471"
+  },
+  {
+    "id": 81,
+    "nome": "SENAI São José dos Campos",
+    "endereco": "Rua Pedro Rachid, 304 - Santana - São José dos Campos/SP, 12211-180",
+    "latitude": "-23.164127885961143",
+    "longitude": "-45.895940630620046",
+    "modalidades": [
+         "08",
+         "09",
+         "17"
+      ]
+  },
+  {
+    "id": 82,
+    "nome": "SENAI Sertãozinho",
+    "endereco": "Av. Fioravante Magro, 230 - Conj. Hab. Dr. Walter Antônio de Pádua Becker - Sertãozinho/SP, 14177-340",
+    "latitude": "-21.125853769439882",
+    "longitude": "-48.02040731799145"
+  },
+  {
+    "id": 83,
+    "nome": "SENAI Sorocaba - Santa Cecília",
+    "endereco": "Av. Itavuvu, 6515 - Jardim Santa Cecília - Sorocaba/SP, 18078-005",
+    "latitude": "-23.42903028359925",
+    "longitude": "-47.482937757743976"
+  },
+  {
+    "id": 84,
+    "nome": "SENAI Sorocaba - Santa Rosália",
+    "endereco": "Praça Roberto Mange, 30 - Santa Rosália - Sorocaba/SP, 18090-110",
+    "latitude": "-23.48652538741534",
+    "longitude": "-47.448670701153766",
+    "modalidades": [
+         "17"
+      ]
+    
+  },
+  {
+    "id": 85,
+    "nome": "SENAI Sumaré",
+    "endereco": "Av. Rebouças, 3965 - Jardim São Carlos - Sumaré/SP, 13170-023",
+    "latitude": "-22.833894691372844", 
+    "longitude": "-47.26265947937425",
+    "modalidades": [
+         "08",
+         "09",
+         "17"
+      ]
+  },
+  {
+    "id": 86,
+    "nome": "SENAI Taubaté",
+    "endereco": "Av. Independência, 846 - Independência - Taubaté/SP, 12031-001",
+    "latitude": "-23.03680277711066",
+    "longitude": "-45.579459544956784",
+    "modalidades": [
+         "08",
+         "09",
+         "17"
+      ]
+  },
+  {
+    "id": 87,
+    "nome": "SENAI Valinhos",
+    "endereco": "Rua Artur Fernandes Querido, 55 - Vila Santo Antonio - Valinhos/SP, 13270-530",
+    "latitude": "-22.978562177084758",
+    "longitude": "-47.009628932332575",
+    "modalidades": [
+         "08",
+         "17"
+      ]
+  },
+  {
+    "id": 88,
+    "nome": "SENAI Votuporanga",
+    "endereco": "Rua Olga Loti Camargo, 3500 - Jardim Santos Dumont - Votuporanga/SP, 15501-280",
+    "latitude": "-20.43585290442823",
+    "longitude": "-49.97112581761657",
+    "modalidades": [
+         "17"
+      ]
+  }
+]

@@ -1,0 +1,48 @@
+============================
+  HOME PAGE – TEXTOS
+============================
+
+--- BARRA SUPERIOR ---
+Título do menu lateral: Menu Coleta Já
+Item menu 1: Voltar
+Item menu 2: Home
+Item menu 3: Coleta
+Item menu 4: Scanner
+Item menu 5: Histórico Ambiental
+Item menu 6: Lembretes
+Nome do app na barra: Coleta Já!
+
+--- BOAS-VINDAS ---
+Bom dia, Amanda!
+
+--- CARD PRINCIPAL (Gamificação) ---
+Título: Reciclado (Semana)
+Descrição: 12.5 Kg
+Meta mensal: 85%
+Badge ecológica: Expert
+
+--- CARD DE COLETA ---
+Título: Próxima Coleta
+Tipo: Orgânico
+Data: 20/06/2026 – 08:00
+Status: Confirmado
+
+--- CARD EDUCATIVO – DICAS DE SEPARAÇÃO---
+Título do card: "Separação Correta"
+
+
+Dica 1:
+Texto: Cascas de frutas são resíduos orgânicos e devem ir para o lixo orgânico.
+
+Dica 2:
+Texto: Embalagens Tetra Pak são recicláveis e devem ser descartadas no lixo reciclável.
+
+Dica 3:
+Texto Papel com gordura não pode ser reciclado e deve ir para o lixo comum.
+
+
+
+--- CARD DE LEMBRETES ---
+Título: Próximo Lembrete
+Link: Ver todos
+Texto do próximo lembrete: Colocar o Lixo para Fora

@@ -1,0 +1,21 @@
+{
+  "name": "recicla-coleta-websocket",
+  "version": "1.0.0",
+  "private": true,
+  "description": "API WebSocket simulada para as telas 3 e 4 do Recicla+",
+  "type": "module",
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "test": "node --test",
+    "demo": "node examples/client.js",
+    "route:generate": "node scripts/gerar-rota.js",
+    "ranking:generate": "node scripts/gerar-ranking.js"
+  },
+  "dependencies": {
+    "ws": "8.22.0"
+  }
+}

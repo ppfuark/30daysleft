@@ -1,0 +1,8 @@
+Dados da empresa e da responsável
+Empresa: ReciclaTec resíduos indústria
+Responsável / Contato: Ana Souza
+E-mail: ana@reciclatec.example
+Endereço: Rua das Flores, 120, Centro
+Cidade: São Paulo
+Estado: SP
+Endereço completo: Rua das Flores, 120, Centro, São Paulo/SP

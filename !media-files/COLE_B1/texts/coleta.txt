@@ -1,0 +1,85 @@
+============================
+  TELA DE COLETA – TEXTOS
+============================
+
+--- BARRA SUPERIOR ---
+Título: Coleta Seletiva
+Botão: Voltar
+
+--- TÍTULO DA SEÇÃO ---
+Cronograma Semanal
+
+--- CALENDÁRIO SEMANAL ---
+Dias exibidos: Segunda | Terça | Quarta | Quinta | Sexta | Sábado
+
+--- TÍTULO DA SEÇÃO INFERIOR ---
+Coleta de Hoje + (dia selecionado)
+
+--- CARDS POR DIA DA SEMANA ---
+
+Segunda-feira:
+  Tipo: Orgânico
+  Horário: 07:00 – 09:00
+  Ícone: resíduo orgânico
+
+Terça-feira:
+  Tipo: Reciclável
+  Horário: 08:00 – 10:00
+  Ícone: resíduo reciclável
+
+Quarta-feira:
+  Tipo: Orgânico
+  Horário: 07:00 – 09:00
+  Ícone: resíduo orgânico
+
+Quinta-feira:
+  Tipo: Reciclável
+  Horário: 08:30 – 10:30
+  Ícone: resíduo reciclável
+
+Sexta-feira:
+  Tipo: Orgânico
+  Horário: 07:00 – 09:00
+  Ícone: resíduo orgânico
+
+Sábado:
+  Tipo: Reciclável
+  Horário: 09:00 – 11:00
+  Ícone: resíduo reciclável
+
+--- BOTÃO DE INFORMAÇÃO ---
+Texto do botão: Saiba o que descartar
+
+--- MODAL – RESÍDUO ORGÂNICO ---
+Título: O que descartar no Lixo Orgânico
+Conteúdo:
+• Restos de alimentos (cascas, sementes, sobras de comida)
+• Folhas e galhos pequenos
+• Borra de café e sachês de chá
+• Guardanapos e papel higiênico usados
+• Ovos e cascas de ovo
+Dica: O lixo orgânico pode ser compostado e virar adubo!
+Botão: Fechar (ícone X)
+
+--- MODAL – RESÍDUO RECICLÁVEL ---
+Título: O que descartar no Lixo Reciclável
+Conteúdo:
+Plásticos:
+• Garrafas PET, potes, sacolas limpas
+• Embalagens de shampoo e produtos de limpeza
+
+Vidros:
+• Garrafas, potes e frascos de vidro (sem tampa metálica)
+• Atenção: vidros quebrados devem ser embalados com segurança
+
+Papéis:
+• Jornais, revistas, caixas de papelão
+• Embalagens Tetra Pak
+• Papel de escritório
+• NÃO reciclar: papel engordurado, papel higiênico, papel carbono
+
+Metais:
+• Latas de alumínio (refrigerante, cerveja)
+• Latas de aço (atum, extrato de tomate)
+• Tampas metálicas
+Botão: Fechar (ícone X)

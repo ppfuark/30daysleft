@@ -1,0 +1,70 @@
+============================
+  TELA DE SCANNER – TEXTOS
+============================
+
+--- BARRA SUPERIOR ---
+Título: Scanner de Resíduos
+Botão: Voltar
+Ícone: Informações
+
+--- FEEDBACKS DE ANIMAÇÃO ---
+Antes escaneamento: Posicione o resíduo dentro da área de leitura
+Durante escaneamento: Analisando resíduo...
+Após escaneamento: Leitura concluída!
+
+--- BOTÃO PRINCIPAL ---
+Escanear Resíduo
+
+--- TEXTO DE DICA ---
+Dica: Certifique-se de que o resíduo esteja bem iluminado e centralizado na moldura.
+
+
+
+============================
+  RESÍDUOS (ciclo rotativo)
+============================
+
+--- RESÍDUO 1: GARRAFA PET ---
+Ícone: garrafa_pet_192x192.png
+Nome: Garrafa PET
+Categoria: Reciclável – Plástico
+Tempo de decomposição: 400 anos
+Instruções de descarte: Lave a embalagem, amasse para economizar espaço e descarte no lixo reciclável (amarelo).
+Texto "Saiba Mais"
+
+MODAL – GARRAFA PET:
+Nome do material: Garrafa PET
+Explicação do descarte correto: Lave e amasse a garrafa antes de descartar. Separe tampas e rótulos se possível. Descarte no lixo reciclável de plástico.
+Impacto ambiental: Uma garrafa PET descartada incorretamente pode contaminar o solo e a água por centenas de anos. Reciclada, pode virar fibra têxtil, calçados ou novas embalagens.
+Tempo de decomposição: 400 anos
+Botão: Fechar
+
+--- RESÍDUO 2: LATA DE ALUMÍNIO ---
+Ícone: lata_aluminio_192x192.png
+Nome: Lata de Alumínio
+Categoria: Reciclável – Metal
+Tempo de decomposição: 200 anos
+Instruções de descarte: Amasse a lata e descarte no lixo reciclável (amarelo). Evite deixar restos de líquido.
+Texto "Saiba Mais"
+
+MODAL – LATA DE ALUMÍNIO:
+Nome do material: Lata de Alumínio
+Explicação do descarte correto: Lave e amasse antes de descartar no lixo reciclável. O alumínio é 100% reciclável e pode ser reaproveitado infinitas vezes.
+Impacto ambiental: Reciclar alumínio consome 95% menos energia do que produzir alumínio novo. Cada lata reciclada evita a extração de minério.
+Tempo de decomposição: 200 anos
+Botão: Fechar
+
+--- RESÍDUO 3: RESTO DE COMIDA ---
+Ícone: organico_192x192.png
+Nome: Resto de Comida
+Categoria: Orgânico
+Tempo de decomposição: 2 a 4 semanas
+Instruções de descarte: Descarte no lixo orgânico (marrom). Pode ser compostado para virar adubo natural.
+Texto "Saiba Mais"
+
+MODAL – RESTO DE COMIDA:
+Nome do material: Resto de Comida
+Explicação do descarte correto: Restos de alimentos devem ir para o lixo orgânico. Evite misturar com lixo reciclável, pois contamina os materiais recicláveis.
+Impacto ambiental: Quando descartado corretamente, o lixo orgânico pode ser compostado e virar adubo, reduzindo o volume de lixo em aterros e devolvendo nutrientes ao solo.
+Tempo de decomposição: 2 a 4 semanas
+Botão: Fechar

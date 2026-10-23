@@ -1,0 +1,72 @@
+[
+  {
+    "nome": "Ecoponto Centro",
+    "endereco": "Rua da Liberdade, 123",
+    "distancia": "0.5 km",
+    "horario": "Seg-Sex: 8h-18h",
+    "avaliacao": "4.8"
+  },
+  {
+    "nome": "Ponto Verde Paulista",
+    "endereco": "Avenida Paulista, 890",
+    "distancia": "1.2 km",
+    "horario": "Seg-Sáb: 7h-19h",
+    "avaliacao": "4.7"
+  },
+  {
+    "nome": "Ecoponto Jardim das Flores",
+    "endereco": "Rua das Acácias, 456",
+    "distancia": "2.0 km",
+    "horario": "Seg-Dom: 8h-20h",
+    "avaliacao": "4.9"
+  },
+  {
+    "nome": "Coleta Sustentável Norte",
+    "endereco": "Rua do Bosque, 78",
+    "distancia": "2.8 km",
+    "horario": "Seg-Sex: 9h-17h",
+    "avaliacao": "4.5"
+  },
+  {
+    "nome": "Ecoponto Vila Nova",
+    "endereco": "Avenida das Palmeiras, 1500",
+    "distancia": "3.1 km",
+    "horario": "Ter-Dom: 8h-18h",
+    "avaliacao": "4.6"
+  },
+  {
+    "nome": "Recicla Fácil Leste",
+    "endereco": "Rua Aurora, 245",
+    "distancia": "3.7 km",
+    "horario": "Seg-Sáb: 8h-16h",
+    "avaliacao": "4.4"
+  },
+  {
+    "nome": "Ponto Eco Esperança",
+    "endereco": "Rua Esperança, 987",
+    "distancia": "4.2 km",
+    "horario": "Seg-Sex: 8h-18h",
+    "avaliacao": "4.7"
+  },
+  {
+    "nome": "Ecoponto Parque Verde",
+    "endereco": "Avenida Central, 321",
+    "distancia": "4.9 km",
+    "horario": "Seg-Dom: 6h-22h",
+    "avaliacao": "4.9"
+  },
+  {
+    "nome": "Estação Reciclar",
+    "endereco": "Rua dos Ipês, 654",
+    "distancia": "5.3 km",
+    "horario": "Seg-Sáb: 8h-17h",
+    "avaliacao": "4.3"
+  },
+  {
+    "nome": "EcoHub Sustentável",
+    "endereco": "Rua São José, 112",
+    "distancia": "6.0 km",
+    "horario": "Seg-Sex: 7h-18h",
+    "avaliacao": "4.8"
+  }
+]

@@ -1,0 +1,55 @@
+{
+  "atualizado_em": "2026-10-21T00:16:30.600Z",
+  "ranking": [
+    {
+      "usuario_id": 1,
+      "nome": "João Silva",
+      "score": 450
+    },
+    {
+      "usuario_id": 2,
+      "nome": "Ana Souza",
+      "score": 10
+    },
+    {
+      "usuario_id": 3,
+      "nome": "Carlos Oliveira",
+      "score": 5
+    },
+    {
+      "usuario_id": 4,
+      "nome": "Mariana Santos",
+      "score": 10
+    },
+    {
+      "usuario_id": 5,
+      "nome": "Pedro Costa",
+      "score": 5
+    },
+    {
+      "usuario_id": 6,
+      "nome": "Juliana Almeida",
+      "score": 10
+    },
+    {
+      "usuario_id": 7,
+      "nome": "Rafael Pereira",
+      "score": 5
+    },
+    {
+      "usuario_id": 8,
+      "nome": "Beatriz Lima",
+      "score": 10
+    },
+    {
+      "usuario_id": 9,
+      "nome": "Lucas Rodrigues",
+      "score": 5
+    },
+    {
+      "usuario_id": 10,
+      "nome": "Camila Ferreira",
+      "score": 10
+    }
+  ]
+}

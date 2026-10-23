@@ -1,0 +1,277 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Usuário VaptFood",
+      "email": "usuario@email.com",
+      "password": "123456",
+      "phone": "(19)99999-9999",
+      "avatar": "image.png",
+      "token": "jwt_token_fake_vaptfood_123456",
+      "notifications": true
+    }
+  ],
+
+  "categories": [
+    {
+      "id": 1,
+      "name": "Hambúrguer",
+      "icon": "image.png"
+    },
+    {
+      "id": 2,
+      "name": "Pizza",
+      "icon": "image.png"
+    },
+    {
+      "id": 3,
+      "name": "Sobremesas",
+      "icon": "image.png"
+    },
+    {
+      "id": 4,
+      "name": "Japonesa",
+      "icon": "image.png"
+    }
+  ],
+
+  "promotions": [
+    {
+      "id": 1,
+      "title": "50% OFF",
+      "subtitle": "Em seu primeiro pedido hoje.",
+      "button": "Aproveitar",
+      "discount": 50,
+      "image": "image.png"
+    }
+  ],
+
+  "restaurants": [
+    {
+      "id": 1,
+      "name": "Burger Tech",
+      "categoryId": 1,
+      "rating": 4.8,
+      "deliveryTime": "30-40 min",
+      "deliveryFee": 5.00,
+      "image": "image.png",
+      "active": true
+    },
+    {
+      "id": 2,
+      "name": "Pizza Square",
+      "categoryId": 2,
+      "rating": 4.5,
+      "deliveryTime": "45-60 min",
+      "deliveryFee": 0,
+      "image": "image.png",
+      "active": true
+    }
+  ],
+
+  "products": [
+    {
+      "id": 101,
+      "restaurantId": 1,
+      "category": "Hamburguers",
+      "featured": true,
+      "name": "Da Casa",
+      "description": "Pão leve, carne saborosa, cheddar marcante, alface crocante e tomate maduro.",
+      "price": 29.90,
+      "image": "image.png"
+    },
+    {
+      "id": 102,
+      "restaurantId": 1,
+      "category": "Hamburguers",
+      "featured": false,
+      "subcategory": "ENTRADAS",
+      "name": "Classic Burger Gold",
+      "description": "Pão estilo brioche, hambúrguer bovino, cheddar e molho especial.",
+      "price": 45.00,
+      "image": "image.png"
+    },
+    {
+      "id": 103,
+      "restaurantId": 1,
+      "category": "Bebidas",
+      "name": "Coca-Cola",
+      "description": "Lata 350ml",
+      "price": 8.00,
+      "image": "image.png"
+    },
+    {
+      "id": 104,
+      "restaurantId": 1,
+      "category": "Bebidas",
+      "name": "Suco de Laranja",
+      "description": "Natural 500ml",
+      "price": 10.00,
+      "image": "image.png"
+    },
+    {
+      "id": 201,
+      "restaurantId": 2,
+      "category": "Pizza",
+      "name": "Pizza Napolitana",
+      "description": "Molho italiano, muçarela e manjericão.",
+      "price": 78.00,
+      "image": "image.png"
+    }
+  ],
+
+  "productDetails": [
+    {
+      "id": 102,
+      "description": "Pão estilo brioche seguido por um toque de molho especial e cheddar.",
+      "price": 45.00,
+      "rating": 4.8,
+      "deliveryTime": 20,
+      "restaurant": "Burger Tech",
+      "image": "image.png",
+      "drinks": [
+        {
+          "id": 1,
+          "name": "Coca-Cola",
+          "price": 8.00
+        },
+        {
+          "id": 2,
+          "name": "Suco de Laranja",
+          "price": 10.00
+        }
+      ]
+    }
+  ],
+
+  "cart": [
+    {
+      "id": 1,
+      "productId": 102,
+      "name": "Classic Burger Gold",
+      "description": "Pão, carne 180g, queijo cheddar",
+      "image": "image.png",
+      "quantity": 1,
+      "price": 45.00
+    },
+    {
+      "id": 2,
+      "productId": 301,
+      "name": "Batata Frita",
+      "description": "Porção de 100g",
+      "image": "image.png",
+      "quantity": 1,
+      "price": 10.50
+    }
+  ],
+
+  "cartSummary": {
+    "subtotal": 55.50,
+    "coupon": -27.75,
+    "deliveryFee": 1.00,
+    "total": 28.75,
+    "cutlery": false
+  },
+
+  "couriers": [
+    {
+      "id": 1,
+      "name": "Carlos Alberto",
+      "phone": "(19)99999-9999",
+      "avatar": "image.png",
+      "vehicle": "Moto"
+    }
+  ],
+
+  "orders": [
+    {
+      "id": 8821,
+      "userId": 1,
+      "restaurantId": 1,
+      "courierId": 1,
+      "date": "2026-04-15T12:30:00",
+      "status": "Preparando",
+      "estimatedMin": 12,
+      "estimatedMax": 18,
+      "subtotal": 55.50,
+      "discount": 27.75,
+      "deliveryFee": 1.00,
+      "total": 28.75,
+      "items": [
+        {
+          "productId": 102,
+          "name": "Classic Burger Gold",
+          "quantity": 1,
+          "price": 45.00
+        },
+        {
+          "productId": 301,
+          "name": "Batata Frita",
+          "quantity": 1,
+          "price": 10.50
+        }
+      ]
+    }
+  ],
+
+  "tracking": [
+    {
+      "orderId": 8821,
+      "courier": {
+        "id": 1,
+        "name": "Carlos Alberto",
+        "phone": "(19)99999-9999"
+      },
+      "location": {
+        "latitude": -22.8214,
+        "longitude": -47.2665
+      },
+      "timeline": [
+        {
+          "step": "Preparando",
+          "completed": true
+        },
+        {
+          "step": "Saiu para Entrega",
+          "completed": false
+        },
+        {
+          "step": "Entregue",
+          "completed": false
+        }
+      ]
+    }
+  ],
+
+  "recentOrders": [
+    {
+      "id": 1001,
+      "restaurant": "Hamburguer King",
+      "date": "Ontem",
+      "total": 45.90,
+      "status": "CONCLUÍDO"
+    },
+    {
+      "id": 1002,
+      "restaurant": "Pizzaria Napolitana",
+      "date": "03 Out",
+      "total": 78.00,
+      "status": "CONCLUÍDO"
+    }
+  ],
+
+  "notifications": [
+    {
+      "id": 1,
+      "active": true,
+    }
+  ],
+
+  "forgotPassword": [
+    {
+      "email": "usuario@email.com",
+      "success": true,
+      "message": "Link de redefinição enviado."
+    }
+  ]
+}

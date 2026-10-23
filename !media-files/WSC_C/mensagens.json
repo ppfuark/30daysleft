@@ -1,0 +1,705 @@
+[
+  {
+    "id_conversa": 1,
+    "participantes": [3, 7],
+    "nomes": ["Gabriel Oliveira", "Guilherme Alves"],
+    "mensagens": [
+      {
+        "id": 1,
+        "remetente_id": 3,
+        "remetente_nome": "Gabriel Oliveira",
+        "tipo": "texto",
+        "conteudo": "E aí Guilherme! Já terminou a tela de Login?",
+        "data_hora": "2026-10-01T08:14:22",
+        "lida": true
+      },
+      {
+        "id": 2,
+        "remetente_id": 7,
+        "remetente_nome": "Guilherme Alves",
+        "tipo": "texto",
+        "conteudo": "Quase! Tô travado na parte do bloqueio de 30 segundos depois de 3 tentativas erradas. Você conseguiu fazer?",
+        "data_hora": "2026-10-01T08:16:05",
+        "lida": true
+      },
+      {
+        "id": 3,
+        "remetente_id": 3,
+        "remetente_nome": "Gabriel Oliveira",
+        "tipo": "audio",
+        "conteudo": "audio/conversa1_msg3.mp3",
+        "duracao_segundos": 18,
+        "transcricao": "Fiz usando um Handler com postDelayed de 30 segundos, aí dentro eu reabilito os campos e boto a contagem de tentativas de volta pra zero.",
+        "data_hora": "2026-10-01T08:17:44",
+        "lida": true
+      },
+      {
+        "id": 4,
+        "remetente_id": 7,
+        "remetente_nome": "Guilherme Alves",
+        "tipo": "texto",
+        "conteudo": "Caramba, faz sentido! Obrigado. Aí eu preciso desabilitar os campos também né, não só o botão.",
+        "data_hora": "2026-10-01T08:19:10",
+        "lida": true
+      },
+      {
+        "id": 5,
+        "remetente_id": 3,
+        "remetente_nome": "Gabriel Oliveira",
+        "tipo": "texto",
+        "conteudo": "Isso! Os dois botões E os campos de texto. O documento fala pra deixar tudo \"apagado\".",
+        "data_hora": "2026-10-01T08:20:33",
+        "lida": true
+      },
+      {
+        "id": 6,
+        "remetente_id": 7,
+        "remetente_nome": "Guilherme Alves",
+        "tipo": "texto",
+        "conteudo": "👍 Valeu demais!",
+        "data_hora": "2026-10-01T08:21:00",
+        "lida": true
+      }
+    ]
+  },
+  {
+    "id_conversa": 2,
+    "participantes": [4, 11],
+    "nomes": ["Larissa Souza", "Thiago Costa"],
+    "mensagens": [
+      {
+        "id": 1,
+        "remetente_id": 4,
+        "remetente_nome": "Larissa Souza",
+        "tipo": "texto",
+        "conteudo": "Thiago, boa tarde! Você sabe como funciona o carrossel de usuários na Timeline? Qual biblioteca você usou?",
+        "data_hora": "2026-10-02T13:05:10",
+        "lida": true
+      },
+      {
+        "id": 2,
+        "remetente_id": 11,
+        "remetente_nome": "Thiago Costa",
+        "tipo": "texto",
+        "conteudo": "Boa tarde! Eu usei o ViewPager2 com um RecyclerView horizontal. Ficou bem fluido.",
+        "data_hora": "2026-10-02T13:07:45",
+        "lida": true
+      },
+      {
+        "id": 3,
+        "remetente_id": 4,
+        "remetente_nome": "Larissa Souza",
+        "tipo": "audio",
+        "conteudo": "audio/conversa2_msg3.mp3",
+        "duracao_segundos": 22,
+        "transcricao": "Hmm, tentei com RecyclerView mas tô tendo problema em centralizar o item atual e deixar os adjacentes visíveis pela metade. Tem alguma dica?",
+        "data_hora": "2026-10-02T13:09:30",
+        "lida": true
+      },
+      {
+        "id": 4,
+        "remetente_id": 11,
+        "remetente_nome": "Thiago Costa",
+        "tipo": "texto",
+        "conteudo": "Você precisa setar o PagerSnapHelper e ajustar o padding lateral do RecyclerView com clipToPadding = false. Aí ele mostra os itens do lado.",
+        "data_hora": "2026-10-02T13:12:18",
+        "lida": true
+      },
+      {
+        "id": 5,
+        "remetente_id": 4,
+        "remetente_nome": "Larissa Souza",
+        "tipo": "texto",
+        "conteudo": "Funcionou perfeitamente!! Ficou igualzinho ao wireframe. Muito obrigada!",
+        "data_hora": "2026-10-02T13:28:54",
+        "lida": true
+      },
+      {
+        "id": 6,
+        "remetente_id": 11,
+        "remetente_nome": "Thiago Costa",
+        "tipo": "texto",
+        "conteudo": "Que bom! Boa prova pra você 🚀",
+        "data_hora": "2026-10-02T13:29:40",
+        "lida": false
+      }
+    ]
+  },
+  {
+    "id_conversa": 3,
+    "participantes": [5, 13],
+    "nomes": ["Matheus Rodrigues", "Vinicius Carvalho"],
+    "mensagens": [
+      {
+        "id": 1,
+        "remetente_id": 13,
+        "remetente_nome": "Vinicius Carvalho",
+        "tipo": "texto",
+        "conteudo": "Matheus, você já chegou na parte do Mini Game? Tô com dúvida sobre o acelerômetro.",
+        "data_hora": "2026-10-03T09:00:00",
+        "lida": true
+      },
+      {
+        "id": 2,
+        "remetente_id": 5,
+        "remetente_nome": "Matheus Rodrigues",
+        "tipo": "texto",
+        "conteudo": "Cheguei sim! Que dúvida específica?",
+        "data_hora": "2026-10-03T09:01:22",
+        "lida": true
+      },
+      {
+        "id": 3,
+        "remetente_id": 13,
+        "remetente_nome": "Vinicius Carvalho",
+        "tipo": "audio",
+        "conteudo": "audio/conversa3_msg3.mp3",
+        "duracao_segundos": 30,
+        "transcricao": "Então, o documento diz que inclinando pra frente o jogador acelera e pra trás desacelera. Mas como eu capturo isso no Android? É pelo SensorManager com TYPE_ACCELEROMETER mesmo?",
+        "data_hora": "2026-10-03T09:02:55",
+        "lida": true
+      },
+      {
+        "id": 4,
+        "remetente_id": 5,
+        "remetente_nome": "Matheus Rodrigues",
+        "tipo": "audio",
+        "conteudo": "audio/conversa3_msg4.mp3",
+        "duracao_segundos": 35,
+        "transcricao": "Exato, TYPE_ACCELEROMETER. O eixo Y é o que te interessa pra frente e pra trás. Quando o valor de Y aumenta o celular tá inclinando pra frente, quando diminui tá pra trás. Eu uso um threshold pra não ficar sensível demais.",
+        "data_hora": "2026-10-03T09:05:10",
+        "lida": true
+      },
+      {
+        "id": 5,
+        "remetente_id": 13,
+        "remetente_nome": "Vinicius Carvalho",
+        "tipo": "texto",
+        "conteudo": "E o giro pra esquerda/direita que causa Game Over, é o eixo X então?",
+        "data_hora": "2026-10-03T09:06:30",
+        "lida": true
+      },
+      {
+        "id": 6,
+        "remetente_id": 5,
+        "remetente_nome": "Matheus Rodrigues",
+        "tipo": "texto",
+        "conteudo": "Isso! Eixo X. Mas só dispara o Game Over se o Y indicar que já está acelerando. Lê o documento com atenção nessa parte.",
+        "data_hora": "2026-10-03T09:07:45",
+        "lida": true
+      },
+      {
+        "id": 7,
+        "remetente_id": 13,
+        "remetente_nome": "Vinicius Carvalho",
+        "tipo": "texto",
+        "conteudo": "Perfeito, entendi! Valeu Matheus 💪",
+        "data_hora": "2026-10-03T09:08:20",
+        "lida": false
+      }
+    ]
+  },
+  {
+    "id_conversa": 4,
+    "participantes": [8, 22],
+    "nomes": ["Amanda Pereira", "Isabela Rocha"],
+    "mensagens": [
+      {
+        "id": 1,
+        "remetente_id": 22,
+        "remetente_nome": "Isabela Rocha",
+        "tipo": "texto",
+        "conteudo": "Amanda! Você já implementou o Chat? Tô com problema no tap and hold nas mensagens.",
+        "data_hora": "2026-10-04T10:30:00",
+        "lida": true
+      },
+      {
+        "id": 2,
+        "remetente_id": 8,
+        "remetente_nome": "Amanda Pereira",
+        "tipo": "texto",
+        "conteudo": "Oi Isa! Implementei sim. Você usou setOnLongClickListener no item do RecyclerView?",
+        "data_hora": "2026-10-04T10:32:14",
+        "lida": true
+      },
+      {
+        "id": 3,
+        "remetente_id": 22,
+        "remetente_nome": "Isabela Rocha",
+        "tipo": "texto",
+        "conteudo": "Sim, mas o menu de opções que abre não tá bonito. Como você fez o visual?",
+        "data_hora": "2026-10-04T10:33:50",
+        "lida": true
+      },
+      {
+        "id": 4,
+        "remetente_id": 8,
+        "remetente_nome": "Amanda Pereira",
+        "tipo": "audio",
+        "conteudo": "audio/conversa4_msg4.mp3",
+        "duracao_segundos": 28,
+        "transcricao": "Eu usei um AlertDialog customizado com três opções: Excluir para mim, Excluir para todos e Sair. Aí defini um layout XML personalizado pra ele ficar com o visual do app.",
+        "data_hora": "2026-10-04T10:35:22",
+        "lida": true
+      },
+      {
+        "id": 5,
+        "remetente_id": 22,
+        "remetente_nome": "Isabela Rocha",
+        "tipo": "texto",
+        "conteudo": "Faz sentido! E o bloqueio de print, como você resolveu?",
+        "data_hora": "2026-10-04T10:37:00",
+        "lida": true
+      },
+      {
+        "id": 6,
+        "remetente_id": 8,
+        "remetente_nome": "Amanda Pereira",
+        "tipo": "texto",
+        "conteudo": "Só uma linha: getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE). Bota no onCreate da Activity do chat.",
+        "data_hora": "2026-10-04T10:38:45",
+        "lida": true
+      },
+      {
+        "id": 7,
+        "remetente_id": 22,
+        "remetente_nome": "Isabela Rocha",
+        "tipo": "texto",
+        "conteudo": "Que simples! Nunca tinha usado esse flag. Obrigada!! 😊",
+        "data_hora": "2026-10-04T10:39:30",
+        "lida": false
+      }
+    ]
+  },
+  {
+    "id_conversa": 5,
+    "participantes": [14, 25],
+    "nomes": ["Leticia Martins", "Alexandre Pinto"],
+    "mensagens": [
+      {
+        "id": 1,
+        "remetente_id": 14,
+        "remetente_nome": "Leticia Martins",
+        "tipo": "texto",
+        "conteudo": "Alexandre, bom dia! Você já fez a parte de internacionalização da Timeline? Português, inglês e espanhol?",
+        "data_hora": "2026-10-05T07:55:00",
+        "lida": true
+      },
+      {
+        "id": 2,
+        "remetente_id": 25,
+        "remetente_nome": "Alexandre Pinto",
+        "tipo": "texto",
+        "conteudo": "Bom dia! Fiz sim, usei os arquivos strings.xml nas pastas values-pt, values-en e values-es.",
+        "data_hora": "2026-10-05T07:57:40",
+        "lida": true
+      },
+      {
+        "id": 3,
+        "remetente_id": 14,
+        "remetente_nome": "Leticia Martins",
+        "tipo": "audio",
+        "conteudo": "audio/conversa5_msg3.mp3",
+        "duracao_segundos": 20,
+        "transcricao": "O Android já seleciona automaticamente conforme o idioma do dispositivo né? Não precisa fazer nada em código?",
+        "data_hora": "2026-10-05T07:59:15",
+        "lida": true
+      },
+      {
+        "id": 4,
+        "remetente_id": 25,
+        "remetente_nome": "Alexandre Pinto",
+        "tipo": "texto",
+        "conteudo": "Exatamente, o Android resolve sozinho! Só precisa garantir que todos os textos estejam nos três arquivos. Se faltar algum ele cai pro padrão.",
+        "data_hora": "2026-10-05T08:01:00",
+        "lida": true
+      },
+      {
+        "id": 5,
+        "remetente_id": 14,
+        "remetente_nome": "Leticia Martins",
+        "tipo": "texto",
+        "conteudo": "Entendido! Mas os textos da timeline (posts, comentários) que vêm do JSON não precisam de tradução né, são os dados em si.",
+        "data_hora": "2026-10-05T08:02:30",
+        "lida": true
+      },
+      {
+        "id": 6,
+        "remetente_id": 25,
+        "remetente_nome": "Alexandre Pinto",
+        "tipo": "texto",
+        "conteudo": "Correto! Só os textos fixos da interface precisam. Os dados do JSON ficam como estão.",
+        "data_hora": "2026-10-05T08:03:50",
+        "lida": false
+      }
+    ]
+  },
+  {
+    "id_conversa": 6,
+    "participantes": [17, 29],
+    "nomes": ["Gustavo Barbosa", "Ricardo Moreira"],
+    "mensagens": [
+      {
+        "id": 1,
+        "remetente_id": 17,
+        "remetente_nome": "Gustavo Barbosa",
+        "tipo": "texto",
+        "conteudo": "Ric! Tô com um problema sério no Meu Perfil. O enquadramento circular da foto não tá funcionando direito.",
+        "data_hora": "2026-10-06T14:10:00",
+        "lida": true
+      },
+      {
+        "id": 2,
+        "remetente_id": 29,
+        "remetente_nome": "Ricardo Moreira",
+        "tipo": "texto",
+        "conteudo": "Que problema específico? A foto não corta em círculo ou o arraste não funciona?",
+        "data_hora": "2026-10-06T14:11:30",
+        "lida": true
+      },
+      {
+        "id": 3,
+        "remetente_id": 17,
+        "remetente_nome": "Gustavo Barbosa",
+        "tipo": "audio",
+        "conteudo": "audio/conversa6_msg3.mp3",
+        "duracao_segundos": 25,
+        "transcricao": "O arraste com tap and hold não tá responsivo, às vezes ele move e às vezes não. Parece conflito de touch event.",
+        "data_hora": "2026-10-06T14:13:00",
+        "lida": true
+      },
+      {
+        "id": 4,
+        "remetente_id": 29,
+        "remetente_nome": "Ricardo Moreira",
+        "tipo": "audio",
+        "conteudo": "audio/conversa6_msg4.mp3",
+        "duracao_segundos": 32,
+        "transcricao": "Tive o mesmo problema. Resolve sobrescrevendo o onTouchEvent e dentro do ACTION_MOVE você atualiza as coordenadas da imagem dentro do círculo. O segredo é consumir o evento retornando true no ACTION_DOWN.",
+        "data_hora": "2026-10-06T14:15:45",
+        "lida": true
+      },
+      {
+        "id": 5,
+        "remetente_id": 17,
+        "remetente_nome": "Gustavo Barbosa",
+        "tipo": "texto",
+        "conteudo": "Caraca, funcionou! Era exatamente isso. Você salva o enquadramento no JSON também?",
+        "data_hora": "2026-10-06T14:30:20",
+        "lida": true
+      },
+      {
+        "id": 6,
+        "remetente_id": 29,
+        "remetente_nome": "Ricardo Moreira",
+        "tipo": "texto",
+        "conteudo": "Sim, o documento fala em salvar na API/JSON. Eu salvo o Base64 da imagem recortada diretamente.",
+        "data_hora": "2026-10-06T14:32:00",
+        "lida": true
+      },
+      {
+        "id": 7,
+        "remetente_id": 17,
+        "remetente_nome": "Gustavo Barbosa",
+        "tipo": "texto",
+        "conteudo": "Boa ideia! Obrigado mesmo, você me salvou 🙏",
+        "data_hora": "2026-10-06T14:32:45",
+        "lida": false
+      }
+    ]
+  },
+  {
+    "id_conversa": 7,
+    "participantes": [19, 35],
+    "nomes": ["Daniel Almeida", "Diego Marques"],
+    "mensagens": [
+      {
+        "id": 1,
+        "remetente_id": 35,
+        "remetente_nome": "Diego Marques",
+        "tipo": "texto",
+        "conteudo": "Daniel! Você terminou o Home Widget? Como você acessou os dados do JSON pra calcular a média?",
+        "data_hora": "2026-10-07T16:00:00",
+        "lida": true
+      },
+      {
+        "id": 2,
+        "remetente_id": 19,
+        "remetente_nome": "Daniel Almeida",
+        "tipo": "texto",
+        "conteudo": "Fiz um SharedPreferences pra guardar o JSON do usuário logado e leio de lá no Widget.",
+        "data_hora": "2026-10-07T16:02:10",
+        "lida": true
+      },
+      {
+        "id": 3,
+        "remetente_id": 35,
+        "remetente_nome": "Diego Marques",
+        "tipo": "texto",
+        "conteudo": "E pra calcular a média, você filtra pelo mês atual?",
+        "data_hora": "2026-10-07T16:03:30",
+        "lida": true
+      },
+      {
+        "id": 4,
+        "remetente_id": 19,
+        "remetente_nome": "Daniel Almeida",
+        "tipo": "audio",
+        "conteudo": "audio/conversa7_msg4.mp3",
+        "duracao_segundos": 27,
+        "transcricao": "Sim, filtro as avaliações do mês atual, somo as notas e divido pelo total. Aí verifico se a média ficou acima de 60 pra colocar o background verde, senão deixo transparente.",
+        "data_hora": "2026-10-07T16:05:00",
+        "lida": true
+      },
+      {
+        "id": 5,
+        "remetente_id": 35,
+        "remetente_nome": "Diego Marques",
+        "tipo": "texto",
+        "conteudo": "E as horas de treinamento? Esse campo tá no JSON?",
+        "data_hora": "2026-10-07T16:06:20",
+        "lida": true
+      },
+      {
+        "id": 6,
+        "remetente_id": 19,
+        "remetente_nome": "Daniel Almeida",
+        "tipo": "texto",
+        "conteudo": "Tá sim, campo horas_treinamento_mes. Se for menor que 8 vai background vermelho.",
+        "data_hora": "2026-10-07T16:07:45",
+        "lida": true
+      },
+      {
+        "id": 7,
+        "remetente_id": 35,
+        "remetente_nome": "Diego Marques",
+        "tipo": "texto",
+        "conteudo": "Perfeito! Muito obrigado Daniel. Você foi mais rápido que a documentação 😂",
+        "data_hora": "2026-10-07T16:08:30",
+        "lida": false
+      }
+    ]
+  },
+  {
+    "id_conversa": 8,
+    "participantes": [21, 31],
+    "nomes": ["Leonardo Diaz", "Arthur Correia"],
+    "mensagens": [
+      {
+        "id": 1,
+        "remetente_id": 21,
+        "remetente_nome": "Leonardo Diaz",
+        "tipo": "texto",
+        "conteudo": "Arthur! Como você fez a pista randômica do Mini Game? Tô quebrando a cabeça aqui.",
+        "data_hora": "2026-10-08T11:00:00",
+        "lida": true
+      },
+      {
+        "id": 2,
+        "remetente_id": 31,
+        "remetente_nome": "Arthur Correia",
+        "tipo": "audio",
+        "conteudo": "audio/conversa8_msg2.mp3",
+        "duracao_segundos": 40,
+        "transcricao": "Eu gero a pista em segmentos. Cada segmento tem uma curva pra esquerda, pra direita ou reta. Uso Random pra sortear o tipo de cada segmento e aí desenho no Canvas. O importante é que as curvas sejam suaves pra não ser impossível de jogar.",
+        "data_hora": "2026-10-08T11:02:30",
+        "lida": true
+      },
+      {
+        "id": 3,
+        "remetente_id": 21,
+        "remetente_nome": "Leonardo Diaz",
+        "tipo": "texto",
+        "conteudo": "E como você detecta que o jogador saiu da pista?",
+        "data_hora": "2026-10-08T11:04:00",
+        "lida": true
+      },
+      {
+        "id": 4,
+        "remetente_id": 31,
+        "remetente_nome": "Arthur Correia",
+        "tipo": "texto",
+        "conteudo": "Verifico se a posição X,Y do jogador está dentro do Rect da pista atual. Se não estiver, incremento os danos. Na quarta colisão chama o Game Over.",
+        "data_hora": "2026-10-08T11:06:15",
+        "lida": true
+      },
+      {
+        "id": 5,
+        "remetente_id": 21,
+        "remetente_nome": "Leonardo Diaz",
+        "tipo": "audio",
+        "conteudo": "audio/conversa8_msg5.mp3",
+        "duracao_segundos": 15,
+        "transcricao": "Entendido! E as medalhas, você gera dentro dos limites da pista mesmo?",
+        "data_hora": "2026-10-08T11:07:40",
+        "lida": true
+      },
+      {
+        "id": 6,
+        "remetente_id": 31,
+        "remetente_nome": "Arthur Correia",
+        "tipo": "texto",
+        "conteudo": "Exato, gero a posição X da medalha dentro dos bounds do Rect da pista. Assim garanto que nunca cai fora. E vou diminuindo a frequência de spawn conforme o jogador avança.",
+        "data_hora": "2026-10-08T11:09:00",
+        "lida": false
+      }
+    ]
+  },
+  {
+    "id_conversa": 9,
+    "participantes": [26, 36],
+    "nomes": ["Mariana Teixeira", "Patricia Machado"],
+    "mensagens": [
+      {
+        "id": 1,
+        "remetente_id": 36,
+        "remetente_nome": "Patricia Machado",
+        "tipo": "texto",
+        "conteudo": "Mariana! A tela de Unidades tá funcionando no seu? Os pins no mapa aparecem certos?",
+        "data_hora": "2026-10-09T09:30:00",
+        "lida": true
+      },
+      {
+        "id": 2,
+        "remetente_id": 26,
+        "remetente_nome": "Mariana Teixeira",
+        "tipo": "texto",
+        "conteudo": "Aparece sim! Mas tive problema no raio de 50km. Você calculou a distância como?",
+        "data_hora": "2026-10-09T09:32:20",
+        "lida": true
+      },
+      {
+        "id": 3,
+        "remetente_id": 36,
+        "remetente_nome": "Patricia Machado",
+        "tipo": "audio",
+        "conteudo": "audio/conversa9_msg3.mp3",
+        "duracao_segundos": 22,
+        "transcricao": "Usei Location.distanceBetween passando as coordenadas do usuário e de cada unidade. Retorna a distância em metros, aí divido por 1000 pra ter em km.",
+        "data_hora": "2026-10-09T09:34:10",
+        "lida": true
+      },
+      {
+        "id": 4,
+        "remetente_id": 26,
+        "remetente_nome": "Mariana Teixeira",
+        "tipo": "texto",
+        "conteudo": "Boa! E a mensagem de hospedagem quando é maior que 50km você dispara de onde? Na seleção do pin?",
+        "data_hora": "2026-10-09T09:35:50",
+        "lida": true
+      },
+      {
+        "id": 5,
+        "remetente_id": 36,
+        "remetente_nome": "Patricia Machado",
+        "tipo": "texto",
+        "conteudo": "Sim, dentro do onMarkerClick. Quando o usuário toca no pin, verifico a distância e se passar de 50km mostro o toast de hospedagem.",
+        "data_hora": "2026-10-09T09:37:30",
+        "lida": true
+      },
+      {
+        "id": 6,
+        "remetente_id": 26,
+        "remetente_nome": "Mariana Teixeira",
+        "tipo": "texto",
+        "conteudo": "E os pins \"apagados\" fora do horário de funcionamento?",
+        "data_hora": "2026-10-09T09:38:45",
+        "lida": true
+      },
+      {
+        "id": 7,
+        "remetente_id": 36,
+        "remetente_nome": "Patricia Machado",
+        "tipo": "audio",
+        "conteudo": "audio/conversa9_msg7.mp3",
+        "duracao_segundos": 30,
+        "transcricao": "Pego o horário atual do dispositivo e verifico se tá entre 8h e 17h. Se não tiver, uso um ícone de marker com alpha reduzido e desabilito o clique passando null pro onMarkerClickListener.",
+        "data_hora": "2026-10-09T09:40:20",
+        "lida": true
+      },
+      {
+        "id": 8,
+        "remetente_id": 26,
+        "remetente_nome": "Mariana Teixeira",
+        "tipo": "texto",
+        "conteudo": "Perfeito! Muito obrigada Pati, tava com dúvida exatamente nessa parte! 💙",
+        "data_hora": "2026-10-09T09:41:00",
+        "lida": false
+      }
+    ]
+  },
+  {
+    "id_conversa": 10,
+    "participantes": [33, 38],
+    "nomes": ["Caio Cunha", "Renata Fonseca"],
+    "mensagens": [
+      {
+        "id": 1,
+        "remetente_id": 38,
+        "remetente_nome": "Renata Fonseca",
+        "tipo": "texto",
+        "conteudo": "Caio, ei! Você fez o compartilhamento de score nas mídias sociais do Mini Game?",
+        "data_hora": "2026-10-10T17:00:00",
+        "lida": true
+      },
+      {
+        "id": 2,
+        "remetente_id": 33,
+        "remetente_nome": "Caio Cunha",
+        "tipo": "texto",
+        "conteudo": "Fiz! Usei o Intent.ACTION_SEND com tipo text/plain. Aí monto o texto com nome, score e data formatada.",
+        "data_hora": "2026-10-10T17:01:45",
+        "lida": true
+      },
+      {
+        "id": 3,
+        "remetente_id": 38,
+        "remetente_nome": "Renata Fonseca",
+        "tipo": "audio",
+        "conteudo": "audio/conversa10_msg3.mp3",
+        "duracao_segundos": 18,
+        "transcricao": "Entendi! E a formatação da data? O documento tem uma regra estranha pra dias de 1 dígito e 2 dígitos.",
+        "data_hora": "2026-10-10T17:03:10",
+        "lida": true
+      },
+      {
+        "id": 4,
+        "remetente_id": 33,
+        "remetente_nome": "Caio Cunha",
+        "tipo": "texto",
+        "conteudo": "Sim, é bem específico mesmo. Dia com 2+ dígitos: formato curto tipo 10/4/'26. Dia com 1 dígito: formato longo tipo segunda-feira, 09 de Abril de 2026.",
+        "data_hora": "2026-10-10T17:05:00",
+        "lida": true
+      },
+      {
+        "id": 5,
+        "remetente_id": 38,
+        "remetente_nome": "Renata Fonseca",
+        "tipo": "texto",
+        "conteudo": "Isso é bem incomum! Você usou SimpleDateFormat pra montar as duas versões?",
+        "data_hora": "2026-10-10T17:06:20",
+        "lida": true
+      },
+      {
+        "id": 6,
+        "remetente_id": 33,
+        "remetente_nome": "Caio Cunha",
+        "tipo": "audio",
+        "conteudo": "audio/conversa10_msg6.mp3",
+        "duracao_segundos": 24,
+        "transcricao": "Exato. Pego o dia do Calendar, verifico se é menor que 10. Se for, uso o formato longo com EEEE, dd 'de' MMMM 'de' yyyy. Senão uso o curto montando na mão mesmo: dia, barra, mês, barra, ano com apóstrofe.",
+        "data_hora": "2026-10-10T17:08:30",
+        "lida": true
+      },
+      {
+        "id": 7,
+        "remetente_id": 38,
+        "remetente_nome": "Renata Fonseca",
+        "tipo": "texto",
+        "conteudo": "Entendido! Obrigada Caio, você explicou super bem. Boa sorte na avaliação! 🏆",
+        "data_hora": "2026-10-10T17:09:15",
+        "lida": false
+      }
+    ]
+  }
+]

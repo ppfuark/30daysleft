@@ -1,0 +1,188 @@
+{
+  "descricao": "Geometria viária calculada pelo OSRM sobre OpenStreetMap. Circuito demonstrativo entre a origem e os ecopontos, com retorno roteado à origem. Deslocamento a velocidade constante, categorias e ocupações continuam simulados. Perfil de automóvel; não valida restrições específicas de caminhões nem um itinerário oficial de coleta.",
+  "caminhoes": [
+    {
+      "caminhao_id": "CAM-01",
+      "velocidade_kmh": 18,
+      "tipos_residuo": [
+        "Orgânico",
+        "Rejeitos",
+        "Outros"
+      ],
+      "trajeto": [
+        {
+          "lat": -22.107349,
+          "lng": -50.173148
+        },
+        {
+          "lat": -22.107363,
+          "lng": -50.173122
+        },
+        {
+          "lat": -22.107774,
+          "lng": -50.172693
+        },
+        {
+          "lat": -22.107799,
+          "lng": -50.172675
+        },
+        {
+          "lat": -22.107832,
+          "lng": -50.17266
+        },
+        {
+          "lat": -22.108131,
+          "lng": -50.172625
+        },
+        {
+          "lat": -22.10819,
+          "lng": -50.173508
+        },
+        {
+          "lat": -22.108264,
+          "lng": -50.1744
+        },
+        {
+          "lat": -22.108514,
+          "lng": -50.174377
+        },
+        {
+          "lat": -22.10909,
+          "lng": -50.174325
+        },
+        {
+          "lat": -22.109147,
+          "lng": -50.174985
+        },
+        {
+          "lat": -22.109167,
+          "lng": -50.175216
+        },
+        {
+          "lat": -22.108337,
+          "lng": -50.175294
+        },
+        {
+          "lat": -22.107524,
+          "lng": -50.175385
+        },
+        {
+          "lat": -22.107445,
+          "lng": -50.174478
+        },
+        {
+          "lat": -22.107356,
+          "lng": -50.173584
+        },
+        {
+          "lat": -22.107341,
+          "lng": -50.173226
+        },
+        {
+          "lat": -22.107343,
+          "lng": -50.173185
+        },
+        {
+          "lat": -22.107349,
+          "lng": -50.173148
+        }
+      ],
+      "roteamento": {
+        "provedor": "OSRM",
+        "perfil": "driving",
+        "fonte": "https://router.project-osrm.org",
+        "distancia_metros": 889.6,
+        "duracao_segundos": 142.4,
+        "gerado_em": "2026-10-20T01:32:24.685Z",
+        "vias": [
+          "Rua Osvaldo Lelis",
+          "João da Costa Vieira",
+          "Rua Durval de Carvalho e Silva",
+          "Rua Doutor Luiz Miranda",
+          "Rua Julio da Costa Barros",
+          "Rua Senador Rodolfo Miranda"
+        ],
+        "waypoints": [
+          {
+            "solicitado": {
+              "lat": -22.107,
+              "lng": -50.173
+            },
+            "ajustado": {
+              "lat": -22.107349,
+              "lng": -50.173148
+            },
+            "distancia_snap_metros": 41.55267532,
+            "nome": "Rua Osvaldo Lelis"
+          },
+          {
+            "solicitado": {
+              "lat": -22.1085,
+              "lng": -50.1742
+            },
+            "ajustado": {
+              "lat": -22.108514,
+              "lng": -50.174377
+            },
+            "distancia_snap_metros": 18.32702323,
+            "nome": "Rua Durval de Carvalho e Silva"
+          },
+          {
+            "solicitado": {
+              "lat": -22.109,
+              "lng": -50.175
+            },
+            "ajustado": {
+              "lat": -22.109147,
+              "lng": -50.174985
+            },
+            "distancia_snap_metros": 16.35099978,
+            "nome": "Rua Doutor Luiz Miranda"
+          },
+          {
+            "solicitado": {
+              "lat": -22.107,
+              "lng": -50.173
+            },
+            "ajustado": {
+              "lat": -22.107349,
+              "lng": -50.173148
+            },
+            "distancia_snap_metros": 41.55267532,
+            "nome": "Rua Osvaldo Lelis"
+          }
+        ],
+        "atribuicao": "© OpenStreetMap contributors",
+        "licenca": "https://www.openstreetmap.org/copyright"
+      }
+    }
+  ],
+  "pontos": [
+    {
+      "ponto_id": 34,
+      "ciclo_ocupacao": [
+        85,
+        88,
+        91,
+        95,
+        98,
+        60,
+        70,
+        80
+      ]
+    },
+    {
+      "ponto_id": 31,
+      "ciclo_ocupacao": [
+        30,
+        40,
+        55,
+        75,
+        90,
+        94,
+        45,
+        30
+      ]
+    }
+  ]
+}

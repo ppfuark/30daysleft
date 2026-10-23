@@ -1,0 +1,72 @@
+[
+  {
+    "data": "19",
+    "mes": "MAI",
+    "titulo": "Dia de coleta",
+    "tipo": "Vidro",
+    "cor": "Verde"
+  },
+  {
+    "data": "26",
+    "mes": "MAI",
+    "titulo": "Dia de coleta",
+    "tipo": "Orgânico",
+    "cor": "Marrom"
+  },
+  {
+    "data": "04",
+    "mes": "JUN",
+    "titulo": "Dia de coleta",
+    "tipo": "Plástico",
+    "cor": "Vermelho"
+  },
+  {
+    "data": "06",
+    "mes": "JUN",
+    "titulo": "Dia de coleta",
+    "tipo": "Metal",
+    "cor": "Amarelo"
+  },
+  {
+    "data": "12",
+    "mes": "JUN",
+    "titulo": "Dia de coleta",
+    "tipo": "Papel",
+    "cor": "Azul"
+  },
+  {
+    "data": "17",
+    "mes": "JUN",
+    "titulo": "Dia de coleta",
+    "tipo": "Vidro",
+    "cor": "Verde"
+  },
+  {
+    "data": "24",
+    "mes": "JUN",
+    "titulo": "Dia de coleta",
+    "tipo": "Orgânico",
+    "cor": "Marrom"
+  },
+  {
+    "data": "01",
+    "mes": "JUL",
+    "titulo": "Dia de coleta",
+    "tipo": "Plástico",
+    "cor": "Vermelho"
+  },
+  {
+    "data": "08",
+    "mes": "JUL",
+    "titulo": "Dia de coleta",
+    "tipo": "Metal",
+    "cor": "Amarelo"
+  },
+  {
+    "data": "15",
+    "mes": "JUL",
+    "titulo": "Dia de coleta",
+    "tipo": "Papel",
+    "cor": "Azul"
+  }
+]

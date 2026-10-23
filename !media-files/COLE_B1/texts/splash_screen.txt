@@ -1,0 +1,11 @@
+============================
+  SPLASH SCREEN – TEXTOS
+============================
+
+--- COMPONENTES VISUAIS ---
+Titulo: Coleta Já!
+
+--- NOTAS DE ANIMAÇÃO (referência) ---
+Duração total: 5 segundos
+Transição após splash: Home Page (automática)
+Animação de referência: disponível em media-files/Animations

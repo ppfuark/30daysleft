@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<relatorios>
+    <coleta>
+        <id>1001</id>
+        <data>2026-08-27T08:30:00</data>
+        <quantidade_toneladas>6.5</quantidade_toneladas>
+        <tipo_residuo>Entulho de Obra</tipo_residuo>
+        <ponto_coleta>Ecoponto Central - Zona Norte</ponto_coleta>
+        <avaliacao>5</avaliacao>
+    </coleta>
+    <coleta>
+        <id>1002</id>
+        <data>2026-08-25T14:15:00</data>
+        <quantidade_toneladas>2.1</quantidade_toneladas>
+        <tipo_residuo>Reciclável Misto</tipo_residuo>
+        <ponto_coleta>Ponto Verde - Zona Sul</ponto_coleta>
+        <avaliacao>4</avaliacao>
+    </coleta>
+    <coleta>
+        <id>1003</id>
+        <data>2026-08-26T10:00:00</data>
+        <quantidade_toneladas>8.2</quantidade_toneladas>
+        <tipo_residuo>Descarte Industrial</tipo_residuo>
+        <ponto_coleta>Galpão Industrial - Leste</ponto_coleta>
+        <avaliacao>5</avaliacao>
+    </coleta>
+    <coleta>
+        <id>1004</id>
+        <data>2026-08-24T16:45:00</data>
+        <quantidade_toneladas>1.5</quantidade_toneladas>
+        <tipo_residuo>Lixo Eletrônico</tipo_residuo>
+        <ponto_coleta>Ecoponto Tecnológico</ponto_coleta>
+        <avaliacao>5</avaliacao>
+    </coleta>
+    <coleta>
+        <id>1005</id>
+        <data>2026-08-23T09:20:00</data>
+        <quantidade_toneladas>0.8</quantidade_toneladas>
+        <tipo_residuo>Orgânico</tipo_residuo>
+        <ponto_coleta>Praça Central</ponto_coleta>
+        <avaliacao>3</avaliacao>
+    </coleta>
+</relatorios>
