@@ -1,0 +1,320 @@
+{
+    "provas": [
+        {
+            "etapa": "A1",
+            "codigo": "P01",
+            "categoria": "ColetaJá",
+            "statusAtual": "Aprovada",
+            "nomeCompleto": "ColetaJá - A1",
+            "duracaoPrevista": "02:30",
+            "versaoModificada": false
+        },
+        {
+            "etapa": "A2",
+            "codigo": "P02",
+            "categoria": "ColetaJá",
+            "statusAtual": "Aprovada",
+            "nomeCompleto": "ColetaJá - A2",
+            "duracaoPrevista": "02:30"
+        },
+        {
+            "etapa": "B1",
+            "codigo": "P03",
+            "categoria": "ColetaJá",
+            "statusAtual": "Aprovada",
+            "nomeCompleto": "ColetaJá - B1",
+            "duracaoPrevista": "02:30"
+        },
+        {
+            "etapa": "B2",
+            "codigo": "P04",
+            "categoria": "ColetaJá",
+            "statusAtual": "Aprovada",
+            "nomeCompleto": "ColetaJá - B2",
+            "duracaoPrevista": "02:30",
+            "versaoModificada": false
+        },
+        {
+            "etapa": "C1",
+            "codigo": "P05",
+            "categoria": "ColetaJá",
+            "statusAtual": "Aprovada",
+            "nomeCompleto": "ColetaJá - C1",
+            "duracaoPrevista": "02:00"
+        },
+        {
+            "etapa": "D1",
+            "codigo": "P06",
+            "categoria": "ColetaJá",
+            "statusAtual": "Aprovada",
+            "nomeCompleto": "ColetaJá - D1",
+            "duracaoPrevista": "03:00"
+        },
+        {
+            "etapa": "A1",
+            "codigo": "P07",
+            "categoria": "WSConecta",
+            "statusAtual": "Aprovada",
+            "nomeCompleto": "WSConecta - A1",
+            "duracaoPrevista": "02:30",
+            "versaoModificada": false
+        },
+        {
+            "etapa": "A2",
+            "codigo": "P08",
+            "categoria": "WSConecta",
+            "statusAtual": "Aprovada",
+            "nomeCompleto": "WSConecta - A2",
+            "duracaoPrevista": "02:30"
+        },
+        {
+            "etapa": "B1",
+            "codigo": "P09",
+            "categoria": "WSConecta",
+            "statusAtual": "Aprovada",
+            "nomeCompleto": "WSConecta - B1",
+            "duracaoPrevista": "02:30"
+        },
+        {
+            "etapa": "B2",
+            "codigo": "P10",
+            "categoria": "WSConecta",
+            "statusAtual": "Aprovada",
+            "nomeCompleto": "WSConecta - B2",
+            "duracaoPrevista": "02:30"
+        },
+        {
+            "etapa": "C1",
+            "codigo": "P11",
+            "categoria": "WSConecta",
+            "statusAtual": "Aprovada",
+            "nomeCompleto": "WSConecta - C1",
+            "duracaoPrevista": "02:00"
+        },
+        {
+            "etapa": "D1",
+            "codigo": "P12",
+            "categoria": "WSConecta",
+            "statusAtual": "Aprovada",
+            "nomeCompleto": "WSConecta - D1",
+            "duracaoPrevista": "03:00"
+        },
+        {
+            "etapa": "A1",
+            "codigo": "P13",
+            "categoria": "VAPT",
+            "statusAtual": "Aprovada",
+            "nomeCompleto": "VAPT - A1",
+            "duracaoPrevista": "02:30"
+        },
+        {
+            "etapa": "A2",
+            "codigo": "P14",
+            "categoria": "VAPT",
+            "statusAtual": "Aprovada",
+            "nomeCompleto": "VAPT - A2",
+            "duracaoPrevista": "02:30"
+        },
+        {
+            "etapa": "B1",
+            "codigo": "P15",
+            "categoria": "VAPT",
+            "statusAtual": "Aprovada",
+            "nomeCompleto": "VAPT - B1",
+            "duracaoPrevista": "02:30"
+        },
+        {
+            "etapa": "B2",
+            "codigo": "P16",
+            "categoria": "VAPT",
+            "statusAtual": "Aprovada",
+            "nomeCompleto": "VAPT - B2",
+            "duracaoPrevista": "02:30"
+        },
+        {
+            "etapa": "C1",
+            "codigo": "P17",
+            "categoria": "VAPT",
+            "statusAtual": "Aprovada",
+            "nomeCompleto": "VAPT - C1",
+            "duracaoPrevista": "02:00"
+        },
+        {
+            "etapa": "D1",
+            "codigo": "P18",
+            "categoria": "VAPT",
+            "statusAtual": "Aprovada",
+            "nomeCompleto": "VAPT - D1",
+            "duracaoPrevista": "03:00"
+        }
+    ],
+    "tentativas": [
+        {
+            "id": 1,
+            "data": "2026-10-26",
+            "nota": 0.01,
+            "prova": "ColetaJá - A1",
+            "anotacoes": "",
+            "tempoGasto": "02:30",
+            "tentativaNumero": 1,
+            "criteriosAEstudar": ""
+        },
+        {
+            "prova": "ColetaJá - A2",
+            "tentativaNumero": 1,
+            "data": "2026-10-27",
+            "nota": 0.01,
+            "tempoGasto": "02:30",
+            "anotacoes": "",
+            "criteriosAEstudar": "",
+            "id": 2
+        }
+    ],
+    "config": {
+        "dataInicio": "2026-10-26",
+        "dataCompeticao": "2026-11-23"
+    },
+    "cycleConfig": {
+        "id": "preset-default",
+        "name": "Ciclo Padrão (27 slots)",
+        "ipBands": [
+            {
+                "id": "band-1",
+                "maxIP": 9999,
+                "minIP": 80,
+                "maxReps": 4,
+                "minReps": 3
+            },
+            {
+                "id": "band-2",
+                "maxIP": 79.99,
+                "minIP": 50,
+                "maxReps": 3,
+                "minReps": 2
+            },
+            {
+                "id": "band-3",
+                "maxIP": 49.99,
+                "minIP": 20,
+                "maxReps": 2,
+                "minReps": 1
+            },
+            {
+                "id": "band-4",
+                "maxIP": 19.99,
+                "minIP": 0,
+                "maxReps": 1,
+                "minReps": 1
+            }
+        ],
+        "cycleSize": 27,
+        "activeProvaCodigos": [
+            "P01",
+            "P03",
+            "P07",
+            "P08",
+            "P10",
+            "P12",
+            "P13",
+            "P16"
+        ]
+    },
+    "cyclePresets": [
+        {
+            "id": "preset-default",
+            "name": "Ciclo Padrão (27 slots)",
+            "ipBands": [
+                {
+                    "id": "band-1",
+                    "maxIP": 9999,
+                    "minIP": 80,
+                    "maxReps": 4,
+                    "minReps": 3
+                },
+                {
+                    "id": "band-2",
+                    "maxIP": 79.99,
+                    "minIP": 50,
+                    "maxReps": 3,
+                    "minReps": 2
+                },
+                {
+                    "id": "band-3",
+                    "maxIP": 49.99,
+                    "minIP": 20,
+                    "maxReps": 2,
+                    "minReps": 1
+                },
+                {
+                    "id": "band-4",
+                    "maxIP": 19.99,
+                    "minIP": 0,
+                    "maxReps": 1,
+                    "minReps": 1
+                }
+            ],
+            "cycleSize": 27,
+            "activeProvaCodigos": [
+                "P01",
+                "P03",
+                "P07",
+                "P08",
+                "P10",
+                "P12",
+                "P13",
+                "P16"
+            ]
+        },
+        {
+            "id": "preset-pre-comp",
+            "name": "Ciclo Reta Final / Intensivo (16 slots)",
+            "ipBands": [
+                {
+                    "id": "band-int-1",
+                    "maxIP": 9999,
+                    "minIP": 60,
+                    "maxReps": 5,
+                    "minReps": 4
+                },
+                {
+                    "id": "band-int-2",
+                    "maxIP": 59.99,
+                    "minIP": 30,
+                    "maxReps": 3,
+                    "minReps": 2
+                },
+                {
+                    "id": "band-int-3",
+                    "maxIP": 29.99,
+                    "minIP": 0,
+                    "maxReps": 2,
+                    "minReps": 1
+                }
+            ],
+            "cycleSize": 16,
+            "activeProvaCodigos": [
+                "P08",
+                "P13",
+                "P03",
+                "P10",
+                "P07"
+            ]
+        }
+    ],
+    "registrosExecucao": {
+        "2026-10-26": {
+            "data": "2026-10-26",
+            "status": "realizado"
+        }
+    },
+    "agendaPersistida": {
+        "2026-10-26": {
+            "prova1Codigo": "P01",
+            "prova2Codigo": "P02"
+        },
+        "2026-10-27": {
+            "prova1Codigo": "P03",
+            "prova2Codigo": "P04"
+        }
+    }
+}
