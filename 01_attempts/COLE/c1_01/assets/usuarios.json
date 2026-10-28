@@ -1,0 +1,39 @@
+{
+    "usuarios": [
+        {
+            "id": 1,
+            "nome": "João Silva",
+            "email": "joao.silva@coletaja.com.br",
+            "senha": "password123",
+            "foto": "joao.png"
+        },
+        {
+            "id": 2,
+            "nome": "Maria Oliveira",
+            "email": "maria.oliveira@coletaja.com.br",
+            "senha": "senhaSegura456",
+            "foto": "maria.png"
+        },
+        {
+            "id": 3,
+            "nome": "Carlos Souza",
+            "email": "carlos.souza@empresa.com.br",
+            "senha": "carlos789",
+            "foto": "carlos.png"
+        },
+        {
+            "id": 4,
+            "nome": "Ana Costa",
+            "email": "ana.costa@ongverde.com.br",
+            "senha": "eco2026",
+            "foto": "ana.png"
+        },
+        {
+            "id": 5,
+            "nome": "Lucas Almeida",
+            "email": "lucas.almeida@coletaja.com.br",
+            "senha": "lucas_admin",
+            "foto": "lucas.png"
+        }
+    ]
+}
