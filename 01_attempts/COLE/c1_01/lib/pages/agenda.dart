@@ -68,8 +68,6 @@ class _AgendaState extends State<Agenda> {
                 children: [
                   Expanded(
                     child: Container(
-                      width: double.infinity,
-                      height: double.infinity,
                       decoration: BoxDecoration(
                         border: Border.all(),
                         borderRadius: BorderRadius.circular(16),
@@ -96,8 +94,6 @@ class _AgendaState extends State<Agenda> {
                   ),
                   Expanded(
                     child: Container(
-                      width: double.infinity,
-                      height: double.infinity,
                       decoration: BoxDecoration(
                         border: Border.all(),
                         borderRadius: BorderRadius.circular(16),
