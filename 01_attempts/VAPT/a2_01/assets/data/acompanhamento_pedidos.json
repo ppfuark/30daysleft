@@ -1,0 +1,50 @@
+[
+  {
+    "id": 87234,
+    "cliente": "Mariana Costa",
+    "valor": 65.89,
+    "status": "Novo"
+  },
+  {
+    "id": 87233,
+    "cliente": "Rafael Mendes",
+    "valor": 43.49,
+    "status": "Novo"
+  },
+  {
+    "id": 87232,
+    "cliente": "Juliana Alves",
+    "valor": 76.98,
+    "status": "Novo"
+  },
+  {
+    "id": 87231,
+    "cliente": "Carlos Eduardo",
+    "valor": 53.48,
+    "status": "Em preparo"
+  },
+  {
+    "id": 87230,
+    "cliente": "Fernanda Lima",
+    "valor": 176.53,
+    "status": "Em preparo"
+  },
+  {
+    "id": 87229,
+    "cliente": "Gustavo Barbosa",
+    "valor": 83.86,
+    "status": "Em preparo"
+  },
+  {
+    "id": 87228,
+    "cliente": "Giovanna Silva",
+    "valor": 123.36,
+    "status": "Pronto para retirada"
+  },
+  {
+    "id": 87227,
+    "cliente": "Bruno Oliveira",
+    "valor": 98.54,
+    "status": "Pronto para retirada"
+  }
+]
