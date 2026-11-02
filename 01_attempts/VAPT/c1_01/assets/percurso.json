@@ -1,0 +1,22 @@
+[
+  {
+    "step": 1,
+    "title": "Nova Solicitação",
+    "description": "O motoboy recebe uma nova solicitação de entrega."
+  },
+  {
+    "step": 2,
+    "title": "Coleta no Estabelecimento",
+    "description": "O motoboy coleta o pedido no restaurante."
+  },
+  {
+    "step": 3,
+    "title": "A Caminho",
+    "description": "O motoboy está a caminho do endereço do cliente."
+  },
+  {
+    "step": 4,
+    "title": "Entrega Finalizada",
+    "description": "O pedido é entregue e finalizado com sucesso."
+  }
+]
