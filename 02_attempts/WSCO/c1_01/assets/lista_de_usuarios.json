@@ -1,0 +1,1009 @@
+[
+  { 
+    "id": 1, 
+    "escola": "SENAI Brás",
+    "nome": "Carlos Silva", 
+    "perfil": "avaliador", 
+    "modalidade": "Desenvolvimento de Aplicativos Mobile",
+    "cidade": "São Paulo", 
+    "e-mail": "carlos.silva@senai.sp.br", 
+    "data de nascimento": "14/03/1985",
+    "foto": "foto_1.png"
+  },
+  { 
+    "id": 2, 
+    "escola": "SENAI Osasco", 
+    "nome": "Mariana Souza", 
+    "perfil": "avaliador", 
+    "modalidade": "Mecatrônica",
+    "cidade": "Osasco", 
+    "e-mail": "mariana.souza@senai.sp.br", 
+    "data de nascimento": "22/07/1990",
+    "foto": "foto_2.png"
+  },
+  {
+     "id": 3, 
+     "escola": "SENAI São Bernardo do Campo", 
+     "nome": "João Pereira", 
+     "perfil": "avaliador", 
+     "modalidade": "Mecânica Industrial",
+     "cidade": "São Bernardo do Campo", 
+     "e-mail": "joao.pereira@senai.sp.br", 
+     "data de nascimento": "09/11/1982",
+     "foto": "foto_3.png"
+  },
+  { 
+     "id": 4, 
+     "escola": "SENAI São Caetano do Sul - Cyber e IA", 
+     "nome": "Ana Oliveira", 
+     "perfil": "avaliador", 
+     "modalidade": "BIM",
+     "cidade": "São Caetano do Sul", 
+     "e-mail": "ana.oliveira@senai.sp.br", 
+     "data de nascimento": "30/01/1995",
+     "foto": "foto_4.png"
+  },
+  { 
+     "id": 5, 
+     "escola": "SENAI Suzano", 
+     "nome": "Lucas Santos", 
+     "perfil": "avaliador", 
+     "modalidade": "Soldagem",
+     "cidade": "Suzano", 
+     "e-mail": "lucas.santos@senai.sp.br", 
+     "data de nascimento": "18/06/1988",
+     "foto": "foto_5.png" 
+  },
+  { 
+    "id": 6, 
+    "escola": "SENAI Alumínio", 
+    "nome": "Fernanda Costa", 
+    "perfil": "avaliador", 
+    "modalidade": "Instalações Elétricas",
+    "cidade": "Alumínio", 
+    "e-mail": "fernanda.costa@senai.sp.br", 
+    "data de nascimento": "05/09/1992",
+    "foto": "foto_6.png" 
+  },
+  { 
+    "id": 7, 
+    "escola": "SENAI Americana", 
+    "nome": "Rafael Almeida", 
+    "perfil": "avaliador", 
+    "modalidade": "Tornearia CNC",
+    "cidade": "Americana", 
+    "e-mail": "rafael.almeida@senai.sp.br", 
+    "data de nascimento": "12/12/1981",
+    "foto": "foto_7.png" 
+  },
+  { 
+    "id": 8, 
+    "escola": "SENAI Campinas - R. Mange", 
+    "nome": "Juliana Rocha", 
+    "perfil": "avaliador", 
+    "modalidade": "Projeto de Engenharia Mecânica (CAD)",
+    "cidade": "Campinas", 
+    "e-mail": "juliana.rocha@senai.sp.br", 
+    "data de nascimento": "27/04/1996",
+    "foto": "foto_8.png" 
+  },
+  { 
+    "id": 9, 
+    "escola": "SENAI Cruzeiro", 
+    "nome": "Bruno Martins", 
+    "perfil": "avaliador", 
+    "modalidade": "Construção em Alvenaria",
+    "cidade": "Cruzeiro", 
+    "e-mail": "bruno.martins@senai.sp.br", 
+    "data de nascimento": "03/08/1983",
+    "foto": "foto_9.png"
+  },
+  { 
+    "id": 10, 
+    "escola": "SENAI Jaguariúna", 
+    "nome": "Patrícia Lima", 
+    "perfil": "avaliador", 
+    "modalidade": "Aplicação de Revestimento Cerâmico",
+    "cidade": "Jaguariúna", 
+    "e-mail": "patricia.lima@senai.sp.br", 
+    "data de nascimento": "16/02/1991",
+    "foto": "foto_10.png" 
+  },
+  { 
+    "id": 11, 
+    "escola": "SENAI Limeira", 
+    "nome": "Daniel Gomes", 
+    "perfil": "avaliador", 
+    "modalidade": "Desenvolvimento de Aplicativos Mobile",
+    "cidade": "Limeira", 
+    "e-mail": "daniel.gomes@senai.sp.br", 
+    "data de nascimento": "21/10/1987",
+    "foto": "foto_11.png"
+  },
+  { 
+    "id": 12, 
+    "escola": "SENAI Marília", 
+    "nome": "Camila Ribeiro", 
+    "perfil": "avaliador", 
+    "modalidade": "Mecatrônica",
+    "cidade": "Marília", 
+    "e-mail": "camila.ribeiro@senai.sp.br", 
+    "data de nascimento": "07/05/1994",
+    "foto": "foto_12.png" 
+  },
+  { 
+    "id": 13, 
+    "escola": "SENAI Pindamonhangaba", 
+    "nome": "Eduardo Carvalho", 
+    "perfil": "avaliador", 
+    "modalidade": "Soldagem",
+    "cidade": "Pindamonhangaba", 
+    "e-mail": "eduardo.carvalho@senai.sp.br", 
+    "data de nascimento": "11/01/1980",
+    "foto": "foto_13.png"
+  },
+  { 
+    "id": 14, 
+    "escola": "SENAI Pompeia", 
+    "nome": "Larissa Fernandes", 
+    "perfil": "avaliador", 
+    "modalidade": "Mecânica Industrial",
+    "cidade": "Pompeia", 
+    "e-mail": "larissa.fernandes@senai.sp.br", 
+    "data de nascimento": "25/09/1993",
+    "foto": "foto_14.png" 
+  },
+  { 
+    "id": 15, 
+    "escola": "SENAI Ribeirão Preto", 
+    "nome": "Felipe Barbosa", 
+    "perfil": "avaliador", 
+    "modalidade": "Projeto de Engenharia Mecânica (CAD)",
+    "cidade": "Ribeirão Preto", 
+    "e-mail": "felipe.barbosa@senai.sp.br", 
+    "data de nascimento": "19/06/1986",
+    "foto": "foto_15.png"
+  },
+  { 
+    "id": 16, 
+    "escola": "SENAI São José dos Campos", 
+    "nome": "Aline Nunes", 
+    "perfil": "avaliador", 
+    "modalidade": "BIM",
+    "cidade": "São José dos Campos", 
+    "e-mail": "aline.nunes@senai.sp.br", 
+    "data de nascimento": "02/03/1997",
+    "foto": "foto_16.png" 
+  },
+  { 
+    "id": 17, 
+    "escola": "SENAI Sumaré", 
+    "nome": "Rodrigo Teixeira", 
+    "perfil": "avaliador", 
+    "modalidade": "Instalações Elétricas",
+    "cidade": "Sumaré", 
+    "e-mail": "rodrigo.teixeira@senai.sp.br", 
+    "data de nascimento": "28/07/1984",
+    "foto": "foto_17.png"
+  },
+  { 
+    "id": 18, 
+    "escola": "SENAI Taubaté", 
+    "nome": "Vanessa Araújo", 
+    "perfil": "avaliador", 
+    "modalidade": "Tornearia CNC",
+    "cidade": "Taubaté", 
+    "e-mail": "vanessa.araujo@senai.sp.br", 
+    "data de nascimento": "13/12/1998",
+    "foto": "foto_18.png"
+  },
+  { 
+    "id": 19, 
+    "escola": "SENAI Valinhos", 
+    "nome": "Thiago Moreira", 
+    "perfil": "avaliador", 
+    "modalidade": "Construção em Alvenaria",
+    "cidade": "Valinhos", 
+    "e-mail": "thiago.moreira@senai.sp.br", 
+    "data de nascimento": "06/04/1989",
+    "foto": "foto_19.png" 
+  },
+  {
+    "id": 20,
+    "escola": "SENAI Brás",
+    "nome": "Gabriel Melo",
+    "perfil": "competidor",
+    "modalidade": "Desenvolvimento de Aplicativos Mobile",
+    "cidade": "São Paulo",
+    "e-mail": "gabriel.melo@senai.sp.br",
+    "data de nascimento": "16/02/2009",
+    "foto": "foto_20.png",
+    "ultimas_avaliacoes": [
+      {
+        "nota": 93,
+        "data": "05/08/2026"
+      },
+      {
+        "nota": 82,
+        "data": "20/08/2026"
+      },
+      {
+        "nota": 85,
+        "data": "15/09/2026"
+      }
+    ],
+    "treinamento": [
+      { "data": "01/09/2026", "entrada": "07:21", "saida": "12:00" },
+      { "data": "07/09/2026", "entrada": "08:50", "saida": "11:02" },
+      { "data": "09/09/2026", "entrada": "07:53", "saida": "12:45" },
+      { "data": "11/09/2026", "entrada": "07:34", "saida": "11:51" },
+      { "data": "12/09/2026", "entrada": "08:08", "saida": "12:54" },
+      { "data": "14/09/2026", "entrada": "08:57", "saida": "12:59" },
+      { "data": "16/09/2026", "entrada": "08:14", "saida": "11:53" },
+      { "data": "17/09/2026", "entrada": "08:27", "saida": "11:13" },
+      { "data": "18/09/2026", "entrada": "07:49", "saida": "12:05" },
+      { "data": "19/09/2026", "entrada": "08:27", "saida": "12:47" },
+      { "data": "22/09/2026", "entrada": "08:31", "saida": "12:57" },
+      { "data": "24/09/2026", "entrada": "07:52", "saida": "11:53" },
+      { "data": "28/09/2026", "entrada": "08:29", "saida": "12:03" },
+      { "data": "29/09/2026", "entrada": "07:31", "saida": "12:48" },
+      { "data": "30/09/2026", "entrada": "07:45", "saida": "11:56" }
+    ]
+  },
+  {
+    "id": 21,
+    "escola": "SENAI Osasco",
+    "nome": "Beatriz Pires",
+    "perfil": "competidor",
+    "modalidade": "Mecatrônica",
+    "cidade": "Osasco",
+    "e-mail": "beatriz.pires@senai.sp.br",
+    "data de nascimento": "05/01/2009",
+    "foto": "foto_21.png",
+    "ultimas_avaliacoes": [
+      {
+        "nota": 87,
+        "data": "05/08/2026"
+      },
+      {
+        "nota": 87,
+        "data": "20/08/2026"
+      },
+      {
+        "nota": 98,
+        "data": "15/09/2026"
+      }
+    ],
+    "treinamento": [
+      { "data": "01/09/2026", "entrada": "08:11", "saida": "12:18" },
+      { "data": "02/09/2026", "entrada": "08:07", "saida": "11:18" },
+      { "data": "03/09/2026", "entrada": "07:22", "saida": "11:54" },
+      { "data": "04/09/2026", "entrada": "07:42", "saida": "12:15" },
+      { "data": "07/09/2026", "entrada": "08:26", "saida": "11:09" },
+      { "data": "08/09/2026", "entrada": "07:55", "saida": "12:51" },
+      { "data": "09/09/2026", "entrada": "07:47", "saida": "12:11" },
+      { "data": "11/09/2026", "entrada": "07:06", "saida": "12:36" },
+      { "data": "12/09/2026", "entrada": "07:53", "saida": "12:45" },
+      { "data": "14/09/2026", "entrada": "07:16", "saida": "11:06" },
+      { "data": "15/09/2026", "entrada": "07:32", "saida": "12:25" },
+      { "data": "16/09/2026", "entrada": "08:07", "saida": "11:25" },
+      { "data": "21/09/2026", "entrada": "08:29", "saida": "11:01" },
+      { "data": "22/09/2026", "entrada": "07:18", "saida": "12:27" },
+      { "data": "28/09/2026", "entrada": "07:38", "saida": "12:31" }
+    ]
+  },
+  {
+    "id": 22,
+    "escola": "SENAI São Bernardo do Campo",
+    "nome": "André Freitas",
+    "perfil": "competidor",
+    "modalidade": "Mecânica Industrial",
+    "cidade": "São Bernardo do Campo",
+    "e-mail": "andré.freitas@senai.sp.br",
+    "data de nascimento": "02/07/2008",
+    "foto": "foto_22.png",
+    "ultimas_avaliacoes": [
+      {
+        "nota": 89,
+        "data": "05/08/2026"
+      },
+      {
+        "nota": 93,
+        "data": "20/08/2026"
+      },
+      {
+        "nota": 88,
+        "data": "15/09/2026"
+      }
+    ],
+    "treinamento": [
+      { "data": "02/09/2026", "entrada": "08:06", "saida": "12:38" },
+      { "data": "04/09/2026", "entrada": "08:11", "saida": "11:05" },
+      { "data": "05/09/2026", "entrada": "08:29", "saida": "11:57" },
+      { "data": "07/09/2026", "entrada": "07:59", "saida": "11:57" },
+      { "data": "08/09/2026", "entrada": "07:21", "saida": "12:25" },
+      { "data": "09/09/2026", "entrada": "08:07", "saida": "12:09" },
+      { "data": "10/09/2026", "entrada": "07:44", "saida": "12:43" },
+      { "data": "11/09/2026", "entrada": "08:12", "saida": "11:02" },
+      { "data": "12/09/2026", "entrada": "08:52", "saida": "12:05" },
+      { "data": "14/09/2026", "entrada": "07:35", "saida": "11:43" },
+      { "data": "16/09/2026", "entrada": "08:09", "saida": "12:26" },
+      { "data": "22/09/2026", "entrada": "07:32", "saida": "11:19" },
+      { "data": "24/09/2026", "entrada": "08:40", "saida": "12:55" },
+      { "data": "25/09/2026", "entrada": "07:34", "saida": "12:35" },
+      { "data": "30/09/2026", "entrada": "08:45", "saida": "11:16" }
+    ]
+  },
+  {
+    "id": 23,
+    "escola": "SENAI São Caetano do Sul - Cyber e IA",
+    "nome": "Renata Batista",
+    "perfil": "competidor",
+    "modalidade": "BIM",
+    "cidade": "São Caetano do Sul",
+    "e-mail": "renata.batista@senai.sp.br",
+    "data de nascimento": "07/04/2009",
+    "foto": "foto_23.png",
+    "ultimas_avaliacoes": [
+      {
+        "nota": 89,
+        "data": "05/08/2026"
+      },
+      {
+        "nota": 93,
+        "data": "20/08/2026"
+      },
+      {
+        "nota": 96,
+        "data": "15/09/2026"
+      }
+    ],
+    "treinamento": [
+      { "data": "01/09/2026", "entrada": "08:50", "saida": "12:02" },
+      { "data": "03/09/2026", "entrada": "08:16", "saida": "11:34" },
+      { "data": "05/09/2026", "entrada": "07:42", "saida": "12:12" },
+      { "data": "07/09/2026", "entrada": "08:15", "saida": "12:08" },
+      { "data": "08/09/2026", "entrada": "08:07", "saida": "11:27" },
+      { "data": "09/09/2026", "entrada": "08:50", "saida": "11:03" },
+      { "data": "14/09/2026", "entrada": "08:33", "saida": "12:38" },
+      { "data": "16/09/2026", "entrada": "08:58", "saida": "11:58" },
+      { "data": "17/09/2026", "entrada": "07:30", "saida": "12:23" },
+      { "data": "18/09/2026", "entrada": "08:22", "saida": "11:54" },
+      { "data": "22/09/2026", "entrada": "08:22", "saida": "12:57" },
+      { "data": "24/09/2026", "entrada": "07:13", "saida": "12:35" },
+      { "data": "25/09/2026", "entrada": "08:47", "saida": "12:34" },
+      { "data": "28/09/2026", "entrada": "07:41", "saida": "12:58" },
+      { "data": "30/09/2026", "entrada": "08:14", "saida": "12:32" }
+    ]
+  },
+  {
+    "id": 24,
+    "escola": "SENAI Suzano",
+    "nome": "Gustavo Moura",
+    "perfil": "competidor",
+    "modalidade": "Soldagem",
+    "cidade": "Suzano",
+    "e-mail": "gustavo.moura@senai.sp.br",
+    "data de nascimento": "15/12/2007",
+    "foto": "foto_24.png",
+    "ultimas_avaliacoes": [
+      {
+        "nota": 91,
+        "data": "05/08/2026"
+      },
+      {
+        "nota": 80,
+        "data": "20/08/2026"
+      },
+      {
+        "nota": 98,
+        "data": "15/09/2026"
+      }
+    ],
+    "treinamento": [
+      { "data": "01/09/2026", "entrada": "07:55", "saida": "12:51" },
+      { "data": "02/09/2026", "entrada": "08:41", "saida": "11:53" },
+      { "data": "05/09/2026", "entrada": "07:26", "saida": "12:12" },
+      { "data": "07/09/2026", "entrada": "08:22", "saida": "11:40" },
+      { "data": "11/09/2026", "entrada": "07:14", "saida": "12:20" },
+      { "data": "14/09/2026", "entrada": "08:53", "saida": "12:28" },
+      { "data": "15/09/2026", "entrada": "08:24", "saida": "11:01" },
+      { "data": "16/09/2026", "entrada": "07:27", "saida": "11:08" },
+      { "data": "17/09/2026", "entrada": "08:54", "saida": "11:15" },
+      { "data": "18/09/2026", "entrada": "07:37", "saida": "11:32" },
+      { "data": "22/09/2026", "entrada": "08:19", "saida": "12:28" },
+      { "data": "24/09/2026", "entrada": "08:05", "saida": "12:07" },
+      { "data": "28/09/2026", "entrada": "07:36", "saida": "11:19" },
+      { "data": "29/09/2026", "entrada": "08:13", "saida": "11:52" },
+      { "data": "30/09/2026", "entrada": "07:05", "saida": "11:11" }
+    ]
+  },
+  {
+    "id": 25,
+    "escola": "SENAI Alumínio",
+    "nome": "Carolina Duarte",
+    "perfil": "competidor",
+    "modalidade": "Instalações Elétricas",
+    "cidade": "Alumínio",
+    "e-mail": "carolina.duarte@senai.sp.br",
+    "data de nascimento": "07/11/2009",
+    "foto": "foto_25.png",
+    "ultimas_avaliacoes": [
+      {
+        "nota": 84,
+        "data": "05/08/2026"
+      },
+      {
+        "nota": 94,
+        "data": "20/08/2026"
+      },
+      {
+        "nota": 83,
+        "data": "15/09/2026"
+      }
+    ],
+    "treinamento": [
+      { "data": "02/09/2026", "entrada": "07:45", "saida": "12:55" },
+      { "data": "04/09/2026", "entrada": "08:49", "saida": "11:37" },
+      { "data": "08/09/2026", "entrada": "07:12", "saida": "12:25" },
+      { "data": "09/09/2026", "entrada": "08:40", "saida": "12:06" },
+      { "data": "10/09/2026", "entrada": "08:49", "saida": "11:41" },
+      { "data": "11/09/2026", "entrada": "07:35", "saida": "11:17" },
+      { "data": "14/09/2026", "entrada": "07:29", "saida": "11:12" },
+      { "data": "15/09/2026", "entrada": "08:29", "saida": "11:41" },
+      { "data": "17/09/2026", "entrada": "08:35", "saida": "12:03" },
+      { "data": "18/09/2026", "entrada": "07:09", "saida": "11:31" },
+      { "data": "21/09/2026", "entrada": "08:45", "saida": "11:54" },
+      { "data": "22/09/2026", "entrada": "07:49", "saida": "11:34" },
+      { "data": "23/09/2026", "entrada": "07:54", "saida": "11:36" },
+      { "data": "25/09/2026", "entrada": "08:52", "saida": "11:52" },
+      { "data": "29/09/2026", "entrada": "08:04", "saida": "12:48" }
+    ]
+  },
+  {
+    "id": 26,
+    "escola": "SENAI Americana",
+    "nome": "Vinícius Ramos",
+    "perfil": "competidor",
+    "modalidade": "Tornearia CNC",
+    "cidade": "Americana",
+    "e-mail": "vinícius.ramos@senai.sp.br",
+    "data de nascimento": "16/06/2008",
+    "foto": "foto_26.png",
+    "ultimas_avaliacoes": [
+      {
+        "nota": 97,
+        "data": "05/08/2026"
+      },
+      {
+        "nota": 97,
+        "data": "20/08/2026"
+      },
+      {
+        "nota": 95,
+        "data": "15/09/2026"
+      }
+    ],
+    "treinamento": [
+      { "data": "01/09/2026", "entrada": "07:11", "saida": "11:26" },
+      { "data": "02/09/2026", "entrada": "08:57", "saida": "11:56" },
+      { "data": "04/09/2026", "entrada": "07:57", "saida": "12:15" },
+      { "data": "07/09/2026", "entrada": "07:54", "saida": "11:52" },
+      { "data": "10/09/2026", "entrada": "07:39", "saida": "11:04" },
+      { "data": "11/09/2026", "entrada": "08:49", "saida": "12:17" },
+      { "data": "12/09/2026", "entrada": "07:30", "saida": "11:37" },
+      { "data": "15/09/2026", "entrada": "07:26", "saida": "11:06" },
+      { "data": "16/09/2026", "entrada": "08:32", "saida": "11:39" },
+      { "data": "17/09/2026", "entrada": "08:23", "saida": "11:18" },
+      { "data": "18/09/2026", "entrada": "08:11", "saida": "12:41" },
+      { "data": "19/09/2026", "entrada": "07:06", "saida": "12:31" },
+      { "data": "22/09/2026", "entrada": "08:27", "saida": "11:15" },
+      { "data": "28/09/2026", "entrada": "08:40", "saida": "11:12" },
+      { "data": "29/09/2026", "entrada": "07:02", "saida": "11:14" }
+    ]
+  },
+  {
+    "id": 27,
+    "escola": "SENAI Campinas - R. Mange",
+    "nome": "Paula Cardoso",
+    "perfil": "competidor",
+    "modalidade": "Projeto de Engenharia Mecânica (CAD)",
+    "cidade": "Campinas",
+    "e-mail": "paula.cardoso@senai.sp.br",
+    "data de nascimento": "19/12/2007",
+    "foto": "foto_27.png",
+    "ultimas_avaliacoes": [
+      {
+        "nota": 84,
+        "data": "05/08/2026"
+      },
+      {
+        "nota": 89,
+        "data": "20/08/2026"
+      },
+      {
+        "nota": 98,
+        "data": "15/09/2026"
+      }
+    ],
+    "treinamento": [
+      { "data": "03/09/2026", "entrada": "07:00", "saida": "11:39" },
+      { "data": "09/09/2026", "entrada": "07:29", "saida": "11:15" },
+      { "data": "10/09/2026", "entrada": "08:37", "saida": "12:51" },
+      { "data": "12/09/2026", "entrada": "08:21", "saida": "12:29" },
+      { "data": "15/09/2026", "entrada": "08:03", "saida": "12:11" },
+      { "data": "18/09/2026", "entrada": "07:43", "saida": "12:03" },
+      { "data": "19/09/2026", "entrada": "08:44", "saida": "11:22" },
+      { "data": "21/09/2026", "entrada": "08:48", "saida": "11:29" },
+      { "data": "22/09/2026", "entrada": "08:35", "saida": "11:36" },
+      { "data": "24/09/2026", "entrada": "08:03", "saida": "11:29" },
+      { "data": "25/09/2026", "entrada": "07:00", "saida": "11:44" },
+      { "data": "26/09/2026", "entrada": "08:49", "saida": "11:19" },
+      { "data": "28/09/2026", "entrada": "08:19", "saida": "11:45" },
+      { "data": "29/09/2026", "entrada": "07:05", "saida": "11:52" },
+      { "data": "30/09/2026", "entrada": "08:57", "saida": "11:20" }
+    ]
+  },
+  {
+    "id": 28,
+    "escola": "SENAI Cruzeiro",
+    "nome": "Leonardo Farias",
+    "perfil": "competidor",
+    "modalidade": "Construção em Alvenaria",
+    "cidade": "Cruzeiro",
+    "e-mail": "leonardo.farias@senai.sp.br",
+    "data de nascimento": "20/06/2008",
+    "foto": "foto_28.png",
+    "ultimas_avaliacoes": [
+      {
+        "nota": 95,
+        "data": "05/08/2026"
+      },
+      {
+        "nota": 96,
+        "data": "20/08/2026"
+      },
+      {
+        "nota": 84,
+        "data": "15/09/2026"
+      }
+    ],
+    "treinamento": [
+      { "data": "02/09/2026", "entrada": "08:08", "saida": "11:19" },
+      { "data": "03/09/2026", "entrada": "07:05", "saida": "11:24" },
+      { "data": "04/09/2026", "entrada": "07:31", "saida": "11:41" },
+      { "data": "05/09/2026", "entrada": "07:55", "saida": "12:46" },
+      { "data": "10/09/2026", "entrada": "07:25", "saida": "12:32" },
+      { "data": "11/09/2026", "entrada": "07:54", "saida": "12:03" },
+      { "data": "15/09/2026", "entrada": "07:53", "saida": "12:51" },
+      { "data": "17/09/2026", "entrada": "07:33", "saida": "11:18" },
+      { "data": "19/09/2026", "entrada": "07:05", "saida": "12:00" },
+      { "data": "21/09/2026", "entrada": "07:28", "saida": "11:50" },
+      { "data": "22/09/2026", "entrada": "07:08", "saida": "11:10" },
+      { "data": "23/09/2026", "entrada": "07:55", "saida": "12:48" },
+      { "data": "25/09/2026", "entrada": "08:47", "saida": "11:49" },
+      { "data": "28/09/2026", "entrada": "07:26", "saida": "12:27" },
+      { "data": "30/09/2026", "entrada": "07:59", "saida": "12:53" }
+    ]
+  },
+  {
+    "id": 29,
+    "escola": "SENAI Jaguariúna",
+    "nome": "Simone Lopes",
+    "perfil": "competidor",
+    "modalidade": "Aplicação de Revestimento Cerâmico",
+    "cidade": "Jaguariúna",
+    "e-mail": "simone.lopes@senai.sp.br",
+    "data de nascimento": "23/12/2009",
+    "foto": "foto_29.png",
+    "ultimas_avaliacoes": [
+      {
+        "nota": 89,
+        "data": "05/08/2026"
+      },
+      {
+        "nota": 82,
+        "data": "20/08/2026"
+      },
+      {
+        "nota": 98,
+        "data": "15/09/2026"
+      }
+    ],
+    "treinamento": [
+      { "data": "01/09/2026", "entrada": "08:07", "saida": "12:52" },
+      { "data": "02/09/2026", "entrada": "07:44", "saida": "12:32" },
+      { "data": "03/09/2026", "entrada": "07:13", "saida": "12:12" },
+      { "data": "04/09/2026", "entrada": "08:33", "saida": "11:35" },
+      { "data": "08/09/2026", "entrada": "08:18", "saida": "11:42" },
+      { "data": "10/09/2026", "entrada": "07:54", "saida": "11:34" },
+      { "data": "16/09/2026", "entrada": "07:02", "saida": "12:16" },
+      { "data": "17/09/2026", "entrada": "07:42", "saida": "12:02" },
+      { "data": "19/09/2026", "entrada": "07:59", "saida": "11:02" },
+      { "data": "21/09/2026", "entrada": "08:44", "saida": "11:26" },
+      { "data": "22/09/2026", "entrada": "07:35", "saida": "11:50" },
+      { "data": "23/09/2026", "entrada": "07:36", "saida": "12:18" },
+      { "data": "26/09/2026", "entrada": "08:00", "saida": "11:29" },
+      { "data": "28/09/2026", "entrada": "08:15", "saida": "11:29" },
+      { "data": "29/09/2026", "entrada": "08:30", "saida": "12:43" }
+    ]
+  },
+  {
+    "id": 30,
+    "escola": "SENAI Limeira",
+    "nome": "Diego Castro",
+    "perfil": "competidor",
+    "modalidade": "Desenvolvimento de Aplicativos Mobile",
+    "cidade": "Limeira",
+    "e-mail": "diego.castro@senai.sp.br",
+    "data de nascimento": "12/06/2007",
+    "foto": "foto_30.png",
+    "ultimas_avaliacoes": [
+      {
+        "nota": 83,
+        "data": "05/08/2026"
+      },
+      {
+        "nota": 89,
+        "data": "20/08/2026"
+      },
+      {
+        "nota": 96,
+        "data": "15/09/2026"
+      }
+    ],
+    "treinamento": [
+      { "data": "01/09/2026", "entrada": "07:09", "saida": "11:56" },
+      { "data": "08/09/2026", "entrada": "08:12", "saida": "11:30" },
+      { "data": "09/09/2026", "entrada": "07:39", "saida": "12:43" },
+      { "data": "14/09/2026", "entrada": "08:37", "saida": "11:48" },
+      { "data": "16/09/2026", "entrada": "07:39", "saida": "11:58" },
+      { "data": "18/09/2026", "entrada": "07:46", "saida": "11:11" },
+      { "data": "19/09/2026", "entrada": "08:10", "saida": "12:16" },
+      { "data": "21/09/2026", "entrada": "07:13", "saida": "11:25" },
+      { "data": "22/09/2026", "entrada": "08:35", "saida": "12:37" },
+      { "data": "24/09/2026", "entrada": "08:24", "saida": "11:08" },
+      { "data": "25/09/2026", "entrada": "08:35", "saida": "11:28" },
+      { "data": "26/09/2026", "entrada": "07:21", "saida": "11:25" },
+      { "data": "28/09/2026", "entrada": "07:35", "saida": "12:30" },
+      { "data": "29/09/2026", "entrada": "07:06", "saida": "12:33" },
+      { "data": "30/09/2026", "entrada": "08:43", "saida": "12:23" }
+    ]
+  },
+  {
+    "id": 31,
+    "escola": "SENAI Marília",
+    "nome": "Tatiane Monteiro",
+    "perfil": "competidor",
+    "modalidade": "Mecatrônica",
+    "cidade": "Marília",
+    "e-mail": "tatiane.monteiro@senai.sp.br",
+    "data de nascimento": "27/05/2008",
+    "foto": "foto_31.png",
+    "ultimas_avaliacoes": [
+      {
+        "nota": 93,
+        "data": "05/08/2026"
+      },
+      {
+        "nota": 92,
+        "data": "20/08/2026"
+      },
+      {
+        "nota": 82,
+        "data": "15/09/2026"
+      }
+    ],
+    "treinamento": [
+      { "data": "01/09/2026", "entrada": "08:10", "saida": "11:12" },
+      { "data": "05/09/2026", "entrada": "07:30", "saida": "12:01" },
+      { "data": "07/09/2026", "entrada": "08:41", "saida": "12:16" },
+      { "data": "08/09/2026", "entrada": "08:48", "saida": "12:02" },
+      { "data": "09/09/2026", "entrada": "08:08", "saida": "11:29" },
+      { "data": "10/09/2026", "entrada": "08:06", "saida": "11:50" },
+      { "data": "11/09/2026", "entrada": "07:49", "saida": "11:23" },
+      { "data": "14/09/2026", "entrada": "08:35", "saida": "12:52" },
+      { "data": "15/09/2026", "entrada": "08:43", "saida": "12:35" },
+      { "data": "17/09/2026", "entrada": "08:06", "saida": "12:31" },
+      { "data": "18/09/2026", "entrada": "08:48", "saida": "11:07" },
+      { "data": "21/09/2026", "entrada": "07:50", "saida": "11:43" },
+      { "data": "22/09/2026", "entrada": "08:42", "saida": "12:14" },
+      { "data": "24/09/2026", "entrada": "08:04", "saida": "12:48" },
+      { "data": "25/09/2026", "entrada": "07:48", "saida": "11:40" }
+    ]
+  },
+  {
+    "id": 32,
+    "escola": "SENAI Pindamonhangaba",
+    "nome": "Marcelo Correia",
+    "perfil": "competidor",
+    "modalidade": "Soldagem",
+    "cidade": "Pindamonhangaba",
+    "e-mail": "marcelo.correia@senai.sp.br",
+    "data de nascimento": "02/12/2008",
+    "foto": "foto_32.png",
+    "ultimas_avaliacoes": [
+      {
+        "nota": 81,
+        "data": "05/08/2026"
+      },
+      {
+        "nota": 81,
+        "data": "20/08/2026"
+      },
+      {
+        "nota": 95,
+        "data": "15/09/2026"
+      }
+    ],
+    "treinamento": [
+      { "data": "01/09/2026", "entrada": "08:24", "saida": "11:41" },
+      { "data": "03/09/2026", "entrada": "07:43", "saida": "12:50" },
+      { "data": "04/09/2026", "entrada": "07:29", "saida": "12:29" },
+      { "data": "05/09/2026", "entrada": "07:26", "saida": "12:29" },
+      { "data": "08/09/2026", "entrada": "08:59", "saida": "11:50" },
+      { "data": "09/09/2026", "entrada": "08:41", "saida": "11:57" },
+      { "data": "11/09/2026", "entrada": "07:02", "saida": "11:48" },
+      { "data": "15/09/2026", "entrada": "07:02", "saida": "12:50" },
+      { "data": "16/09/2026", "entrada": "07:35", "saida": "11:03" },
+      { "data": "17/09/2026", "entrada": "08:40", "saida": "11:39" },
+      { "data": "19/09/2026", "entrada": "07:56", "saida": "12:12" },
+      { "data": "21/09/2026", "entrada": "08:12", "saida": "12:57" },
+      { "data": "25/09/2026", "entrada": "08:53", "saida": "12:44" },
+      { "data": "28/09/2026", "entrada": "07:47", "saida": "12:00" },
+      { "data": "29/09/2026", "entrada": "07:30", "saida": "11:34" }
+    ]
+  },
+  {
+    "id": 33,
+    "escola": "SENAI Pompeia",
+    "nome": "Priscila Alves",
+    "perfil": "competidor",
+    "modalidade": "Mecânica Industrial",
+    "cidade": "Pompeia",
+    "e-mail": "priscila.alves@senai.sp.br",
+    "data de nascimento": "09/05/2007",
+    "foto": "foto_33.png",
+    "ultimas_avaliacoes": [
+      {
+        "nota": 82,
+        "data": "05/08/2026"
+      },
+      {
+        "nota": 87,
+        "data": "20/08/2026"
+      },
+      {
+        "nota": 80,
+        "data": "15/09/2026"
+      }
+    ],
+    "treinamento": [
+      { "data": "01/09/2026", "entrada": "08:24", "saida": "11:44" },
+      { "data": "02/09/2026", "entrada": "08:20", "saida": "12:15" },
+      { "data": "03/09/2026", "entrada": "07:04", "saida": "12:45" },
+      { "data": "04/09/2026", "entrada": "07:24", "saida": "11:59" },
+      { "data": "08/09/2026", "entrada": "08:32", "saida": "11:35" },
+      { "data": "09/09/2026", "entrada": "08:24", "saida": "12:50" },
+      { "data": "12/09/2026", "entrada": "07:10", "saida": "12:54" },
+      { "data": "16/09/2026", "entrada": "08:31", "saida": "11:57" },
+      { "data": "18/09/2026", "entrada": "08:16", "saida": "12:45" },
+      { "data": "21/09/2026", "entrada": "07:11", "saida": "11:52" },
+      { "data": "23/09/2026", "entrada": "07:32", "saida": "11:16" },
+      { "data": "24/09/2026", "entrada": "07:54", "saida": "11:18" },
+      { "data": "25/09/2026", "entrada": "07:57", "saida": "12:57" },
+      { "data": "29/09/2026", "entrada": "08:00", "saida": "12:48" },
+      { "data": "30/09/2026", "entrada": "08:14", "saida": "11:44" }
+    ]
+  },
+  {
+    "id": 34,
+    "escola": "SENAI Ribeirão Preto",
+    "nome": "José Rodrigues",
+    "perfil": "competidor",
+    "modalidade": "Projeto de Engenharia Mecânica (CAD)",
+    "cidade": "Ribeirão Preto",
+    "e-mail": "josé.rodrigues@senai.sp.br",
+    "data de nascimento": "01/01/2009",
+    "foto": "foto_34.png",
+    "ultimas_avaliacoes": [
+      {
+        "nota": 95,
+        "data": "05/08/2026"
+      },
+      {
+        "nota": 80,
+        "data": "20/08/2026"
+      },
+      {
+        "nota": 89,
+        "data": "15/09/2026"
+      }
+    ],
+    "treinamento": [
+      { "data": "01/09/2026", "entrada": "08:56", "saida": "12:42" },
+      { "data": "02/09/2026", "entrada": "07:47", "saida": "12:25" },
+      { "data": "03/09/2026", "entrada": "08:11", "saida": "12:02" },
+      { "data": "04/09/2026", "entrada": "08:30", "saida": "12:11" },
+      { "data": "07/09/2026", "entrada": "08:27", "saida": "11:04" },
+      { "data": "09/09/2026", "entrada": "08:22", "saida": "12:36" },
+      { "data": "10/09/2026", "entrada": "07:56", "saida": "12:01" },
+      { "data": "11/09/2026", "entrada": "07:27", "saida": "11:39" },
+      { "data": "14/09/2026", "entrada": "07:18", "saida": "12:00" },
+      { "data": "16/09/2026", "entrada": "07:25", "saida": "12:06" },
+      { "data": "19/09/2026", "entrada": "07:13", "saida": "11:22" },
+      { "data": "22/09/2026", "entrada": "07:41", "saida": "11:45" },
+      { "data": "26/09/2026", "entrada": "07:41", "saida": "11:49" },
+      { "data": "28/09/2026", "entrada": "07:25", "saida": "12:50" },
+      { "data": "30/09/2026", "entrada": "08:20", "saida": "12:47" }
+    ]
+  },
+  {
+    "id": 35,
+    "escola": "SENAI São José dos Campos",
+    "nome": "Elaine Campos",
+    "perfil": "competidor",
+    "modalidade": "BIM",
+    "cidade": "São José dos Campos",
+    "e-mail": "elaine.campos@senai.sp.br",
+    "data de nascimento": "12/05/2007",
+    "foto": "foto_35.png",
+    "ultimas_avaliacoes": [
+      {
+        "nota": 88,
+        "data": "05/08/2026"
+      },
+      {
+        "nota": 91,
+        "data": "20/08/2026"
+      },
+      {
+        "nota": 95,
+        "data": "15/09/2026"
+      }
+    ],
+    "treinamento": [
+      { "data": "01/09/2026", "entrada": "07:20", "saida": "11:56" },
+      { "data": "02/09/2026", "entrada": "08:55", "saida": "11:06" },
+      { "data": "03/09/2026", "entrada": "07:40", "saida": "12:41" },
+      { "data": "05/09/2026", "entrada": "08:34", "saida": "11:30" },
+      { "data": "07/09/2026", "entrada": "08:55", "saida": "12:29" },
+      { "data": "10/09/2026", "entrada": "07:14", "saida": "11:35" },
+      { "data": "15/09/2026", "entrada": "08:20", "saida": "11:16" },
+      { "data": "16/09/2026", "entrada": "07:03", "saida": "12:36" },
+      { "data": "18/09/2026", "entrada": "08:24", "saida": "11:01" },
+      { "data": "22/09/2026", "entrada": "07:31", "saida": "12:00" },
+      { "data": "23/09/2026", "entrada": "07:51", "saida": "12:18" },
+      { "data": "24/09/2026", "entrada": "08:25", "saida": "12:33" },
+      { "data": "28/09/2026", "entrada": "07:15", "saida": "12:06" },
+      { "data": "29/09/2026", "entrada": "08:40", "saida": "11:49" },
+      { "data": "30/09/2026", "entrada": "07:09", "saida": "12:55" }
+    ]
+  },
+  {
+    "id": 36,
+    "escola": "SENAI Sumaré",
+    "nome": "Fábio Rezende",
+    "perfil": "competidor",
+    "modalidade": "Instalações Elétricas",
+    "cidade": "Sumaré",
+    "e-mail": "fábio.rezende@senai.sp.br",
+    "data de nascimento": "12/03/2007",
+    "foto": "foto_36.png",
+    "ultimas_avaliacoes": [
+      {
+        "nota": 83,
+        "data": "05/08/2026"
+      },
+      {
+        "nota": 95,
+        "data": "20/08/2026"
+      },
+      {
+        "nota": 86,
+        "data": "15/09/2026"
+      }
+    ],
+    "treinamento": [
+      { "data": "01/09/2026", "entrada": "08:04", "saida": "11:09" },
+      { "data": "02/09/2026", "entrada": "07:44", "saida": "11:21" },
+      { "data": "04/09/2026", "entrada": "08:48", "saida": "12:46" },
+      { "data": "05/09/2026", "entrada": "08:04", "saida": "12:35" },
+      { "data": "08/09/2026", "entrada": "08:19", "saida": "11:49" },
+      { "data": "11/09/2026", "entrada": "07:55", "saida": "12:17" },
+      { "data": "14/09/2026", "entrada": "08:40", "saida": "12:49" },
+      { "data": "17/09/2026", "entrada": "08:53", "saida": "12:43" },
+      { "data": "18/09/2026", "entrada": "07:18", "saida": "12:35" },
+      { "data": "21/09/2026", "entrada": "08:41", "saida": "11:49" },
+      { "data": "23/09/2026", "entrada": "08:32", "saida": "12:32" },
+      { "data": "24/09/2026", "entrada": "08:33", "saida": "12:23" },
+      { "data": "26/09/2026", "entrada": "07:51", "saida": "11:30" },
+      { "data": "29/09/2026", "entrada": "08:05", "saida": "12:01" },
+      { "data": "30/09/2026", "entrada": "07:34", "saida": "11:45" }
+    ]
+  },
+  {
+    "id": 37,
+    "escola": "SENAI Taubaté",
+    "nome": "Mônica Vieira",
+    "perfil": "competidor",
+    "modalidade": "Tornearia CNC",
+    "cidade": "Taubaté",
+    "e-mail": "mônica.vieira@senai.sp.br",
+    "data de nascimento": "05/04/2008",
+    "foto": "foto_37.png",
+    "ultimas_avaliacoes": [
+      {
+        "nota": 94,
+        "data": "05/08/2026"
+      },
+      {
+        "nota": 85,
+        "data": "20/08/2026"
+      },
+      {
+        "nota": 87,
+        "data": "15/09/2026"
+      }
+    ],
+    "treinamento": [
+      { "data": "01/09/2026", "entrada": "08:47", "saida": "12:51" },
+      { "data": "04/09/2026", "entrada": "08:53", "saida": "11:46" },
+      { "data": "05/09/2026", "entrada": "07:32", "saida": "11:49" },
+      { "data": "08/09/2026", "entrada": "08:12", "saida": "12:40" },
+      { "data": "09/09/2026", "entrada": "07:32", "saida": "11:19" },
+      { "data": "10/09/2026", "entrada": "08:44", "saida": "11:44" },
+      { "data": "12/09/2026", "entrada": "08:15", "saida": "11:24" },
+      { "data": "14/09/2026", "entrada": "07:49", "saida": "12:01" },
+      { "data": "15/09/2026", "entrada": "07:52", "saida": "12:49" },
+      { "data": "18/09/2026", "entrada": "07:20", "saida": "12:28" },
+      { "data": "19/09/2026", "entrada": "07:03", "saida": "12:38" },
+      { "data": "23/09/2026", "entrada": "07:27", "saida": "11:57" },
+      { "data": "25/09/2026", "entrada": "08:27", "saida": "11:52" },
+      { "data": "26/09/2026", "entrada": "07:50", "saida": "11:58" },
+      { "data": "28/09/2026", "entrada": "07:41", "saida": "11:54" }
+    ]
+  },
+  {
+    "id": 38,
+    "escola": "SENAI Valinhos",
+    "nome": "Hugo Barros",
+    "perfil": "competidor",
+    "modalidade": "Construção em Alvenaria",
+    "cidade": "Valinhos",
+    "e-mail": "hugo.barros@senai.sp.br",
+    "data de nascimento": "23/11/2007",
+    "foto": "foto_38.png",
+    "ultimas_avaliacoes": [
+      {
+        "nota": 82,
+        "data": "05/08/2026"
+      },
+      {
+        "nota": 95,
+        "data": "20/08/2026"
+      },
+      {
+        "nota": 98,
+        "data": "15/09/2026"
+      }
+    ],
+    "treinamento": [
+      { "data": "01/09/2026", "entrada": "07:56", "saida": "11:27" },
+      { "data": "02/09/2026", "entrada": "07:51", "saida": "12:06" },
+      { "data": "04/09/2026", "entrada": "08:27", "saida": "11:34" },
+      { "data": "05/09/2026", "entrada": "08:26", "saida": "11:19" },
+      { "data": "07/09/2026", "entrada": "08:40", "saida": "12:01" },
+      { "data": "10/09/2026", "entrada": "07:45", "saida": "12:19" },
+      { "data": "11/09/2026", "entrada": "07:05", "saida": "11:23" },
+      { "data": "12/09/2026", "entrada": "08:38", "saida": "11:09" },
+      { "data": "14/09/2026", "entrada": "08:39", "saida": "12:20" },
+      { "data": "17/09/2026", "entrada": "08:30", "saida": "11:23" },
+      { "data": "18/09/2026", "entrada": "08:02", "saida": "12:22" },
+      { "data": "22/09/2026", "entrada": "08:33", "saida": "11:24" },
+      { "data": "25/09/2026", "entrada": "08:27", "saida": "11:50" },
+      { "data": "28/09/2026", "entrada": "08:40", "saida": "12:28" },
+      { "data": "30/09/2026", "entrada": "08:12", "saida": "11:51" }
+    ]
+  }
+]
