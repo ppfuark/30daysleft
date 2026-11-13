@@ -29,7 +29,7 @@ class _ProfileState extends State<Profile> {
     final t = sharedPreferences.getString('token') ?? "";
 
     final response0 = await http.get(
-      Uri.parse('http://192.168.56.1:3000/profile'),
+      Uri.parse('http://192.168.233.50:3000/profile'),
       headers: {
         'Content-Type': 'application/json',
         'Authorization': 'Bearer $t',
@@ -46,7 +46,7 @@ class _ProfileState extends State<Profile> {
     }
 
     final response = await http.get(
-      Uri.parse('http://192.168.56.1:3000/products'),
+      Uri.parse('http://192.168.233.50:3000/products'),
       headers: {
         'Content-Type': 'application/json',
         'Authorization': 'Bearer $t',
@@ -54,7 +54,7 @@ class _ProfileState extends State<Profile> {
     );
 
     final response1 = await http.get(
-      Uri.parse('http://192.168.56.1:3000/restaurants'),
+      Uri.parse('http://192.168.233.50:3000/restaurants'),
       headers: {
         'Content-Type': 'application/json',
         'Authorization': 'Bearer $t',
@@ -62,7 +62,7 @@ class _ProfileState extends State<Profile> {
     );
 
     final response2 = await http.get(
-      Uri.parse('http://192.168.56.1:3000/categories'),
+      Uri.parse('http://192.168.233.50:3000/categories'),
       headers: {
         'Content-Type': 'application/json',
         'Authorization': 'Bearer $t',
@@ -70,7 +70,7 @@ class _ProfileState extends State<Profile> {
     );
 
     final response3 = await http.get(
-      Uri.parse('http://192.168.56.1:3000/recentOrders'),
+      Uri.parse('http://192.168.233.50:3000/recentOrders'),
       headers: {
         'Content-Type': 'application/json',
         'Authorization': 'Bearer $t',
@@ -238,7 +238,7 @@ class _ProfileState extends State<Profile> {
                                               for (var element in e['items']) {
                                                 final response = await http.post(
                                                   Uri.parse(
-                                                    'http://192.168.56.1:3000/cart',
+                                                    'http://192.168.233.50:3000/cart',
                                                   ),
                                                   headers: {
                                                     'Content-Type':

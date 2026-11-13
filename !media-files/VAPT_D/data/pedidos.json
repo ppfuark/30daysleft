@@ -1,0 +1,10 @@
+[
+  { "id": 87234, "cliente": "Mariana Costa", "valor": 65.89, "status": "Novo", "avatar": "images/clientes/mariana.jpg" },
+  { "id": 87233, "cliente": "Rafael Mendes", "valor": 43.49, "status": "Novo", "avatar": "images/clientes/rafael.jpg" },
+  { "id": 87232, "cliente": "Juliana Alves", "valor": 76.98, "status": "Novo", "avatar": "images/clientes/juliana.jpg" },
+  { "id": 87231, "cliente": "Carlos Eduardo", "valor": 53.48, "status": "Em preparo", "avatar": "images/clientes/carlos.jpg" },
+  { "id": 87230, "cliente": "Fernanda Lima", "valor": 176.53, "status": "Em preparo", "avatar": "images/clientes/fernanda.jpg" },
+  { "id": 87229, "cliente": "Gustavo Barbosa", "valor": 83.86, "status": "Pronto para retirada", "avatar": "images/clientes/gustavo.jpg" },
+  { "id": 87228, "cliente": "Giovanna Silva", "valor": 123.36, "status": "Em rota", "avatar": "images/clientes/giovanna.jpg" },
+  { "id": 87227, "cliente": "Bruno Oliveira", "valor": 98.54, "status": "Entregue", "avatar": "images/clientes/bruno.jpg" }
+]

@@ -72,7 +72,7 @@ class _MyHomePageState extends State<MyHomePage> {
     final t = sharedPreferences.getString('token') ?? "";
 
     final response = await http.get(
-      Uri.parse('http://192.168.56.1:3000/products'),
+      Uri.parse('http://192.168.233.50:3000/products'),
       headers: {
         'Content-Type': 'application/json',
         'Authorization': 'Bearer $t',
@@ -158,7 +158,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               ).hasMatch(text.text)) {
                                 final response = await http.post(
                                   Uri.parse(
-                                    'http://192.168.56.1:3000/forgotPassword',
+                                    'http://192.168.233.50:3000/forgotPassword',
                                   ),
                                   headers: {'Content-Type': 'application/json'},
                                   body: jsonEncode({'email': text.text}),
@@ -197,7 +197,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   loading = true;
                 });
                 final response = await http.post(
-                  Uri.parse('http://192.168.56.1:3000/api/auth/login'),
+                  Uri.parse('http://192.168.233.50:3000/api/auth/login'),
                   headers: {'Content-Type': 'application/json'},
                   body: jsonEncode({
                     'email': email.text,

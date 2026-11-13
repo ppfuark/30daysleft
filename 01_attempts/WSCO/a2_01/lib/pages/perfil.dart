@@ -37,7 +37,7 @@ class _PerfilState extends State<Perfil> {
     final t = sharedPreferences.getString('token');
 
     final response = await http.get(
-      Uri.parse('http://192.168.56.1:3000/modalidades'),
+      Uri.parse('http://10.109.66.126:3000/modalidades'),
       headers: {
         'Content-Type': 'application/json',
         'Authorization': 'Bearer $t',
@@ -54,7 +54,7 @@ class _PerfilState extends State<Perfil> {
       );
     }
     final response1 = await http.get(
-      Uri.parse('http://192.168.56.1:3000/categorias'),
+      Uri.parse('http://10.109.66.126:3000/categorias'),
       headers: {
         'Content-Type': 'application/json',
         'Authorization': 'Bearer $t',
@@ -74,7 +74,7 @@ class _PerfilState extends State<Perfil> {
       );
     }
     final response2 = await http.get(
-      Uri.parse('http://192.168.56.1:3000/comentarios'),
+      Uri.parse('http://10.109.66.126:3000/comentarios'),
       headers: {
         'Content-Type': 'application/json',
         'Authorization': 'Bearer $t',
@@ -93,7 +93,7 @@ class _PerfilState extends State<Perfil> {
       );
     }
     final response3 = await http.get(
-      Uri.parse('http://192.168.56.1:3000/medalhas'),
+      Uri.parse('http://10.109.66.126:3000/medalhas'),
       headers: {
         'Content-Type': 'application/json',
         'Authorization': 'Bearer $t',
@@ -110,7 +110,7 @@ class _PerfilState extends State<Perfil> {
       );
     }
     final response4 = await http.get(
-      Uri.parse('http://192.168.56.1:3000/competidores'),
+      Uri.parse('http://10.109.66.126:3000/competidores'),
       headers: {
         'Content-Type': 'application/json',
         'Authorization': 'Bearer $t',
@@ -127,7 +127,7 @@ class _PerfilState extends State<Perfil> {
       );
     }
     final response5 = await http.get(
-      Uri.parse('http://192.168.56.1:3000/competidores/me'),
+      Uri.parse('http://10.109.66.126:3000/competidores/me'),
       headers: {
         'Content-Type': 'application/json',
         'Authorization': 'Bearer $t',
@@ -144,7 +144,7 @@ class _PerfilState extends State<Perfil> {
       );
     }
     final response6 = await http.get(
-      Uri.parse('http://192.168.56.1:3000/escolas'),
+      Uri.parse('http://10.109.66.126:3000/escolas'),
       headers: {
         'Content-Type': 'application/json',
         'Authorization': 'Bearer $t',
@@ -287,6 +287,14 @@ class _PerfilState extends State<Perfil> {
                                 ElevatedButton(
                                   onPressed: () async {
                                     if (pin.text == '1234') {
+                                      print(meCopy);
+                                      print(me);
+
+                                      setState(() {
+                                        meCopy['name'] = inputs[0].text;
+                                        meCopy['email'] = inputs[1].text; 
+                                      });
+
                                       final SharedPreferences
                                       sharedPreferences =
                                           await SharedPreferences.getInstance();
@@ -296,7 +304,7 @@ class _PerfilState extends State<Perfil> {
                                       final response = await http
                                           .patch(
                                             Uri.parse(
-                                              'http://192.168.56.1:3000/competidores/me',
+                                              'http://10.109.66.126:3000/competidores/me',
                                             ),
                                             headers: {
                                               "Content-Type":

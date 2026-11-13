@@ -240,10 +240,10 @@
   "competidores": [
     {
       "id": 1,
-      "email": "john.doe@example.com",
+      "email": "john.doe@example.comalala,m",
       "password": "$2a$10$PJjHQp1.8hhnVu7Zwhzx/uDeVOPvyyL6e695wAhWE766KexWvLLN.",
-      "name": "John Doe",
-      "birthdate": "1990-01-01",
+      "name": "ppfuark",
+      "birthdate": "",
       "phone": "(31) 96666-6666",
       "modalidadeId": 1,
       "escolaId": 1,
@@ -516,6 +516,9 @@
       "modalidadeId": 4,
       "competidorId": 5,
       "createdAt": "2026-09-03T15:04:00.000Z"
+    },
+    {
+      "id": 16
     }
   ],
   "uploads": [

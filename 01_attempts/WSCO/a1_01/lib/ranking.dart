@@ -21,7 +21,7 @@ class _RankingState extends State<Ranking> {
     final res = sharedPreferences.getString('token') ?? "";
 
     final response = await http.get(
-      Uri.parse('http://192.168.56.1:3000/modalidades/'),
+      Uri.parse('http://10.109.66.126:3000/modalidades/'),
       headers: {
         'Content-Type': 'application/json',
         'Authorization': "Bearer $res",

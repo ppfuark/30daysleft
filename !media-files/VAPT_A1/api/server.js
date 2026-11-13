@@ -2,6 +2,7 @@ const http = require('node:http');
 const fs = require('node:fs');
 const path = require('node:path');
 const crypto = require('node:crypto');
+const SWAGGER_UI_DIR = require('swagger-ui-dist').getAbsoluteFSPath();
 const ROOT = __dirname;
 const DB = process.env.DB_FILE || path.join(ROOT, 'data/db.json');
 const SECRET = process.env.JWT_SECRET || crypto.randomBytes(48).toString('hex');
@@ -53,6 +54,9 @@ const server=http.createServer(async(req,res)=>{
   if(req.method==='OPTIONS'){res.writeHead(204);return res.end();}
   try{
     const url=new URL(req.url,'http://localhost');let route=url.pathname.replace(/^\/api(?=\/|$)/,'').replace(/\/$/,'')||'/';const method=req.method;
+    if(method==='GET'&&route==='/openapi.json'){res.writeHead(200,{'Content-Type':'application/json; charset=utf-8'});return res.end(fs.readFileSync(path.join(ROOT,'openapi.json')));}
+    if(method==='GET'&&(route==='/docs'||route==='/docs/')){res.writeHead(200,{'Content-Type':'text/html; charset=utf-8'});return res.end('<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>VaptFood API - Swagger</title><link rel="stylesheet" href="/docs/swagger-ui.css"></head><body><div id="swagger-ui"></div><script src="/docs/swagger-ui-bundle.js"></script><script>SwaggerUIBundle({url:"/openapi.json",dom_id:"#swagger-ui",deepLinking:true});</script></body></html>');}
+    if(method==='GET'&&route.startsWith('/docs/')){const filename=path.basename(route);const file=path.join(SWAGGER_UI_DIR,filename);if(!fs.existsSync(file))fail(404,'Arquivo Swagger não encontrado');const types={'.css':'text/css; charset=utf-8','.js':'application/javascript; charset=utf-8','.png':'image/png','.svg':'image/svg+xml'};res.writeHead(200,{'Content-Type':types[path.extname(filename)]||'application/octet-stream'});return fs.createReadStream(file).pipe(res);}
     if(method==='GET'&&route==='/health')return send(200,{status:'ok',name:'VaptFood A1'});
     if(method==='GET'&&route.startsWith('/media/')){const filename=path.basename(route);const file=path.join(ROOT,'media',filename);if(!fs.existsSync(file))fail(404,'Imagem não encontrada');res.writeHead(200,{'Content-Type':'image/png'});return fs.createReadStream(file).pipe(res);}
     if(method==='POST'&&['/login','/auth/login'].includes(route)){const b=await body(req);const u=db.users.find(x=>x.email===String(b.email).trim().toLowerCase());let valid=false;if(u&&typeof b.password==='string'&&b.password.length<=1024){const [salt,hash]=u.passwordHash.split(':');valid=crypto.timingSafeEqual(crypto.scryptSync(b.password,salt,64),Buffer.from(hash,'hex'));}if(!valid)fail(401,'Dados de acesso inválidos');return send(200,{token:sign(u),tokenType:'Bearer',expiresIn:86400,user:publicUser(u)});}

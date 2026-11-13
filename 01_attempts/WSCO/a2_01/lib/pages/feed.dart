@@ -29,7 +29,7 @@ class FeedState extends State<Feed> {
     final t = sharedPreferences.getString('token');
 
     final response = await http.get(
-      Uri.parse('http://192.168.56.1:3000/modalidades'),
+      Uri.parse('http://10.109.66.126:3000/modalidades'),
       headers: {
         'Content-Type': 'application/json',
         'Authorization': 'Bearer $t',
@@ -46,7 +46,7 @@ class FeedState extends State<Feed> {
       );
     }
     final response1 = await http.get(
-      Uri.parse('http://192.168.56.1:3000/categorias'),
+      Uri.parse('http://10.109.66.126:3000/categorias'),
       headers: {
         'Content-Type': 'application/json',
         'Authorization': 'Bearer $t',
@@ -66,7 +66,7 @@ class FeedState extends State<Feed> {
       );
     }
     final response2 = await http.get(
-      Uri.parse('http://192.168.56.1:3000/comentarios'),
+      Uri.parse('http://10.109.66.126:3000/comentarios'),
       headers: {
         'Content-Type': 'application/json',
         'Authorization': 'Bearer $t',
@@ -85,7 +85,7 @@ class FeedState extends State<Feed> {
       );
     }
     final response3 = await http.get(
-      Uri.parse('http://192.168.56.1:3000/medalhas'),
+      Uri.parse('http://10.109.66.126:3000/medalhas'),
       headers: {
         'Content-Type': 'application/json',
         'Authorization': 'Bearer $t',
@@ -102,7 +102,7 @@ class FeedState extends State<Feed> {
       );
     }
     final response4 = await http.get(
-      Uri.parse('http://192.168.56.1:3000/competidores'),
+      Uri.parse('http://10.109.66.126:3000/competidores'),
       headers: {
         'Content-Type': 'application/json',
         'Authorization': 'Bearer $t',
@@ -119,7 +119,7 @@ class FeedState extends State<Feed> {
       );
     }
     final response5 = await http.get(
-      Uri.parse('http://192.168.56.1:3000/competidores/me'),
+      Uri.parse('http://10.109.66.126:3000/competidores/me'),
       headers: {
         'Content-Type': 'application/json',
         'Authorization': 'Bearer $t',
@@ -318,7 +318,7 @@ class FeedState extends State<Feed> {
                                   final response = await http
                                       .post(
                                         Uri.parse(
-                                          'http://192.168.56.1:3000/modalidades/${modalidade!['id']}/comentarios',
+                                          'http://10.109.66.126:3000/modalidades/${modalidade!['id']}/comentarios',
                                         ),
                                         headers: {
                                           "Content-Type": "application/json",
@@ -373,7 +373,7 @@ class FeedState extends State<Feed> {
                                             final res = await http
                                                 .delete(
                                                   Uri.parse(
-                                                    'http://192.168.56.1:3000/comentarios/${e['id']}',
+                                                    'http://10.109.66.126:3000/comentarios/${e['id']}',
                                                   ),
                                                   headers: {
                                                     "Content-Type":

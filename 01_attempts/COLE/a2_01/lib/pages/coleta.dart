@@ -28,7 +28,7 @@ class _ColetaState extends State<Coleta> {
     final token = sharedPreferences.getString('token') ?? "";
 
     final response = await http.get(
-      Uri.parse('http://192.168.56.1:8080/api/v1/coletas'),
+      Uri.parse('http://192.168.233.50:8080/api/v1/coletas'),
       headers: {
         'Content-Type': 'application/json',
         'Authorization': 'Bearer $token',
@@ -101,7 +101,7 @@ class _ColetaState extends State<Coleta> {
 
                       final response = await http.put(
                         Uri.parse(
-                          'http://192.168.56.1:8080/api/v1/coletas/${c['id']}',
+                          'http://192.168.233.50:8080/api/v1/coletas/${c['id']}',
                         ),
                         headers: {
                           'Content-Type': 'application/json',

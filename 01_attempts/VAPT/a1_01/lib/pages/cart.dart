@@ -26,7 +26,7 @@ class _CartState extends State<Cart> {
     final t = sharedPreferences.getString('token') ?? "";
 
     final response0 = await http.get(
-      Uri.parse('http://192.168.56.1:3000/cart'),
+      Uri.parse('http://192.168.233.50:3000/cart'),
       headers: {
         'Content-Type': 'application/json',
         'Authorization': 'Bearer $t',
@@ -126,7 +126,7 @@ class _CartState extends State<Cart> {
 
                           final response = await http.delete(
                             Uri.parse(
-                              'http://192.168.56.1:3000/cart/${e['id']}',
+                              'http://192.168.233.50:3000/cart/${e['id']}',
                             ),
                             headers: {
                               'Content-Type': 'application/json',
@@ -188,7 +188,7 @@ class _CartState extends State<Cart> {
 
                                           final response = await http.post(
                                             Uri.parse(
-                                              'http://192.168.56.1:3000/cart/${e['id']}',
+                                              'http://192.168.233.50:3000/cart/${e['id']}',
                                             ),
                                             headers: {
                                               'Content-Type':
@@ -230,7 +230,7 @@ class _CartState extends State<Cart> {
 
                                           final response = await http.post(
                                             Uri.parse(
-                                              'http://192.168.56.1:3000/cart/${e['id']}',
+                                              'http://192.168.233.50:3000/cart/${e['id']}',
                                             ),
                                             headers: {
                                               'Content-Type':
@@ -339,7 +339,7 @@ class _CartState extends State<Cart> {
                         final t = sharedPreferences.getString('token') ?? "";
 
                         final response = await http.post(
-                          Uri.parse('http://192.168.56.1:3000/orders'),
+                          Uri.parse('http://192.168.233.50:3000/orders'),
                           headers: {
                             'Content-Type': 'application/json',
                             'Authorization': "Bearer $t",

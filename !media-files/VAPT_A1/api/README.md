@@ -10,17 +10,18 @@ Em bases novas, o pedido demonstrativo 8821 começa em “Saiu para Entrega”, 
 
 **Divergência da prova:** o exemplo visual cita R$ 28,70. Os dados fornecidos resultam em R$ 55,50 − R$ 27,75 + R$ 1,00 = R$ 28,75. A API conserva R$ 28,75 e a regra financeira explícita na revisão. Os nomes e preços ilustrativos do catálogo também diferem do db.json; o catálogo conserva os dados fornecidos, sem substituir os produtos por exemplos visuais.
 
-API para fornecer os dados e operações exigidos pela prova A1. Requer Node.js 22 ou superior. Não requer npm install nem banco externo.
+API para fornecer os dados e operações exigidos pela prova A1. Requer Node.js 22 ou superior e não requer banco externo.
 
 ## Executar
 
 Abra um terminal nesta pasta e execute:
 
 ```powershell
+npm install
 npm start
 ```
 
-No computador: `http://localhost:3000`. No emulador Android: `http://10.0.2.2:3000`. Em aparelho físico, use o IP do computador na mesma rede. O aplicativo Android precisa de permissão INTERNET e configuração para permitir HTTP local.
+No computador: `http://localhost:3000`. A documentação interativa Swagger fica em `http://localhost:3000/docs` e o contrato OpenAPI em `http://localhost:3000/openapi.json`. No emulador Android: `http://10.0.2.2:3000`. Em aparelho físico, use o IP do computador na mesma rede. O aplicativo Android precisa de permissão INTERNET e configuração para permitir HTTP local.
 
 Login: `usuario@email.com`, senha `123456`.
 

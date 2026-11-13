@@ -21,7 +21,7 @@ class _OrderState extends State<Order> {
     final t = sharedPreferences.getString('token') ?? "";
 
     final response0 = await http.get(
-      Uri.parse('http://192.168.56.1:3000/orders'),
+      Uri.parse('http://192.168.233.50:3000/orders'),
       headers: {
         'Content-Type': 'application/json',
         'Authorization': 'Bearer $t',

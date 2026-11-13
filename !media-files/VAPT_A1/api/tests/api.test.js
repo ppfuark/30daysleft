@@ -11,6 +11,9 @@ test('Fluxo A1 com autenticação, carrinho, pedidos, recompra e persistência',
  let token='';const base='http://127.0.0.1:'+server.address().port;
  async function call(route,method='GET',body){const r=await fetch(base+route,{method,headers:{'Content-Type':'application/json',...(token?{Authorization:'Bearer '+token}:{})},body:body===undefined?undefined:JSON.stringify(body)});return {status:r.status,data:await r.json()};}
  try{
+ const docs=await fetch(base+'/docs');assert.equal(docs.status,200);assert.match(docs.headers.get('content-type'),/text\/html/);assert.match(await docs.text(),/swagger-ui-bundle\.js/);
+ const spec=await call('/openapi.json');assert.equal(spec.status,200);assert.equal(spec.data.openapi,'3.0.3');assert.ok(spec.data.paths['/auth/login']);assert.ok(spec.data.paths['/orders/{orderId}/tracking']);
+ const swaggerAsset=await fetch(base+'/docs/swagger-ui.css');assert.equal(swaggerAsset.status,200);assert.match(swaggerAsset.headers.get('content-type'),/text\/css/);
  assert.equal((await call('/products')).status,401);
  assert.equal((await call('/login','POST',{email:'usuario@email.com',password:'errada'})).status,401);
  const login=await call('/api/auth/login','POST',{email:'usuario@email.com',password:'123456'});assert.equal(login.status,200);token=login.data.token;assert.equal(token.split('.').length,3);assert.equal(login.data.user.passwordHash,undefined);

@@ -101,7 +101,7 @@ class _MyHomePageState extends State<MyHomePage> {
     final t = sharedPreferences.getString('token');
 
     final response = await http.get(
-      Uri.parse('http://192.168.56.1:3000/competidores'),
+      Uri.parse('http://10.109.66.126:3000/competidores'),
       headers: {
         'Content-Type': 'application/json',
         'Authorization': 'Bearer $t',
@@ -207,7 +207,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   : () async {
                       final response = await http
                           .post(
-                            Uri.parse('http://192.168.56.1:3000/auth/login'),
+                            Uri.parse('http://10.109.66.126:3000/auth/login'),
                             headers: {"Content-Type": "application/json"},
                             body: jsonEncode({
                               "email": email.text,

@@ -23,7 +23,7 @@ class _ColabState extends State<Colab> {
     final token = sharedPreferences.getString('token') ?? "";
 
     final response = await http.get(
-      Uri.parse('http://192.168.56.1:8080/api/v1/colaboradores'),
+      Uri.parse('http://192.168.233.50:8080/api/v1/colaboradores'),
       headers: {
         'Content-Type': 'application/json',
         'Authorization': 'Bearer $token',
@@ -97,7 +97,7 @@ class _ColabState extends State<Colab> {
               ),
             );
           },
-          onReorderItem: (oldIndex, newIndex) {
+          onReorder: (oldIndex, newIndex) {
             final item = colabs.removeAt(oldIndex);
             colabs.insert(newIndex, item);
             setState(() {});

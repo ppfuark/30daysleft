@@ -109,7 +109,7 @@ class _LoginState extends State<Login> {
                 }
 
                 final response = await http.post(
-                  Uri.parse('http://192.168.56.1:8080/api/v1/auth/login/'),
+                  Uri.parse('http://192.168.233.50:8080/api/v1/auth/login/'),
                   headers: {'Content-Type': 'application/json'},
                   body: jsonEncode({
                     'email': email.text,

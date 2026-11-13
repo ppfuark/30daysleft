@@ -34,7 +34,7 @@ class _DashState extends State<Dash> with TickerProviderStateMixin {
       final token = sharedPreferences.getString('token') ?? "";
 
       final response = await http.get(
-        Uri.parse('http://192.168.56.1:8080/api/v1/dashboard?periodo=$value'),
+        Uri.parse('http://192.168.233.50:8080/api/v1/dashboard?periodo=$value'),
         headers: {
           'Content-Type': 'application/json',
           'Authorization': 'Bearer $token',

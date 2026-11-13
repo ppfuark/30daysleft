@@ -25,7 +25,7 @@ class _ExploreState extends State<Explore> {
     final t = sharedPreferences.getString('token') ?? "";
 
     final response = await http.get(
-      Uri.parse('http://192.168.56.1:3000/products'),
+      Uri.parse('http://192.168.233.50:3000/products'),
       headers: {
         'Content-Type': 'application/json',
         'Authorization': 'Bearer $t',
@@ -33,7 +33,7 @@ class _ExploreState extends State<Explore> {
     );
 
     final response1 = await http.get(
-      Uri.parse('http://192.168.56.1:3000/restaurants'),
+      Uri.parse('http://192.168.233.50:3000/restaurants'),
       headers: {
         'Content-Type': 'application/json',
         'Authorization': 'Bearer $t',
@@ -41,7 +41,7 @@ class _ExploreState extends State<Explore> {
     );
 
     final response2 = await http.get(
-      Uri.parse('http://192.168.56.1:3000/categories'),
+      Uri.parse('http://192.168.233.50:3000/categories'),
       headers: {
         'Content-Type': 'application/json',
         'Authorization': 'Bearer $t',
@@ -183,7 +183,7 @@ class _ExploreState extends State<Explore> {
 
                                       final response = await http.post(
                                         Uri.parse(
-                                          'http://192.168.56.1:3000/cart',
+                                          'http://192.168.233.50:3000/cart',
                                         ),
                                         headers: {
                                           'Content-Type': 'application/json',

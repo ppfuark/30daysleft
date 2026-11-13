@@ -1,0 +1,4 @@
+[
+  { "id": 1, "pedidoId": 87228, "cliente": "Giovanna Silva", "status": "Em rota", "valor": 123.36, "tempoEstimado": "12 min", "entregador": "Ana Oliveira" },
+  { "id": 2, "pedidoId": 87227, "cliente": "Bruno Oliveira", "status": "Entregue", "valor": 98.54, "tempoEstimado": "0 min", "entregador": "Lucas Santos" }
+]

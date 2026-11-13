@@ -14,7 +14,7 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
+  // This widget is the root of your application. 
   @override
   Widget build(BuildContext context) {
     return ValueListenableBuilder(
@@ -65,7 +65,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
     final token = sharedPreferences.getString('token') ?? "";
 
     final response = await http.get(
-      Uri.parse('http://192.168.56.1:8080/api/v1/coletas'),
+      Uri.parse('http://192.168.233.50:8080/api/v1/coletas'),
       headers: {
         'Content-Type': 'application/json',
         'Authorization': 'Bearer $token',
