@@ -71,9 +71,7 @@ class _LoginState extends State<Login> with SingleTickerProviderStateMixin {
       return;
     }
 
-    if (!RegExp(
-      r'^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z0-9]+$',
-    ).hasMatch(email.text)) {
+    if (!RegExp(r'^[a-zA-Z0-9]+@vaptfood.com.br').hasMatch(email.text)) {
       Fluttertoast.showToast(
         msg: 'E-mail no formato inválido!',
         backgroundColor: Colors.red,
