@@ -1,0 +1,61 @@
+{
+  "caminhao": {
+    "id_frota": "CAM-01",
+    "latitude": -22.9250,
+    "longitude": -45.4610,
+    "status": "em_rota",
+    "ultima_atualizacao": "2026-08-27T11:40:00"
+  },
+  "pontos_coleta": [
+    {
+      "id": 1,
+      "nome": "Ecoponto Centro",
+      "latitude": -22.9225,
+      "longitude": -45.4580,
+      "nivel_lixo_porcentagem": 45,
+      "aceita_novas_coletas": true,
+      "avaliacao_cliente": 4.8,
+      "capacidade_entulho_restante": "2.5 toneladas"
+    },
+    {
+      "id": 2,
+      "nome": "Ponto de Descarte Norte",
+      "latitude": -22.9100,
+      "longitude": -45.4500,
+      "nivel_lixo_porcentagem": 100,
+      "aceita_novas_coletas": false,
+      "avaliacao_cliente": 4.2,
+      "capacidade_entulho_restante": "0 toneladas"
+    },
+    {
+      "id": 3,
+      "nome": "Galpão de Reciclagem Sul",
+      "latitude": -22.9350,
+      "longitude": -45.4700,
+      "nivel_lixo_porcentagem": 80,
+      "aceita_novas_coletas": true,
+      "avaliacao_cliente": 4.5,
+      "capacidade_entulho_restante": "1.0 tonelada"
+    },
+    {
+      "id": 4,
+      "nome": "Caçamba Comunitária Leste",
+      "latitude": -22.9200,
+      "longitude": -45.4400,
+      "nivel_lixo_porcentagem": 15,
+      "aceita_novas_coletas": true,
+      "avaliacao_cliente": 3.9,
+      "capacidade_entulho_restante": "5.0 toneladas"
+    },
+    {
+      "id": 5,
+      "nome": "Ecoponto Distrito Industrial",
+      "latitude": -22.9450,
+      "longitude": -45.4850,
+      "nivel_lixo_porcentagem": 100,
+      "aceita_novas_coletas": false,
+      "avaliacao_cliente": 4.9,
+      "capacidade_entulho_restante": "0 toneladas"
+    }
+  ]
+}
