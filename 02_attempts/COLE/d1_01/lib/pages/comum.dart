@@ -169,6 +169,7 @@ class _ComumState extends State<Comum> with TickerProviderStateMixin {
   @override
   void dispose() {
     _controller.dispose();
+    socket?.close();
     super.dispose();
   }
 

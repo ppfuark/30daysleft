@@ -14,7 +14,7 @@ void main() {
       await tester.pumpAndSettle(Durations.medium1);
       await tester.tap(finder);
       await tester.pumpAndSettle(
-        wait ?? true ? Duration(seconds: 2) : Duration(seconds: 1),
+        wait ?? true ? Duration(seconds: 5) : Duration(seconds: 1),
       );
     }
 
@@ -28,13 +28,13 @@ void main() {
       await tester.pumpAndSettle(Durations.medium1);
       await tester.enterText(finder, value);
       await tester.pumpAndSettle(
-        wait ?? true ? Duration(seconds: 2) : Duration(seconds: 1),
+        wait ?? true ? Duration(seconds: 5) : Duration(seconds: 1),
       );
     }
 
     print("1.");
     await tester.pumpWidget(MyApp());
-    await tester.pumpAndSettle(Duration(seconds: 2));
+    await tester.pumpAndSettle(Duration(seconds: 5));
 
     print("2.");
     await enterVisible(find.byKey(Key('main_pin')), "12", wait: false);
@@ -59,6 +59,7 @@ void main() {
     print("7.");
     await enterVisible(find.byKey(Key('main_pin')), "1234", wait: false);
     await tapVisible(find.text("Entrar"));
+    await tester.pumpAndSettle(Duration(seconds: 10));
 
     print("8.");
     await tapVisible(find.text("Coleta Comum"));
@@ -70,7 +71,7 @@ void main() {
     await tapVisible(find.byKey(Key('comum_not')));
 
     print("14.");
-    await tapVisible(find.text("Orgânica"));
+    await tapVisible(find.text("Orgânico"));
 
     print("15.");
     await tapVisible(find.byKey(Key('comum_drop')), wait: false);
@@ -103,7 +104,7 @@ void main() {
     await tapVisible(find.text("Papel"));
 
     print("25.");
-    await tester.pumpAndSettle(Duration(seconds: 2));
+    await tester.pumpAndSettle(Duration(seconds: 5));
 
     print("27.");
     await tapVisible(find.byKey(Key('delete_35')));
@@ -115,13 +116,13 @@ void main() {
     await tapVisible(find.byKey(Key('game_trash')));
 
     print("40.");
-    await tester.pumpAndSettle(Duration(seconds: 2));
+    await tester.pumpAndSettle(Duration(seconds: 5));
 
     print("41.");
     await tapVisible(find.text("Trocar por Benefícioss"));
 
     print("42.");
-    await tester.pumpAndSettle(Duration(seconds: 2));
+    await tester.pumpAndSettle(Duration(seconds: 5));
 
     print("43.");
     await enterVisible(find.byKey(Key('game_pin')), "12345");

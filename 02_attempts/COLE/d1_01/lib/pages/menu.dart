@@ -64,9 +64,6 @@ class _MenuState extends State<Menu> with TickerProviderStateMixin {
         );
       });
 
-      print(data);
-      print(coletas);
-
       setState(() {
         loading = false;
       });
