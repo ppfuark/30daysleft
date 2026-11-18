@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:math';
 
 import 'package:audioplayers/audioplayers.dart';
+import 'package:battery_plus/battery_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:fluttertoast/fluttertoast.dart';
@@ -20,6 +21,25 @@ class Menu extends StatefulWidget {
 class _MenuState extends State<Menu> {
   final name = TextEditingController();
   final age = TextEditingController();
+
+  bool bat = true;
+
+  @override
+  void initState() {
+    super.initState();
+    Battery().onBatteryStateChanged.listen((event) async {
+      final b = Battery();
+      if (await b.batteryLevel <= 10) {
+        setState(() {
+          bat = true;
+        });
+      } else {
+        setState(() {
+          bat = false;
+        });
+      }
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -92,6 +112,14 @@ class _MenuState extends State<Menu> {
                   );
                   return;
                 }
+                if (bat) {
+                  Fluttertoast.showToast(
+                    msg: 'Bateria baixa, sem jogo.',
+                    backgroundColor: Colors.red,
+                  );
+                  return;
+                }
+
                 Navigator.push(
                   context,
                   MaterialPageRoute(
@@ -307,7 +335,7 @@ class _GameState extends State<Game> {
     }
 
     await musicP.setReleaseMode(ReleaseMode.loop);
-    musicP.play(AssetSource('media-files/trilha_sonora_jogo.mp3'));
+    musicP.play(AssetSource('trilha_sonora_jogo.mp3'));
 
     speedT = Timer.periodic(const Duration(seconds: 15), (timer) {
       if (!over && !paused) baseSpeed += 1;
@@ -351,7 +379,7 @@ class _GameState extends State<Game> {
           items.remove(e);
           kg += 10;
           power = (power + 10).clamp(0, 100).toDouble();
-          bagP.play(AssetSource('media-files/pega_sacola.mp3'));
+          bagP.play(AssetSource('pega_sacola.mp3'));
         } else if (!invencible) {
           items.remove(e);
           damages++;

@@ -23,6 +23,8 @@ class _ProfileState extends State<Profile> {
   File? file;
   bool notifications = false;
 
+  final senha = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     final w = MediaQuery.of(context).size.width;
@@ -116,6 +118,33 @@ class _ProfileState extends State<Profile> {
               title: Text("Dados Pessoais"),
               subtitle: Text("Nome, e-mail e gerenciamento de senhas"),
               trailing: Icon(Icons.arrow_forward_ios),
+              onTap: () {
+                showDialog(
+                  context: context,
+                  builder: (context) {
+                    return AlertDialog(
+                      title: Text('Editar Senha'),
+                      content: TextField(
+                        controller: senha,
+                        decoration: InputDecoration(
+                          hintText: "Digite sua nova senha",
+                        ),
+                      ),
+                      actions: [
+                        TextButton(
+                          onPressed: () {
+                            Navigator.pop(context);
+                            setState(() {
+                              senha.clear();
+                            });
+                          },
+                          child: Text('Ok!'),
+                        ),
+                      ],
+                    );
+                  },
+                );
+              },
             ),
             ListTile(
               leading: Icon(Icons.notifications),

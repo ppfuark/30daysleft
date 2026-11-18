@@ -138,7 +138,7 @@ class _MapaState extends State<Mapa> with TickerProviderStateMixin {
                             children: [
                               SizedBox(
                                 width: double.infinity,
-                                height: 125,
+                                height: 140,
                                 child: SingleChildScrollView(
                                   scrollDirection: Axis.horizontal,
                                   child: Row(
@@ -174,7 +174,7 @@ class _MapaState extends State<Mapa> with TickerProviderStateMixin {
                                                             : Icons.close,
                                                       ),
                                                       subtitle: Text(
-                                                        "${distance.toStringAsFixed(1)}km",
+                                                        "${distance.toStringAsFixed(1)}km\n${e['nivel_lixo_porcentagem'].toString()}%",
                                                       ),
                                                     ),
                                                   ],
@@ -210,8 +210,7 @@ class _MapaState extends State<Mapa> with TickerProviderStateMixin {
                                           Navigator.push(
                                             context,
                                             MaterialPageRoute(
-                                              builder: (context) =>
-                                                  Checkin(coleta: selected!),
+                                              builder: (context) => Checkin(),
                                             ),
                                           );
                                         },

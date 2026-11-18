@@ -40,7 +40,13 @@ class _AgendaState extends State<Agenda> with TickerProviderStateMixin {
         });
       }
 
-      setState(() {});
+      setState(() {
+        coletas.sort(
+          (a, b) => DateTime.parse(
+            b['data'].toString(),
+          ).compareTo(DateTime.parse(a['data'].toString())),
+        );
+      });
       setState(() {
         loading = false;
       });
@@ -253,11 +259,11 @@ class _AgendaState extends State<Agenda> with TickerProviderStateMixin {
                                     ),
                                   ],
                                 ),
-                                trailing:
-                                    DateTime.parse(c['data'].toString()) ==
-                                        DateTime.now()
-                                    ? IconButton(
-                                        onPressed: () {
+                                trailing: IconButton(
+                                  onPressed:
+                                      DateTime.parse(c['data'].toString()) ==
+                                          DateTime.now()
+                                      ? () {
                                           showDialog(
                                             context: context,
                                             builder: (context) {
@@ -279,10 +285,10 @@ class _AgendaState extends State<Agenda> with TickerProviderStateMixin {
                                               );
                                             },
                                           );
-                                        },
-                                        icon: Icon(Icons.delete),
-                                      )
-                                    : null,
+                                        }
+                                      : null,
+                                  icon: Icon(Icons.delete),
+                                ),
                               ),
                             ],
                           ),

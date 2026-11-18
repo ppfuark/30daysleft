@@ -6,9 +6,8 @@ import 'package:flutter_sound/public/flutter_sound.dart';
 import 'package:path_provider/path_provider.dart';
 
 class Checkin extends StatefulWidget {
-  final Map<String, dynamic> coleta;
 
-  const Checkin({super.key, required this.coleta});
+  const Checkin({super.key,});
   @override
   State<Checkin> createState() => _CheckinState();
 }

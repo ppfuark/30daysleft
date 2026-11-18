@@ -1,4 +1,5 @@
 import 'package:c1_01/pages/agenda.dart';
+import 'package:c1_01/pages/checkin.dart';
 import 'package:c1_01/pages/home.dart';
 import 'package:c1_01/pages/mapa.dart';
 import 'package:c1_01/pages/profile.dart';
@@ -52,7 +53,21 @@ class _MainPageState extends State<MainPage> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     final pages = [
-      Home(me: widget.me, onTap: () {}, onTap1: () {}),
+      Home(
+        me: widget.me,
+        onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => Checkin()),
+          );
+        },
+        onTap1: () {},
+        onTap2: () {
+          setState(() {
+            index = 1;
+          });
+        },
+      ),
       Mapa(me: widget.me),
       Agenda(),
       Profile(me: widget.me),

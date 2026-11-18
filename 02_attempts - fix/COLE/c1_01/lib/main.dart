@@ -50,6 +50,8 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      navigatorKey: key,
       title: 'Flutter Demo',
       theme: ThemeData(colorScheme: .fromSeed(seedColor: Colors.deepPurple)),
       home: const MyHomePage(),
@@ -160,7 +162,10 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                 spacing: 20,
                 children: [
                   Image.asset('assets/ic_launcher.png'),
-                  Text("ColetaJá"),
+                  ListTile(
+                    title: Text("ColetaJá"),
+                    subtitle: Text("Acesse sua conta"),
+                  ),
                   ListTile(
                     title: Text("E-mail"),
                     subtitle: TextField(
@@ -216,6 +221,25 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                               (element) => element['email'] == email.text,
                             );
 
+                            if (showPass) {
+                              if (exist.first['senha'] != pass.text) {
+                                Fluttertoast.showToast(
+                                  msg: 'Senha incorreta.',
+                                  backgroundColor: Colors.red,
+                                );
+                                increment();
+                                return;
+                              } else {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) =>
+                                        MainPage(me: exist.first),
+                                  ),
+                                );
+                              }
+                            }
+
                             if (exist.isNotEmpty) {
                               setState(() {
                                 showPass = true;
@@ -239,24 +263,6 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                                 ),
                               );
                               return;
-                            }
-
-                            if (showPass) {
-                              if (exist.first['senha'] != pass.text) {
-                                Fluttertoast.showToast(
-                                  msg: 'Senha incorreta.',
-                                  backgroundColor: Colors.red,
-                                );
-                                increment();
-                              } else {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) =>
-                                        MainPage(me: exist.first),
-                                  ),
-                                );
-                              }
                             }
                           },
                     label: Text("Continuar"),

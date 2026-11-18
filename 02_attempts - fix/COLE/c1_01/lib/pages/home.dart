@@ -5,12 +5,14 @@ class Home extends StatefulWidget {
   final Map<String, dynamic> me;
   final Function onTap;
   final Function onTap1;
+  final Function onTap2;
 
   const Home({
     super.key,
     required this.me,
     required this.onTap,
     required this.onTap1,
+    required this.onTap2,
   });
   @override
   State<Home> createState() => _HomeState();
@@ -74,6 +76,11 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
               ),
               title: Text("ColetaJá"),
               centerTitle: true,
+              actions: [
+                CircleAvatar(
+                  backgroundImage: AssetImage('assets/icons/FotoUsuario.jpg'),
+                ),
+              ],
             ),
             body: Container(
               width: w,
@@ -85,7 +92,9 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                   spacing: 20,
                   children: [
                     ListTile(
-                      title: Text("Olá Amanda! Seu impacto ecológico este mês"),
+                      title: Text(
+                        "Olá ${widget.me['nome']}! Seu impacto ecológico este mês\n${widget.me['email']}",
+                      ),
                       subtitle: Text("Total reciclado: 12.5kg"),
                       trailing: Chip(label: Text("Expert")),
                     ),
@@ -103,7 +112,9 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                             width: double.infinity,
                             padding: EdgeInsets.all(16),
                             child: ElevatedButton.icon(
-                              onPressed: () {},
+                              onPressed: () {
+                                widget.onTap2();
+                              },
                               label: Text("Acompanhar no Mapa"),
                               icon: Icon(Icons.location_pin),
                             ),
