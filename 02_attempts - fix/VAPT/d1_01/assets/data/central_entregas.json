@@ -1,0 +1,26 @@
+[
+  {
+    "pedidoId": 87234,
+    "cliente": "Mariana Costa",
+    "status": "Em rota",
+    "valor": 65.89,
+    "tempoEstimado": "12 min",
+    "entregador": "João Ferreira"
+  },
+  {
+    "pedidoId": 87235,
+    "cliente": "Carlos Eduardo",
+    "status": "Em rota",
+    "valor": 42.50,
+    "tempoEstimado": "8 min",
+    "entregador": "Ana Oliveira"
+  },
+  {
+    "pedidoId": 87236,
+    "cliente": "Fernanda Lima",
+    "status": "Entregue",
+    "valor": 87.90,
+    "tempoEstimado": "0 min",
+    "entregador": "Lucas Santos"
+  }
+]

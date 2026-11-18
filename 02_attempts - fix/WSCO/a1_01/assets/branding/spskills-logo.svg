@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="400" viewBox="0 0 1200 400">
+  <rect width="1200" height="400" rx="48" fill="#FFFFFF"/>
+  <g transform="translate(85 62)" fill="none" stroke="#003764" stroke-width="24" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M76 20h168v78c0 76-38 118-84 118S76 174 76 98z"/>
+    <path d="M76 52H28v38c0 46 28 78 74 78M244 52h48v38c0 46-28 78-74 78"/>
+    <path d="M160 216v46M104 296h112M128 262h64"/>
+    <path d="M160 62l13 28 31 4-23 22 6 31-27-15-27 15 6-31-23-22 31-4z" fill="#F5A623" stroke="#F5A623" stroke-width="8"/>
+  </g>
+  <text x="420" y="205" font-family="Arial, sans-serif" font-size="112" font-weight="700" fill="#003764">SP</text>
+  <text x="580" y="205" font-family="Arial, sans-serif" font-size="112" font-weight="700" fill="#0084AD">Skills</text>
+  <text x="426" y="270" font-family="Arial, sans-serif" font-size="34" letter-spacing="8" fill="#4A0D66">MODALIDADES SENAI</text>
+</svg>

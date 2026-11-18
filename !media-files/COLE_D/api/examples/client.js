@@ -1,4 +1,4 @@
-const url = process.argv[2] ?? 'ws://127.0.0.1:8080/ws';
+const url = process.argv[2] ?? 'ws://0.0.0.0:8080/ws';
 const socket = new WebSocket(url);
 socket.addEventListener('open', () => {
   socket.send(JSON.stringify({ type: 'subscribe', requestId: 'tela3', topic: 'coleta_comum', filters: { turno: 'Tarde' }, location: { lat: -22.1085, lng: -50.1742 }, notifyArrival: true }));

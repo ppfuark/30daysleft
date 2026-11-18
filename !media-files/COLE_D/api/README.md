@@ -14,7 +14,10 @@ npm ci --ignore-scripts
 npm start
 ```
 
-WebSocket: `ws://127.0.0.1:8080/ws`. Verificação de funcionamento: `http://127.0.0.1:8080/health`.
+WebSocket: `ws://0.0.0.0:8080/ws`. Verificação de funcionamento: `http://0.0.0.0:8080/health`.
+
+Documentação Swagger: `http://0.0.0.0:8080/docs`.
+Especificação OpenAPI JSON: `http://0.0.0.0:8080/openapi.json`.
 
 Em outro terminal, na mesma pasta:
 
@@ -64,7 +67,7 @@ npm start
 
 | Variável | Padrão | Uso |
 | --- | --- | --- |
-| `HOST` | `127.0.0.1` | Interface de rede |
+| `HOST` | `0.0.0.0` | Interface de rede |
 | `PORT` | `8080` | Porta HTTP e WebSocket |
 | `PONTOS_PATH` | `data/pontos.json` | Fonte da frota e dos ecopontos |
 | `SIMULACAO_PATH` | `data/simulacao.json` | Geometria viária e parâmetros simulados |

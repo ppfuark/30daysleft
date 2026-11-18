@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<comentariosWSConecta>
+  <comentarios>
+
+    <comentario id="1">
+      <postId>1</postId>
+      <usuario>
+        <id>1</id>
+      </usuario>
+      <conteudo>Essa modalidade parece muito desafiadora! Gostei de ver como a competição simula situações reais da indústria.</conteudo>
+      <dataComentario>2026-05-13T09:15:00</dataComentario>
+      <curtidas>18</curtidas>
+    </comentario>
+
+    <comentario id="2">
+      <postId>1</postId>
+      <usuario>
+        <id>7</id>
+      </usuario>
+      <conteudo>Também achei interessante. Dá para perceber que não é só habilidade técnica, tem muita estratégia envolvida.</conteudo>
+      <dataComentario>2026-05-13T09:42:00</dataComentario>
+      <curtidas>11</curtidas>
+    </comentario>
+
+    <comentario id="3">
+      <postId>1</postId>
+      <usuario>
+        <id>14</id>
+      </usuario>
+      <conteudo>Queria ver mais detalhes sobre os critérios de avaliação dessa modalidade.</conteudo>
+      <dataComentario>2026-05-13T10:05:00</dataComentario>
+      <curtidas>7</curtidas>
+    </comentario>
+
+    <comentario id="4">
+      <postId>2</postId>
+      <usuario>
+        <id>3</id>
+      </usuario>
+      <conteudo>Esse cronograma ajudou bastante. Agora ficou mais fácil entender as etapas até a competição.</conteudo>
+      <dataComentario>2026-05-13T10:30:00</dataComentario>
+      <curtidas>23</curtidas>
+    </comentario>
+
+    <comentario id="5">
+      <postId>2</postId>
+      <usuario>
+        <id>19</id>
+      </usuario>
+      <conteudo>Seria legal se o app enviasse lembretes antes dos treinamentos e das avaliações.</conteudo>
+      <dataComentario>2026-05-13T10:55:00</dataComentario>
+      <curtidas>16</curtidas>
+    </comentario>
+
+    <comentario id="6">
+      <postId>2</postId>
+      <usuario>
+        <id>28</id>
+      </usuario>
+      <conteudo>Com uma agenda integrada, o competidor conseguiria acompanhar melhor os prazos de preparação.</conteudo>
+      <dataComentario>2026-05-13T11:07:00</dataComentario>
+      <curtidas>9</curtidas>
+    </comentario>
+
+    <comentario id="7">
+      <postId>3</postId>
+      <usuario>
+        <id>5</id>
+      </usuario>
+      <conteudo>Gostei da ideia de acompanhar o progresso em tempo real. Isso pode motivar bastante os competidores.</conteudo>
+      <dataComentario>2026-05-13T11:20:00</dataComentario>
+      <curtidas>29</curtidas>
+    </comentario>
+
+    <comentario id="8">
+      <postId>3</postId>
+      <usuario>
+        <id>11</id>
+      </usuario>
+      <conteudo>Ver o progresso por etapas ajuda a saber onde precisamos melhorar antes da próxima entrega.</conteudo>
+      <dataComentario>2026-05-13T11:38:00</dataComentario>
+      <curtidas>14</curtidas>
+    </comentario>
+
+    <comentario id="9">
+      <postId>3</postId>
+      <usuario>
+        <id>22</id>
+      </usuario>
+      <conteudo>Essa parte poderia ter medalhas ou conquistas para deixar a preparação mais divertida.</conteudo>
+      <dataComentario>2026-05-13T12:02:00</dataComentario>
+      <curtidas>21</curtidas>
+    </comentario>
+
+    <comentario id="10">
+      <postId>3</postId>
+      <usuario>
+        <id>36</id>
+      </usuario>
+      <conteudo>Um ranking por evolução, e não só por pontuação, deixaria o acompanhamento mais justo.</conteudo>
+      <dataComentario>2026-05-13T12:26:00</dataComentario>
+      <curtidas>13</curtidas>
+    </comentario>
+
+    <comentario id="11">
+      <postId>4</postId>
+      <usuario>
+        <id>2</id>
+      </usuario>
+      <conteudo>Conhecer os competidores de outras unidades deixa a experiência mais imersiva.</conteudo>
+      <dataComentario>2026-05-13T13:10:00</dataComentario>
+      <curtidas>12</curtidas>
+    </comentario>
+
+    <comentario id="12">
+      <postId>4</postId>
+      <usuario>
+        <id>9</id>
+      </usuario>
+      <conteudo>Concordo. A WorldSkills também é sobre troca, networking e aprendizado com outras pessoas.</conteudo>
+      <dataComentario>2026-05-13T13:25:00</dataComentario>
+      <curtidas>19</curtidas>
+    </comentario>
+
+    <comentario id="13">
+      <postId>4</postId>
+      <usuario>
+        <id>31</id>
+      </usuario>
+      <conteudo>Seria interessante ter uma área para encontrar competidores da mesma modalidade.</conteudo>
+      <dataComentario>2026-05-13T13:47:00</dataComentario>
+      <curtidas>15</curtidas>
+    </comentario>
+
+    <comentario id="14">
+      <postId>5</postId>
+      <usuario>
+        <id>4</id>
+      </usuario>
+      <conteudo>Esse conteúdo sobre regras é essencial. Às vezes o competidor domina a técnica, mas perde ponto por detalhe do regulamento.</conteudo>
+      <dataComentario>2026-05-13T14:00:00</dataComentario>
+      <curtidas>31</curtidas>
+    </comentario>
+
+    <comentario id="15">
+      <postId>5</postId>
+      <usuario>
+        <id>13</id>
+      </usuario>
+      <conteudo>Seria interessante ter exemplos de penalidades e boas práticas dentro de cada modalidade.</conteudo>
+      <dataComentario>2026-05-13T14:18:00</dataComentario>
+      <curtidas>17</curtidas>
+    </comentario>
+
+    <comentario id="16">
+      <postId>5</postId>
+      <usuario>
+        <id>26</id>
+      </usuario>
+      <conteudo>Um quiz sobre regras antes da competição ajudaria bastante na preparação.</conteudo>
+      <dataComentario>2026-05-13T14:36:00</dataComentario>
+      <curtidas>20</curtidas>
+    </comentario>
+
+    <comentario id="17">
+      <postId>6</postId>
+      <usuario>
+        <id>6</id>
+      </usuario>
+      <conteudo>Gostei da proposta de tornar a competição mais divertida sem perder o foco profissional.</conteudo>
+      <dataComentario>2026-05-13T15:05:00</dataComentario>
+      <curtidas>24</curtidas>
+    </comentario>
+
+    <comentario id="18">
+      <postId>6</postId>
+      <usuario>
+        <id>16</id>
+      </usuario>
+      <conteudo>A parte lúdica pode ajudar principalmente quem está conhecendo a WorldSkills agora.</conteudo>
+      <dataComentario>2026-05-13T15:22:00</dataComentario>
+      <curtidas>10</curtidas>
+    </comentario>
+
+    <comentario id="19">
+      <postId>6</postId>
+      <usuario>
+        <id>38</id>
+      </usuario>
+      <conteudo>Competir também pode ser uma experiência social, não apenas técnica.</conteudo>
+      <dataComentario>2026-05-13T15:48:00</dataComentario>
+      <curtidas>18</curtidas>
+    </comentario>
+
+    <comentario id="20">
+      <postId>7</postId>
+      <usuario>
+        <id>8</id>
+      </usuario>
+      <conteudo>Seria bom ter conteúdos sobre modalidades antigas para entender a evolução das provas.</conteudo>
+      <dataComentario>2026-05-13T16:10:00</dataComentario>
+      <curtidas>22</curtidas>
+    </comentario>
+
+    <comentario id="21">
+      <postId>7</postId>
+      <usuario>
+        <id>17</id>
+      </usuario>
+      <conteudo>Ver exemplos de desafios anteriores pode ajudar muito no treinamento.</conteudo>
+      <dataComentario>2026-05-13T16:31:00</dataComentario>
+      <curtidas>27</curtidas>
+    </comentario>
+
+    <comentario id="22">
+      <postId>7</postId>
+      <usuario>
+        <id>25</id>
+      </usuario>
+      <conteudo>Eu gostaria de comparar provas passadas com as competências exigidas atualmente.</conteudo>
+      <dataComentario>2026-05-13T16:52:00</dataComentario>
+      <curtidas>8</curtidas>
+    </comentario>
+
+    <comentario id="23">
+      <postId>8</postId>
+      <usuario>
+        <id>10</id>
+      </usuario>
+      <conteudo>As conexões entre competidores, treinadores e avaliadores podem deixar a preparação mais organizada.</conteudo>
+      <dataComentario>2026-05-13T17:15:00</dataComentario>
+      <curtidas>14</curtidas>
+    </comentario>
+
+    <comentario id="24">
+      <postId>8</postId>
+      <usuario>
+        <id>20</id>
+      </usuario>
+      <conteudo>Uma rede social focada na WorldSkills faz sentido, porque o público tem interesses muito específicos.</conteudo>
+      <dataComentario>2026-05-13T17:37:00</dataComentario>
+      <curtidas>26</curtidas>
+    </comentario>
+
+    <comentario id="25">
+      <postId>8</postId>
+      <usuario>
+        <id>34</id>
+      </usuario>
+      <conteudo>Seria legal ter grupos por modalidade e por unidade participante.</conteudo>
+      <dataComentario>2026-05-13T17:58:00</dataComentario>
+      <curtidas>19</curtidas>
+    </comentario>
+
+  </comentarios>
+</comentariosWSConecta>

@@ -1,10 +1,10 @@
-import test from 'node:test';
 import assert from 'node:assert/strict';
+import { once } from 'node:events';
 import { mkdtemp, readFile, rm, writeFile } from 'node:fs/promises';
+import { createConnection } from 'node:net';
 import { tmpdir } from 'node:os';
 import { join, resolve, sep } from 'node:path';
-import { createConnection } from 'node:net';
-import { once } from 'node:events';
+import test from 'node:test';
 import WebSocket from 'ws';
 import { createApp } from '../src/server.js';
 
@@ -119,9 +119,9 @@ async function fixture(t, options = {}) {
     await rm(directory, { recursive: true, force: true });
   });
   app = await createApp({
-    port: 0, host: '127.0.0.1', pontosPath, simulacaoPath,
+    port: 0, host: '0.0.0.0', pontosPath, simulacaoPath,
     simulation: false, tickMs: 100, watchMs: 40, heartbeatMs: 30000,
-    logger: { warn() {}, error() {} }, ...options,
+    logger: { warn() { }, error() { } }, ...options,
   });
   return {
     app, source, pontosPath, simulacaoPath,
@@ -147,6 +147,12 @@ test('saúde HTTP, rota inexistente e rejeição de upgrade fora de /ws', async 
   const health = await fetch(`${origin}/health`);
   assert.equal(health.status, 200);
   assert.equal((await health.json()).status, 'ok');
+  const openapi = await fetch(`${origin}/openapi.json`);
+  assert.equal(openapi.status, 200);
+  assert.equal((await openapi.json()).openapi, '3.1.0');
+  const docs = await fetch(`${origin}/docs`);
+  assert.equal(docs.status, 200);
+  assert.match(await docs.text(), /SwaggerUIBundle/u);
   assert.equal((await fetch(`${origin}/nao-existe`)).status, 404);
   await new Promise((done, reject) => {
     const socket = new WebSocket(`${origin.replace(/^http:/u, 'ws:')}/nao-existe`);
@@ -295,7 +301,7 @@ test('encerramento fecha conexão HTTP com cabeçalhos incompletos em menos de u
   const { app } = await fixture(t);
   const address = app.server.address();
   const accepted = once(app.server, 'connection');
-  const socket = createConnection({ host: '127.0.0.1', port: address.port });
+  const socket = createConnection({ host: '0.0.0.0', port: address.port });
   t.after(() => socket.destroy());
   await Promise.all([once(socket, 'connect'), accepted]);
   await new Promise((done, reject) => {

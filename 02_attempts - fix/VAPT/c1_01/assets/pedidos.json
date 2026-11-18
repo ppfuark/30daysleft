@@ -1,0 +1,26 @@
+[
+  {
+    "id_pedido": "#8921",
+    "status": "COLETADO",
+    "restaurante": "BURGER JOINT",
+    "cliente": "João Silva",
+    "itens": "2x Smash Burger, 1x Fritas Crinkle, 1x Refri Cola",
+    "endereco": "Rua das Flores, 123 - Apto 42 Centro"
+  },
+  {
+    "id_pedido": "#8922",
+    "status": "A CAMINHO",
+    "restaurante": "SUSHI EXPRESS",
+    "cliente": "Mariana Costa",
+    "itens": "1x Combo Salmão 20 peças, 2x Hashi extra",
+    "endereco": "Av. Paulista, 1000 - Conj 54 Bela Vista"
+  },
+  {
+    "id_pedido": "#8923",
+    "status": "NO ESTABELECIMENTO",
+    "restaurante": "MAMMA MIA PIZZERIA",
+    "cliente": "Carlos Andrade",
+    "itens": "1x Pizza Calabresa Grande, 1x Pizza Marguerita Média",
+    "endereco": "Rua Augusta, 500 Consolação"
+  }
+]

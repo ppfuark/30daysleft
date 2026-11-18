@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900">
+  <rect width="1400" height="900" fill="#FFFFFF"/>
+  <text x="72" y="92" font-family="Arial, sans-serif" font-size="56" font-weight="700" fill="#003764">Guia de Estilos — SP Skills</text>
+  <text x="72" y="158" font-family="Arial, sans-serif" font-size="28" fill="#334155">Módulo A1 — Funcionalidades</text>
+  <text x="72" y="240" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#003764">Paleta de cores</text>
+  <g font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#182230">
+    <rect x="72" y="278" width="330" height="66" rx="12" fill="#003764"/><text x="430" y="322">#003764 — Primária</text>
+    <rect x="72" y="366" width="330" height="66" rx="12" fill="#0084AD"/><text x="430" y="410">#0084AD — Secundária</text>
+    <rect x="72" y="454" width="330" height="66" rx="12" fill="#8AE2D1"/><text x="430" y="498">#8AE2D1 — Destaque suave</text>
+    <rect x="72" y="542" width="330" height="66" rx="12" fill="#4A0D66"/><text x="430" y="586">#4A0D66 — Apoio</text>
+    <rect x="72" y="630" width="330" height="66" rx="12" fill="#D51067"/><text x="430" y="674">#D51067 — Erro/atenção</text>
+    <rect x="72" y="718" width="330" height="66" rx="12" fill="#F5A623"/><text x="430" y="762">#F5A623 — Curtida/progresso</text>
+  </g>
+  <line x1="830" y1="210" x2="830" y2="800" stroke="#D9E2EA" stroke-width="2"/>
+  <text x="880" y="240" font-family="Arial, sans-serif" font-size="32" font-weight="700" fill="#003764">Identidade e componentes</text>
+  <g transform="translate(870 275) scale(.4)">
+    <rect width="1200" height="400" rx="48" fill="#F8FAFC"/>
+    <g transform="translate(85 62)" fill="none" stroke="#003764" stroke-width="24" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M76 20h168v78c0 76-38 118-84 118S76 174 76 98z"/><path d="M76 52H28v38c0 46 28 78 74 78M244 52h48v38c0 46-28 78-74 78"/><path d="M160 216v46M104 296h112M128 262h64"/><path d="M160 62l13 28 31 4-23 22 6 31-27-15-27 15 6-31-23-22 31-4z" fill="#F5A623" stroke="#F5A623" stroke-width="8"/>
+    </g>
+    <text x="420" y="205" font-family="Arial, sans-serif" font-size="112" font-weight="700" fill="#003764">SP</text><text x="580" y="205" font-family="Arial, sans-serif" font-size="112" font-weight="700" fill="#0084AD">Skills</text>
+  </g>
+  <text x="880" y="520" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#003764">Tipografia</text>
+  <text x="880" y="565" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#182230">Arial Bold — títulos e ações</text>
+  <text x="880" y="605" font-family="Arial, sans-serif" font-size="25" fill="#334155">Arial Regular — textos e campos</text>
+  <text x="880" y="675" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#003764">Regras</text>
+  <text x="880" y="720" font-family="Arial, sans-serif" font-size="22" fill="#334155">• Contraste mínimo WCAG AA</text>
+  <text x="880" y="758" font-family="Arial, sans-serif" font-size="22" fill="#334155">• Área de toque mínima: 48 × 48 dp</text>
+  <text x="880" y="796" font-family="Arial, sans-serif" font-size="22" fill="#334155">• Cantos: 12 dp; espaçamento base: 8 dp</text>
+</svg>

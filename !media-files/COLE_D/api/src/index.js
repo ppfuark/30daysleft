@@ -1,5 +1,5 @@
-import { createApp } from './server.js';
 import path from 'node:path';
+import { createApp } from './server.js';
 
 function integer(name, fallback, minimum, maximum) {
   if (process.env[name] === undefined) return fallback;
@@ -13,7 +13,7 @@ try {
   const simulation = process.env.SIMULATION ?? 'true';
   if (!['true', 'false'].includes(simulation)) throw new Error('SIMULATION deve ser true ou false.');
   const app = await createApp({
-    host: process.env.HOST ?? '127.0.0.1',
+    host: process.env.HOST ?? '0.0.0.0',
     port: integer('PORT', 8080, 1, 65535),
     tickMs: integer('TICK_MS', 2000, 100, 60000),
     watchMs: integer('WATCH_MS', 1000, 100, 60000),
@@ -22,7 +22,7 @@ try {
     ...(process.env.SIMULACAO_PATH ? { simulacaoPath: path.resolve(process.env.SIMULACAO_PATH) } : {}),
   });
   console.log(`API Recicla+ em ${app.url}`);
-  console.log(`Modo: ${simulation === 'true' ? 'simulação em arquivo' : 'atualizações do JSON'}. Saúde: http://${process.env.HOST ?? '127.0.0.1'}:${app.server.address().port}/health`);
+  console.log(`Modo: ${simulation === 'true' ? 'simulação em arquivo' : 'atualizações do JSON'}. Saúde: http://${process.env.HOST ?? '0.0.0.0'}:${app.server.address().port}/health`);
   let stopping = false;
   const shutdown = async () => {
     if (stopping) return;

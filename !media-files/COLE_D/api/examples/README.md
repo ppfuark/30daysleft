@@ -13,7 +13,7 @@ defina `$env:HOST = '0.0.0.0'` antes do comando de inicialização do servidor.
 | Onde o cliente executa | URL |
 | --- | --- |
 | Emulador Android padrão | `ws://10.0.2.2:8080/ws` |
-| Dart/Flutter desktop na mesma máquina | `ws://127.0.0.1:8080/ws` |
+| Dart/Flutter desktop na mesma máquina | `ws://0.0.0.0:8080/ws` |
 | Celular físico na mesma rede | `ws://IP-LOCAL-DO-PC:8080/ws` |
 
 No celular físico, libere a porta 8080 no firewall para a rede de

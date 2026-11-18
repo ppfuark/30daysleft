@@ -1,0 +1,32 @@
+{
+  "graficoFaturamento": [
+    {
+      "dia": "SEG",
+      "valor": 3200
+    },
+    {
+      "dia": "TER",
+      "valor": 4800
+    },
+    {
+      "dia": "QUA",
+      "valor": 2100
+    },
+    {
+      "dia": "QUI",
+      "valor": 6700
+    },
+    {
+      "dia": "SEX",
+      "valor": 5900
+    },
+    {
+      "dia": "SAB",
+      "valor": 7800
+    },
+    {
+      "dia": "DOM",
+      "valor": 4500
+    }
+  ]
+}

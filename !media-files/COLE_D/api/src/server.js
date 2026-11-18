@@ -1,24 +1,61 @@
 import http from 'node:http';
+import { readFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import { WebSocket, WebSocketServer } from 'ws';
 import { DataStore } from './data-store.js';
-import { TOPICS, ProtocolError, validateCommand, snapshot, arrivalAlerts } from './protocol.js';
+import { arrivalAlerts, ProtocolError, snapshot, TOPICS, validateCommand } from './protocol.js';
 
 const DEFAULT_POINTS = fileURLToPath(new URL('../data/pontos.json', import.meta.url));
 const DEFAULT_SIMULATION = fileURLToPath(new URL('../data/simulacao.json', import.meta.url));
+const OPENAPI_PATH = fileURLToPath(new URL('../docs/openapi.json', import.meta.url));
+
+const SWAGGER_HTML = `<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>API Recicla+ - Swagger</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swagger-ui-dist@5.17.14/swagger-ui.css">
+  </head>
+  <body>
+    <div id="swagger-ui"></div>
+    <script src="https://cdn.jsdelivr.net/npm/swagger-ui-dist@5.17.14/swagger-ui-bundle.js"></script>
+    <script>
+      window.onload = () => SwaggerUIBundle({
+        url: '/openapi.json',
+        dom_id: '#swagger-ui',
+        deepLinking: true,
+        presets: [SwaggerUIBundle.presets.apis, SwaggerUIBundle.SwaggerUIStandalonePreset],
+        layout: 'BaseLayout'
+      });
+    </script>
+  </body>
+</html>`;
 
 export async function createApp(options = {}) {
-  const { port = 8080, host = '127.0.0.1', heartbeatMs = 30000, logger = console } = options;
+  const { port = 8080, host = '0.0.0.0', heartbeatMs = 30000, logger = console } = options;
   const store = new DataStore({ pontosPath: DEFAULT_POINTS, simulacaoPath: DEFAULT_SIMULATION, ...options });
   await store.start();
   const sessions = new Map();
   const server = http.createServer((req, res) => {
-    res.setHeader('Content-Type', 'application/json; charset=utf-8');
     res.setHeader('Cache-Control', 'no-store');
     if (req.method === 'GET' && req.url === '/health') {
+      res.setHeader('Content-Type', 'application/json; charset=utf-8');
       const state = store.getState();
       res.end(JSON.stringify({ status: 'ok', service: 'recicla-coleta-websocket', protocol: '1.0', simulation: state.simulation, revision: state.revision, updatedAt: state.updatedAt, clients: sessions.size }));
+    } else if (req.method === 'GET' && req.url === '/openapi.json') {
+      res.setHeader('Content-Type', 'application/json; charset=utf-8');
+      readFile(OPENAPI_PATH, 'utf8')
+        .then(specification => res.end(specification))
+        .catch(error => {
+          res.writeHead(500);
+          res.end(JSON.stringify({ error: 'OPENAPI_UNAVAILABLE', message: error.message }));
+        });
+    } else if (req.method === 'GET' && (req.url === '/docs' || req.url === '/docs/')) {
+      res.setHeader('Content-Type', 'text/html; charset=utf-8');
+      res.end(SWAGGER_HTML);
     } else {
+      res.setHeader('Content-Type', 'application/json; charset=utf-8');
       res.writeHead(404);
       res.end(JSON.stringify({ error: 'NOT_FOUND', message: 'Saúde: GET /health. WebSocket: /ws.' }));
     }

@@ -1,0 +1,153 @@
+{
+  "timeline": {
+    "nome": "WSConecta",
+    "descricao": "Postagens da timeline da plataforma WSConecta.",
+    "fonteUsuarios": "lista_de_usuarios.json",
+    "fonteComentarios": "comentarios.xml",
+    "postagens": [
+      {
+        "id": 1,
+        "autorId": 3,
+        "horarioPostagem": "2026-05-13T08:45:00",
+        "comentariosIds": [
+          1,
+          2,
+          3
+        ],
+        "quantidadeComentarios": 3,
+        "postagemOriginal": "Acabei de ver uma demonstração da modalidade 08 e fiquei impressionado com o quanto a prova exige raciocínio, estratégia e domínio técnico. A WorldSkills mostra que resolver problemas reais da indústria vai muito além de apenas saber programar.",
+        "postagemI18n": {
+          "pt-BR": "Acabei de ver uma demonstração da modalidade 08 e fiquei impressionado com o quanto a prova exige raciocínio, estratégia e domínio técnico. A WorldSkills mostra que resolver problemas reais da indústria vai muito além de apenas saber programar.",
+          "en-US": "I just watched a demonstration of skill 08 and was impressed by how much the challenge requires reasoning, strategy, and technical mastery. WorldSkills shows that solving real industry problems goes far beyond simply knowing how to code.",
+          "es-ES": "Acabo de ver una demostración de la modalidad 08 y me impresionó cuánto la prueba exige razonamiento, estrategia y dominio técnico. WorldSkills demuestra que resolver problemas reales de la industria va mucho más allá de solo saber programar."
+        }
+      },
+      {
+        "id": 2,
+        "autorId": 28,
+        "horarioPostagem": "2026-05-13T10:05:00",
+        "comentariosIds": [
+          4,
+          5,
+          6
+        ],
+        "quantidadeComentarios": 3,
+        "postagemOriginal": "Disponibilizei um novo cronograma de preparação no WSConecta. Agora os competidores conseguem visualizar treinamentos, avaliações, entregas e etapas importantes até a competição.",
+        "postagemI18n": {
+          "pt-BR": "Disponibilizei um novo cronograma de preparação no WSConecta. Agora os competidores conseguem visualizar treinamentos, avaliações, entregas e etapas importantes até a competição.",
+          "en-US": "I added a new preparation schedule to WSConecta. Now competitors can view training sessions, assessments, deliverables, and important milestones leading up to the competition.",
+          "es-ES": "Agregué un nuevo cronograma de preparación en WSConecta. Ahora los competidores pueden ver entrenamientos, evaluaciones, entregas y etapas importantes hasta la competencia."
+        }
+      },
+      {
+        "id": 3,
+        "autorId": 5,
+        "horarioPostagem": "2026-05-13T11:00:00",
+        "comentariosIds": [
+          7,
+          8,
+          9,
+          10
+        ],
+        "quantidadeComentarios": 4,
+        "postagemOriginal": "Atualizei meu progresso de treinamento na plataforma. Ver a evolução por etapas ajuda muito a entender onde estou melhorando e quais pontos ainda preciso reforçar antes da próxima avaliação.",
+        "postagemI18n": {
+          "pt-BR": "Atualizei meu progresso de treinamento na plataforma. Ver a evolução por etapas ajuda muito a entender onde estou melhorando e quais pontos ainda preciso reforçar antes da próxima avaliação.",
+          "en-US": "I updated my training progress on the platform. Seeing progress by stages helps a lot to understand where I am improving and which points I still need to strengthen before the next assessment.",
+          "es-ES": "Actualicé mi progreso de entrenamiento en la plataforma. Ver la evolución por etapas ayuda mucho a entender en qué estoy mejorando y qué puntos todavía necesito reforzar antes de la próxima evaluación."
+        }
+      },
+      {
+        "id": 4,
+        "autorId": 31,
+        "horarioPostagem": "2026-05-13T12:45:00",
+        "comentariosIds": [
+          11,
+          12,
+          13
+        ],
+        "quantidadeComentarios": 3,
+        "postagemOriginal": "Uma das partes mais legais da WorldSkills é conhecer competidores de outras unidades. Trocar experiências com pessoas da mesma modalidade deixa a preparação mais rica e mais próxima da realidade do evento.",
+        "postagemI18n": {
+          "pt-BR": "Uma das partes mais legais da WorldSkills é conhecer competidores de outras unidades. Trocar experiências com pessoas da mesma modalidade deixa a preparação mais rica e mais próxima da realidade do evento.",
+          "en-US": "One of the best parts of WorldSkills is meeting competitors from other schools. Exchanging experiences with people in the same skill makes preparation richer and closer to the reality of the event.",
+          "es-ES": "Una de las partes más interesantes de WorldSkills es conocer competidores de otras unidades. Intercambiar experiencias con personas de la misma modalidad hace que la preparación sea más rica y cercana a la realidad del evento."
+        }
+      },
+      {
+        "id": 5,
+        "autorId": 1,
+        "horarioPostagem": "2026-05-13T13:35:00",
+        "comentariosIds": [
+          14,
+          15,
+          16
+        ],
+        "quantidadeComentarios": 3,
+        "postagemOriginal": "Reforcei hoje a importância de estudar o regulamento da competição. Muitas vezes o competidor domina a parte técnica, mas pode perder desempenho por não observar critérios, penalidades e boas práticas da modalidade.",
+        "postagemI18n": {
+          "pt-BR": "Reforcei hoje a importância de estudar o regulamento da competição. Muitas vezes o competidor domina a parte técnica, mas pode perder desempenho por não observar critérios, penalidades e boas práticas da modalidade.",
+          "en-US": "Today I reinforced the importance of studying the competition rules. Often, a competitor masters the technical side but may lose performance by not paying attention to criteria, penalties, and best practices for the skill.",
+          "es-ES": "Hoy reforcé la importancia de estudiar el reglamento de la competencia. Muchas veces el competidor domina la parte técnica, pero puede perder rendimiento por no observar criterios, penalizaciones y buenas prácticas de la modalidad."
+        }
+      },
+      {
+        "id": 6,
+        "autorId": 16,
+        "horarioPostagem": "2026-05-13T14:42:00",
+        "comentariosIds": [
+          17,
+          18,
+          19
+        ],
+        "quantidadeComentarios": 3,
+        "postagemOriginal": "O WSConecta quer mostrar que competir também pode ser divertido. A preparação para a WorldSkills pode ser técnica, séria e, ao mesmo tempo, lúdica, social e motivadora para quem está começando.",
+        "postagemI18n": {
+          "pt-BR": "O WSConecta quer mostrar que competir também pode ser divertido. A preparação para a WorldSkills pode ser técnica, séria e, ao mesmo tempo, lúdica, social e motivadora para quem está começando.",
+          "en-US": "WSConecta wants to show that competing can also be fun. Preparing for WorldSkills can be technical and serious while also being playful, social, and motivating for those who are just starting.",
+          "es-ES": "WSConecta quiere mostrar que competir también puede ser divertido. La preparación para WorldSkills puede ser técnica y seria, y al mismo tiempo lúdica, social y motivadora para quienes están comenzando."
+        }
+      },
+      {
+        "id": 7,
+        "autorId": 25,
+        "horarioPostagem": "2026-05-13T15:50:00",
+        "comentariosIds": [
+          20,
+          21,
+          22
+        ],
+        "quantidadeComentarios": 3,
+        "postagemOriginal": "Estou pesquisando modalidades e provas anteriores para entender como os desafios evoluíram ao longo dos anos. Comparar edições passadas ajuda a perceber quais competências continuam importantes.",
+        "postagemI18n": {
+          "pt-BR": "Estou pesquisando modalidades e provas anteriores para entender como os desafios evoluíram ao longo dos anos. Comparar edições passadas ajuda a perceber quais competências continuam importantes.",
+          "en-US": "I am researching previous skills and challenges to understand how they have evolved over the years. Comparing past editions helps identify which competencies remain important.",
+          "es-ES": "Estoy investigando modalidades y pruebas anteriores para entender cómo los desafíos han evolucionado con los años. Comparar ediciones pasadas ayuda a identificar qué competencias siguen siendo importantes."
+        }
+      },
+      {
+        "id": 8,
+        "autorId": 20,
+        "horarioPostagem": "2026-05-13T16:55:00",
+        "comentariosIds": [
+          23,
+          24,
+          25
+        ],
+        "quantidadeComentarios": 3,
+        "postagemOriginal": "A conexão entre competidores, treinadores e avaliadores pode tornar a experiência da WorldSkills muito mais organizada. Uma rede social específica para esse público ajuda a centralizar conversas, conteúdos e interações relevantes.",
+        "postagemI18n": {
+          "pt-BR": "A conexão entre competidores, treinadores e avaliadores pode tornar a experiência da WorldSkills muito mais organizada. Uma rede social específica para esse público ajuda a centralizar conversas, conteúdos e interações relevantes.",
+          "en-US": "The connection between competitors, trainers, and evaluators can make the WorldSkills experience much more organized. A social network designed for this audience helps centralize conversations, content, and relevant interactions.",
+          "es-ES": "La conexión entre competidores, entrenadores y evaluadores puede hacer que la experiencia de WorldSkills sea mucho más organizada. Una red social específica para este público ayuda a centralizar conversaciones, contenidos e interacciones relevantes."
+        }
+      }
+    ],
+    "idiomaPadrao": "pt-BR",
+    "idiomasDisponiveis": [
+      "pt-BR",
+      "en-US",
+      "es-ES"
+    ]
+  }
+}

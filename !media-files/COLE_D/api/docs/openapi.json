@@ -1,0 +1,148 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "API Recicla+",
+    "version": "1.0.0",
+    "description": "API HTTP e WebSocket para dados simulados de coleta comum e coleta seletiva.\n\nO canal principal é WebSocket em `/ws`. Os protocolos de subscribe, snapshot, update e alertas estão descritos em `x-websocket-protocol` nesta especificação."
+  },
+  "servers": [
+    {
+      "url": "http://localhost:8080",
+      "description": "Servidor local padrão"
+    }
+  ],
+  "tags": [
+    {
+      "name": "Saúde",
+      "description": "Estado e disponibilidade do serviço"
+    }
+  ],
+  "paths": {
+    "/health": {
+      "get": {
+        "tags": ["Saúde"],
+        "summary": "Consultar estado da API",
+        "description": "Retorna o estado atual do serviço, da simulação e da quantidade de clientes WebSocket conectados.",
+        "responses": {
+          "200": {
+            "description": "Serviço disponível",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Health"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Health": {
+        "type": "object",
+        "required": ["status", "service", "protocol", "simulation", "revision", "updatedAt", "clients"],
+        "properties": {
+          "status": {
+            "type": "string",
+            "const": "ok"
+          },
+          "service": {
+            "type": "string",
+            "const": "recicla-coleta-websocket"
+          },
+          "protocol": {
+            "type": "string",
+            "const": "1.0"
+          },
+          "simulation": {
+            "type": "boolean"
+          },
+          "revision": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "clients": {
+            "type": "integer",
+            "minimum": 0
+          }
+        }
+      },
+      "Error": {
+        "type": "object",
+        "required": ["error", "message"],
+        "properties": {
+          "error": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "x-websocket-protocol": {
+    "url": "ws://localhost:8080/ws",
+    "protocol": "1.0",
+    "messageFormat": "JSON de texto",
+    "limits": {
+      "payloadBytes": 16384,
+      "commandsPerSecondPerConnection": 60,
+      "outputQueueBytes": 1048576
+    },
+    "incoming": {
+      "subscribe": {
+        "description": "Assina coleta_comum ou coleta_seletiva.",
+        "example": {
+          "type": "subscribe",
+          "requestId": "tela3-1",
+          "topic": "coleta_comum",
+          "filters": {
+            "logradouro": "Rua Osvaldo Lelis",
+            "turno": "Tarde",
+            "tipo_residuo": "Orgânico"
+          },
+          "location": {
+            "lat": -22.1085,
+            "lng": -50.1742
+          },
+          "notifyArrival": true
+        }
+      },
+      "unsubscribe": {
+        "description": "Remove a assinatura de um tópico.",
+        "example": {
+          "type": "unsubscribe",
+          "requestId": "sair",
+          "topic": "coleta_comum"
+        }
+      },
+      "ping": {
+        "description": "Solicita uma resposta pong.",
+        "example": {
+          "type": "ping",
+          "requestId": "heartbeat-1"
+        }
+      }
+    },
+    "outgoing": [
+      "connected",
+      "snapshot",
+      "update",
+      "arrival_alert",
+      "unsubscribed",
+      "pong",
+      "error"
+    ],
+    "topics": [
+      "coleta_comum",
+      "coleta_seletiva"
+    ]
+  }
+}

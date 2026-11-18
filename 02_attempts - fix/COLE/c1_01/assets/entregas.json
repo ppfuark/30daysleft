@@ -1,0 +1,36 @@
+{
+  "entregas": [
+    {
+      "id": "ENT-1001",
+      "destinatario": "SENAI Pindamonhangaba",
+      "endereco": "Rua Suíça, 1000 - Pindamonhangaba",
+      "status": "coletada",
+      "data_hora_coleta": "2026-10-19T08:30:00",
+      "icone_url": "ic_entulho_obra"
+    },
+    {
+      "id": "ENT-1002",
+      "destinatario": "Clube de Autos Antigos de Taubaté",
+      "endereco": "Av. Desembargador Paulo de Oliveira Costa - Taubaté",
+      "status": "coletada",
+      "data_hora_coleta": "2026-10-19T10:15:00",
+      "icone_url": "ic_reciclavel_metal"
+    },
+    {
+      "id": "ENT-1003",
+      "destinatario": "IrmãoLuz Material de Construção",
+      "endereco": "Centro - Pindamonhangaba",
+      "status": "pendente",
+      "data_hora_coleta": null,
+      "icone_url": "ic_entulho_madeira"
+    },
+    {
+      "id": "ENT-1004",
+      "destinatario": "MovePlan",
+      "endereco": "Pindamonhangaba",
+      "status": "coletada",
+      "data_hora_coleta": "2026-10-19T14:00:00",
+      "icone_url": "ic_reciclavel_papelao"
+    }
+  ]
+}
