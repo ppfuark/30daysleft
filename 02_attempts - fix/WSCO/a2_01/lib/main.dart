@@ -3,6 +3,7 @@ import 'dart:convert';
 
 import 'package:a2_01/app.dart';
 import 'package:a2_01/page/main_page.dart';
+import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:fluttertoast/fluttertoast.dart';
@@ -11,6 +12,10 @@ import 'package:local_auth/local_auth.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  debugPrint(
+    "ROTA INICIAL: ${WidgetsBinding.instance.platformDispatcher.defaultRouteName}",
+  );
   runApp(const MyApp());
 }
 
@@ -22,10 +27,23 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  final key = GlobalKey<NavigatorState>();
+
   @override
   void initState() {
     super.initState();
     SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
+
+    final path = Uri.parse(
+      WidgetsBinding.instance.platformDispatcher.defaultRouteName,
+    ).path;
+    print(path);
+
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
+      if (path == "/feed" || path == "/profile") {
+        key.currentState?.pushNamed(path);
+      }
+    });
   }
 
   // This widget is the root of your application.
@@ -35,9 +53,14 @@ class _MyAppState extends State<MyApp> {
       valueListenable: App.theme,
       builder: (context, value, child) {
         return MaterialApp(
+          navigatorKey: key,
           title: 'Flutter Demo',
           theme: value,
-          home: const MyHomePage(),
+          routes: {
+            '/': (context) => const MyHomePage(),
+            '/feed': (context) => MainPage(index: 0),
+            '/profile': (context) => MainPage(index: 1),
+          },
         );
       },
     );
@@ -59,6 +82,30 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
   bool obs = true;
 
   bool bio = false;
+
+  AwesomeNotifications awesomeNotifications = AwesomeNotifications()
+    ..initialize(null, [
+      NotificationChannel(
+        channelKey: 'notif',
+        channelName: 'notif',
+        channelDescription: 'Nofications',
+        importance: NotificationImportance.High,
+      ),
+    ]);
+  Future<void> notificate() async {
+    await awesomeNotifications.requestPermissionToSendNotifications();
+    await awesomeNotifications.requestPermissionToSendNotifications();
+    await awesomeNotifications.requestPermissionToSendNotifications();
+    await awesomeNotifications.createNotification(
+      content: NotificationContent(
+        id: (DateTime.now().millisecondsSinceEpoch / 1000).round(),
+        channelKey: 'notif',
+        title: 'Bem-vindo ao WSConecta! Habilidades mudam o mundo!',
+        body: 'Bem-vindo ao WSConecta! Habilidades mudam o mundo!',
+      ),
+    );
+    print("Notificado");
+  }
 
   bool blocked = false;
   Timer? timer;
@@ -101,6 +148,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
   Future<void> startApp() async {
     try {
       try {
+        notificate();
         final share = await SharedPreferences.getInstance();
         final t = share.getString('token') ?? '';
         final res = await http.get(
@@ -200,7 +248,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                       style: TextStyle(fontWeight: FontWeight.bold),
                     ),
                     subtitle: Text(
-                      "Uma comunidade para a maior competicão de educação profissional do mundo!",
+                      "Uma comunidade para a maior competição de educação profissional do mundo!",
                     ),
                   ),
                   TextField(
@@ -317,6 +365,12 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                                   biometricOnly: true,
                                 );
                             if (auth) {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => MainPage(),
+                                ),
+                              );
                             } else {}
                           },
                     label: Text("Entrar com Biometria"),

@@ -71,6 +71,7 @@ class _FeedState extends State<Feed> with TickerProviderStateMixin {
     });
 
     try {
+      print("Feed");
       try {
         final share = await SharedPreferences.getInstance();
         final t = share.getString('token') ?? '';
@@ -333,12 +334,12 @@ class _FeedState extends State<Feed> with TickerProviderStateMixin {
       }
       try {
         final share = await SharedPreferences.getInstance();
-        final t = share.getString('token') ?? '';
+        token = share.getString('token') ?? '';
         final res = await http.get(
           Uri.parse('http://10.109.66.126:3000/curtidas'),
           headers: {
             'Content-Type': 'application/json',
-            'Authorization': 'Bearer $t',
+            'Authorization': 'Bearer $token',
           },
         );
         final json = jsonDecode(res.body);
@@ -412,6 +413,8 @@ class _FeedState extends State<Feed> with TickerProviderStateMixin {
     _controller.dispose();
     super.dispose();
   }
+
+  String token = "";
 
   Widget skeleton(double h, double w) {
     return FadeTransition(
@@ -841,7 +844,7 @@ class _FeedState extends State<Feed> with TickerProviderStateMixin {
                                 children: [
                                   ...modalidades.map(
                                     (m) => SizedBox(
-                                      width: 300,
+                                      width: 350,
                                       height: 300,
                                       child: Card(
                                         child: Padding(
@@ -849,7 +852,24 @@ class _FeedState extends State<Feed> with TickerProviderStateMixin {
                                           child: Column(
                                             children: [
                                               Expanded(
-                                                child: Icon(Icons.broken_image),
+                                                child: Image.network(
+                                                  "http://10.109.66.126:3000/uploads/id/${m['id']}",
+                                                  fit: BoxFit.cover,
+                                                  width: double.infinity,
+                                                  height: double.infinity,
+                                                  headers: {
+                                                    'Authorization':
+                                                        'Bearer $token',
+                                                  },
+                                                  errorBuilder:
+                                                      (
+                                                        context,
+                                                        error,
+                                                        stackTrace,
+                                                      ) => Icon(
+                                                        Icons.broken_image,
+                                                      ),
+                                                ),
                                               ),
                                               ListTile(
                                                 contentPadding: EdgeInsets.all(
@@ -907,6 +927,41 @@ class _FeedState extends State<Feed> with TickerProviderStateMixin {
                                                       });
                                                     },
                                                     child: Text("Ver Detalhes"),
+                                                  ),
+                                                  IconButton(
+                                                    onPressed: () async {
+                                                      final share =
+                                                          await SharedPreferences.getInstance();
+
+                                                      favorites.contains(
+                                                            m['id'].toString(),
+                                                          )
+                                                          ? favorites.remove(
+                                                              m['id']
+                                                                  .toString(),
+                                                            )
+                                                          : favorites.add(
+                                                              m['id']
+                                                                  .toString(),
+                                                            );
+                                                      await share.setStringList(
+                                                        'favs',
+                                                        favorites,
+                                                      );
+
+                                                      setState(() {});
+                                                    },
+                                                    icon: Icon(
+                                                      Icons.favorite,
+                                                      color:
+                                                          favorites.contains(
+                                                            m!['id'].toString(),
+                                                          )
+                                                          ? Colors.red
+                                                          : Colors
+                                                                .grey
+                                                                .shade200,
+                                                    ),
                                                   ),
                                                 ],
                                               ),

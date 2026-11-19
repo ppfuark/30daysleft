@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_masked_text2/flutter_masked_text2.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:http/http.dart' as http;
+import 'package:model_viewer_plus/model_viewer_plus.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class Profile extends StatefulWidget {
@@ -45,6 +46,8 @@ class _ProfileState extends State<Profile> with TickerProviderStateMixin {
   final comment = TextEditingController();
 
   Future<void> startApp() async {
+    print("profile");
+
     Connectivity().onConnectivityChanged.listen((event) async {
       if (event.contains(ConnectivityResult.none)) {
         await showDialog(
@@ -653,7 +656,24 @@ class _ProfileState extends State<Profile> with TickerProviderStateMixin {
                               ),
                             ),
                             padding: EdgeInsets.all(20),
-                            child: Column(children: [Text("Meu Perfil")]),
+                            child: Column(
+                              children: [
+                                Text("Meu Perfil"),
+                                Expanded(
+                                  child: SizedBox(
+                                    width: double.infinity,
+                                    height: 100,
+                                    child: ModelViewer(
+                                      src:
+                                          'https://modelviewer.dev/shared-assets/models/Astronaut.glb',
+                                      alt: 'A 3D model of an astronaut',
+                                      ar: true,
+                                      autoRotate: true,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                         Expanded(

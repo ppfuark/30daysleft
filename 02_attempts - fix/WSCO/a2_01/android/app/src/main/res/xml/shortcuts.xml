@@ -1,0 +1,25 @@
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        android:shortcutId="favoritos"
+        android:enabled="true"
+        android:icon="@mipmap/ic_launcher"
+        android:shortcutShortLabel="@string/feed">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="wsco://app/feed"
+            android:targetPackage="com.example.a2_01"
+            android:targetClass="com.example.a2_01.MainActivity" />
+    </shortcut>
+
+    <shortcut
+        android:shortcutId="modalidades"
+        android:enabled="true"
+        android:icon="@mipmap/ic_launcher"
+        android:shortcutShortLabel="@string/profile">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="wsco://app/profile"
+            android:targetPackage="com.example.a2_01"
+            android:targetClass="com.example.a2_01.MainActivity" />
+    </shortcut>
+</shortcuts>
