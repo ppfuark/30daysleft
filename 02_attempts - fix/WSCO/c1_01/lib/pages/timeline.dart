@@ -78,6 +78,10 @@ class _TimelineState extends State<Timeline> with TickerProviderStateMixin {
       }
       setState(() {
         comments = data;
+        comments.sort(
+          (a, b) =>
+              int.parse(b['curtidas']).compareTo(int.parse(a['curtidas'])),
+        );
       });
 
       setState(() {
