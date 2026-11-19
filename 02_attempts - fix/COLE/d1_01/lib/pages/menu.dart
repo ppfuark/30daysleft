@@ -135,7 +135,9 @@ class _MenuState extends State<Menu> with TickerProviderStateMixin {
                         await _controller.forward();
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => Comum()),
+                          MaterialPageRoute(
+                            builder: (context) => Comum(me: widget.me),
+                          ),
                         );
                       },
                       icon: Icon(Icons.local_shipping, color: Colors.white),

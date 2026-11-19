@@ -1,6 +1,7 @@
 import 'package:d1_01/main.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:intl/intl.dart';
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
@@ -101,7 +102,7 @@ void main() {
     );
     await tapVisible(find.widgetWithText(ElevatedButton, "Cadastrar"));
 
-    // print('15');
+    print("11.1");
     await enterVisible(
       find.byKey(Key('cad_pass1')),
       "SPskills2026",
@@ -112,10 +113,49 @@ void main() {
       "SPskills2026",
       wait: false,
     );
-    // await tapVisible(find.byKey(Key('cad_drop')));
 
-    // print('16');
-    // await tester.tap(find.text("Desenvolvimento de Aplicativos Móveis"));
+    final hoje = DateTime.now();
+    print('12');
+    await enterVisible(
+      find.byKey(Key('cad_date')),
+      DateFormat(
+        'dd/MM/yyyy',
+      ).format(DateTime(hoje.year - 15, hoje.month, hoje.day)),
+      wait: false,
+    );
+    await tapVisible(find.text("Cadastrar"));
+
+    print('13');
+    await enterVisible(
+      find.byKey(Key('cad_date')),
+      DateFormat(
+        'dd/MM/yyyy',
+      ).format(DateTime(hoje.year - 22, hoje.month, hoje.day)),
+      wait: false,
+    );
+    await tapVisible(find.text("Cadastrar"));
+
+    print('14');
+    await enterVisible(
+      find.byKey(Key('cad_date')),
+      DateFormat(
+        'dd/MM/yyyy',
+      ).format(DateTime(hoje.year - 18, hoje.month, hoje.day)),
+      wait: false,
+    );
+    await tapVisible(find.text("Cadastrar"));
+
+    print('15');
+    await tapVisible(find.byKey(Key('cad_drop')));
+
+    print('16');
+    final opcao = find.text("Desenvolvimento de Aplicativos Móveis");
+    await tester.scrollUntilVisible(
+      opcao,
+      100,
+      scrollable: find.byType(Scrollable).last,
+    );
+    await tapVisible(opcao.last);
 
     print('17');
     await enterVisible(find.byKey(Key('cad_nome')), "João Silva", wait: false);
@@ -194,7 +234,27 @@ void main() {
       find.byKey(Key('profile_email')),
       "Preparando para a São Paulo Skills!",
     );
-    
+
+    print('35');
+    await enterVisible(
+      find.byKey(Key('cad_date')),
+      DateFormat(
+        'dd/MM/yyyy',
+      ).format(DateTime(hoje.year - 14, hoje.month, hoje.day)),
+      wait: false,
+    );
+    await tapVisible(find.text("Salvar Alterações"));
+
+    print('36');
+    await enterVisible(
+      find.byKey(Key('cad_date')),
+      DateFormat(
+        'dd/MM/yyyy',
+      ).format(DateTime(hoje.year - 22, hoje.month, hoje.day)),
+      wait: false,
+    );
+    await tapVisible(find.text("Salvar Alterações"));
+
     print('37');
     await enterVisible(find.byKey(Key('profile_password')), "o");
 
@@ -209,7 +269,7 @@ void main() {
     await tapVisible(find.byKey(const Key('profile_friends')));
 
     print("41");
-    await tapVisible(find.byKey(const Key('friend_remove_5')));
+    await tapVisible(find.byKey(const Key('friend_remove_1')));
 
     print("42");
     await tapVisible(find.byKey(const Key('friends_add')));

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 class Profile extends StatefulWidget {
   final Map<String, dynamic> data;
@@ -246,35 +247,42 @@ class _ProfileState extends State<Profile> {
                 decoration: InputDecoration(hintText: "ex: João Silva"),
               ),
             ),
-
             ListTile(
+              key: Key('cad_date'),
+              title: Text("Data Nascimento"),
               contentPadding: EdgeInsets.all(0),
-              enabled: editing,
-              title: Text(style: TextStyle(fontSize: 14), "Data Nascimento"),
               subtitle: TextField(
-                key: const Key('profile_date'),
-                enabled: editing,
-                keyboardType: TextInputType.datetime,
                 controller: date,
-                onTap: () async {
-                  if (!editing) return;
+                enabled: editing,
+                decoration: InputDecoration(
+                  hintText: "dd/mm/aaaa",
+                  suffixIcon: IconButton(
+                    onPressed: () async {
+                      if (!editing) return;
 
-                  final da = await showDatePicker(
-                    context: context,
-                    lastDate: DateTime.now(),
-                    firstDate: DateTime(1900),
-                    currentDate: DateTime.now(),
-                  );
-
-                  if (da != null) {
-                    setState(() {
-                      date.text = da.toString().split(" ").first;
-                    });
-                  }
-                },
-                decoration: InputDecoration(),
+                      final hoje = DateTime.now();
+                      final date = await showDatePicker(
+                        context: context,
+                        firstDate: DateTime(1900),
+                        lastDate: DateTime(2100),
+                        initialDate: DateTime(
+                          hoje.year - 18,
+                          hoje.month,
+                          hoje.day,
+                        ),
+                      );
+                      if (date != null) {
+                        this.date.text = DateFormat('dd/MM/yyyy').format(date);
+                        setState(() {});
+                      }
+                    },
+                    icon: Icon(Icons.calendar_today),
+                  ),
+                ),
+                keyboardType: TextInputType.datetime,
               ),
             ),
+
             ListTile(
               enabled: editing,
               contentPadding: EdgeInsets.all(0),
@@ -342,6 +350,42 @@ class _ProfileState extends State<Profile> {
                           ),
                         );
                         return;
+                      }
+                      final splits = date.text.trim().split('/');
+
+                      final nasc = splits.length == 3
+                          ? DateTime.tryParse(
+                              "${splits[2]}-${splits[1]}-${splits[0]}",
+                            )
+                          : null;
+
+                      final hoje = DateTime.now();
+
+                      String erro = "";
+
+                      if (nasc != null) {
+                        if (nasc.isAfter(hoje)) {
+                          erro = "A data de nascimento não pode ser futura";
+                        } else if (nasc.isAfter(
+                              DateTime(hoje.year - 15, hoje.month, hoje.day),
+                            ) ||
+                            nasc.isBefore(
+                              DateTime(hoje.year - 21, hoje.month, hoje.day),
+                            )) {
+                          erro =
+                              "O competidor deve ter entre 15 e 21 anos completos";
+                        }
+                        setState(() {});
+                        if (erro != "") {
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(
+                              content: Text(erro),
+                              backgroundColor: Colors.red,
+                              duration: Duration(seconds: 1),
+                            ),
+                          );
+                          return;
+                        }
                       }
 
                       meCopy['nome'] = name.text;

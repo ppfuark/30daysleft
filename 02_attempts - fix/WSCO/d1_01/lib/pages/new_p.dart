@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
@@ -31,6 +32,8 @@ class _NewPState extends State<NewP> with TickerProviderStateMixin {
     }
   }
 
+  bool off = false;
+
   File? file;
   final text = TextEditingController();
   final tag = TextEditingController();
@@ -41,6 +44,17 @@ class _NewPState extends State<NewP> with TickerProviderStateMixin {
     super.initState();
     _controller = AnimationController(vsync: this);
     startApp();
+    Connectivity().onConnectivityChanged.listen((event) {
+      if (event.contains(ConnectivityResult.none)) {
+        setState(() {
+          off = true;
+        });
+      } else {
+        setState(() {
+          off = true;
+        });
+      }
+    });
   }
 
   @override
@@ -124,7 +138,6 @@ class _NewPState extends State<NewP> with TickerProviderStateMixin {
                                 if (image != null) {
                                   setState(() {
                                     file = File(image.path);
-                                    Navigator.pop(context);
                                   });
                                 }
                               },
@@ -202,6 +215,16 @@ class _NewPState extends State<NewP> with TickerProviderStateMixin {
                   Spacer(),
                   ElevatedButton(
                     onPressed: () {
+                      if (off) {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(
+                            content: Text('Sem conexão, publicação bloqueada'),
+                            backgroundColor: Colors.red,
+                            duration: Duration(seconds: 1),
+                          ),
+                        );
+                        return;
+                      }
                       if (text.text.isEmpty) {
                         ScaffoldMessenger.of(context).showSnackBar(
                           SnackBar(

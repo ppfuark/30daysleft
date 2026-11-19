@@ -2,6 +2,7 @@ import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:d1_01/pages/home.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:intl/intl.dart';
 
 void main() {
   runApp(const MyApp());
@@ -24,12 +25,14 @@ class _MyAppState extends State<MyApp> {
         ScaffoldMessenger.of(key.currentContext!).showSnackBar(
           SnackBar(
             content: Text(
-              "Sem conexão com internet. Autentiação e criação de posts não serão realizado.",
+              "Sem conexão com internet. Autenticação e criação de posts não serão realizado.",
             ),
-            duration: Duration(days: 099),
+            duration: Duration(days: 99),
             backgroundColor: Colors.red,
           ),
         );
+      } else {
+        ScaffoldMessenger.of(key.currentContext!).clearSnackBars();
       }
     });
     super.initState();
@@ -40,7 +43,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      key: key,
+      navigatorKey: key,
       theme: ThemeData(
         textTheme: GoogleFonts.inriaSansTextTheme(),
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
@@ -111,7 +114,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
           )
         : Scaffold(
             appBar: AppBar(
-              title: Text("Ws Conenecta"),
+              title: Text("Ws Connecta"),
               actions: [Image.asset('assets/ic_launcher.png')],
             ),
             body: Container(
@@ -403,7 +406,32 @@ class _CadastroState extends State<Cadastro> with TickerProviderStateMixin {
                       title: Text("Data Nascimento"),
                       subtitle: TextField(
                         controller: date,
-                        decoration: InputDecoration(),
+                        decoration: InputDecoration(
+                          hintText: "dd/mm/aaaa",
+                          suffixIcon: IconButton(
+                            onPressed: () async {
+                              final hoje = DateTime.now();
+                              final date = await showDatePicker(
+                                context: context,
+                                firstDate: DateTime(1900),
+                                lastDate: DateTime(2100),
+                                initialDate: DateTime(
+                                  hoje.year - 18,
+                                  hoje.month,
+                                  hoje.day,
+                                ),
+                              );
+                              if (date != null) {
+                                this.date.text = DateFormat(
+                                  'dd/MM/yyyy',
+                                ).format(date);
+                                setState(() {});
+                              }
+                            },
+                            icon: Icon(Icons.calendar_today),
+                          ),
+                        ),
+                        keyboardType: TextInputType.datetime,
                       ),
                     ),
                     ListTile(
@@ -416,7 +444,7 @@ class _CadastroState extends State<Cadastro> with TickerProviderStateMixin {
                       ),
                     ),
                     ListTile(
-                      title: Text("Modalidades"),
+                      title: Text("Modalidade"),
                       subtitle: DropdownButton(
                         key: Key('cad_drop'),
                         items: [
@@ -469,6 +497,43 @@ class _CadastroState extends State<Cadastro> with TickerProviderStateMixin {
                           );
                           return;
                         }
+
+                        final splits = date.text.trim().split('/');
+
+                        final nasc = splits.length == 3
+                            ? DateTime.tryParse(
+                                "${splits[2]}-${splits[1]}-${splits[0]}",
+                              )
+                            : null;
+
+                        final hoje = DateTime.now();
+
+                        String erro = "";
+                        if (nasc == null) {
+                          erro = "Infrome uma data válida";
+                        } else if (nasc.isAfter(hoje)) {
+                          erro = "A data de nascimento não pode ser futura";
+                        } else if (nasc.isAfter(
+                              DateTime(hoje.year - 15, hoje.month, hoje.day),
+                            ) ||
+                            nasc.isBefore(
+                              DateTime(hoje.year - 21, hoje.month, hoje.day),
+                            )) {
+                          erro =
+                              "O competidor deve ter entre 15 e 21 anos completos";
+                        }
+                        setState(() {});
+                        if (erro != "") {
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(
+                              content: Text(erro),
+                              backgroundColor: Colors.red,
+                              duration: Duration(seconds: 1),
+                            ),
+                          );
+                          return;
+                        }
+
                         ScaffoldMessenger.of(context).showSnackBar(
                           SnackBar(
                             content: Text(
@@ -482,8 +547,10 @@ class _CadastroState extends State<Cadastro> with TickerProviderStateMixin {
                           (widget.data['usuarios']
                                   as List<Map<String, dynamic>>)
                               .add({
-                                "amigos": [],
-                                "data_nascimento": "2006-05-12",
+                                "amigos": [1, 2, 3, 4, 5],
+                                "data_nascimento": DateFormat(
+                                  'yyyy-MM-dd',
+                                ).format(nasc!),
                                 "email": email.text,
                                 "id": widget.data['usuarios'].length + 1,
                                 "modalidade": selectedM,

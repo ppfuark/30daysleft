@@ -1,8 +1,10 @@
+import 'package:d1_01/pages/comum.dart';
 import 'package:d1_01/pages/game.dart';
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:speech_to_text/speech_to_text.dart';
 
 class Seletiva extends StatefulWidget {
   final Map<String, dynamic> me;
@@ -66,6 +68,30 @@ class _SeletivaState extends State<Seletiva> with TickerProviderStateMixin {
   Color routeC = Colors.black;
 
   Position? userP;
+  late final SpeechToText speechToText = SpeechToText()
+    ..initialize(
+      onStatus: (status) {},
+      onError: (errorNotification) {
+        showDialog(
+          context: context,
+          builder: (context) {
+            return AlertDialog(
+              title: Text(
+                'Erro ao inicializar speech: ${errorNotification.errorMsg}',
+              ),
+              actions: [
+                TextButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  child: Text('Ok!'),
+                ),
+              ],
+            );
+          },
+        );
+      },
+    );
 
   List<LatLng> points = [];
 
@@ -93,9 +119,29 @@ class _SeletivaState extends State<Seletiva> with TickerProviderStateMixin {
               child: Column(
                 children: [
                   TextField(
+                    onChanged: (value) {
+                      setState(() {});
+                    },
                     controller: search,
                     decoration: InputDecoration(
                       hintText: "Busque um ponto de coleta...",
+                      suffixIcon: IconButton(
+                        onPressed: () async {
+                          speechToText.listen(
+                            onResult: (result) {
+                              final text = result.recognizedWords;
+                              setState(() {
+                                search.text = text;
+                              });
+                            },
+                            listenOptions: SpeechListenOptions(
+                              localeId: 'pt_BR',
+                              cancelOnError: true,
+                            ),
+                          );
+                        },
+                        icon: Icon(Icons.mic),
+                      ),
                     ),
                   ),
 
@@ -150,6 +196,25 @@ class _SeletivaState extends State<Seletiva> with TickerProviderStateMixin {
                       ],
                     ),
                   ),
+                  SegmentedButton<int>(
+                    segments: const [
+                      ButtonSegment(value: 0, label: Text('Início')),
+                      ButtonSegment(value: 1, label: Text('Coleta Comum')),
+                      ButtonSegment(value: 2, label: Text('Coleta Seletiva')),
+                    ],
+                    selected: {2},
+                    onSelectionChanged: (s) {
+                      if (s.first == 1) {
+                        Navigator.pop(context);
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => Comum(me: widget.me),
+                          ),
+                        );
+                      }
+                    },
+                  ),
                   SizedBox(
                     height: 300,
                     child: GoogleMap(
@@ -167,7 +232,11 @@ class _SeletivaState extends State<Seletiva> with TickerProviderStateMixin {
                       },
                       markers: {
                         ...seletivas
-                            .where((e) => e['material'] == radioValue)
+                            .where(
+                              (e) =>
+                                  e['material'] == radioValue &&
+                                  e['nome'].toString().contains(search.text),
+                            )
                             .map(
                               (e) => Marker(
                                 onTap: () {
@@ -204,8 +273,13 @@ class _SeletivaState extends State<Seletiva> with TickerProviderStateMixin {
                   Expanded(
                     child: ListView.builder(
                       itemBuilder: (context, index) {
-                        final s = seletivas[index];
-
+                        final s = seletivas
+                            .where(
+                              (e) =>
+                                  e['material'] == radioValue &&
+                                  e['nome'].toString().contains(search.text),
+                            )
+                            .toList()[index];
                         return AnimatedBuilder(
                           animation: _controller,
                           builder: (context, child) => ListTile(
@@ -237,6 +311,14 @@ class _SeletivaState extends State<Seletiva> with TickerProviderStateMixin {
                         );
                       },
                       shrinkWrap: true,
+                      itemCount: seletivas
+                          .where(
+                            (e) =>
+                                e['material'] == radioValue &&
+                                e['nome'].toString().contains(search.text),
+                          )
+                          .toList()
+                          .length,
                     ),
                   ),
                 ],

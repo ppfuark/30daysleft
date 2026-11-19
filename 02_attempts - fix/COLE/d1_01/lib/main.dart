@@ -127,7 +127,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
 
       if (erros != 3) {
         Fluttertoast.showToast(
-          msg: 'Dados de acesso inválidos.',
+          msg: 'Código de acesso incorreto. Tente novamente.',
           backgroundColor: Colors.red,
         );
       }
@@ -178,7 +178,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                     controller: pin,
                     obscureText: obs,
                     decoration: InputDecoration(
-                      hintText: "Digite seu PIN",
+                      hintText: "Insira seu PIN",
                       suffixIcon: GestureDetector(
                         onLongPressStart: (details) {
                           setState(() {
