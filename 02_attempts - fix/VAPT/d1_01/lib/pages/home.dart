@@ -8,6 +8,7 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> with TickerProviderStateMixin {
   late AnimationController _controller;
+  late AnimationController _controller1;
   bool loading = true;
 
   final search = TextEditingController();
@@ -34,7 +35,14 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
   @override
   void initState() {
     super.initState();
-    _controller = AnimationController(vsync: this);
+    _controller = AnimationController(
+      vsync: this,
+      duration: Duration(seconds: 2),
+    )..forward();
+    _controller1 =
+        AnimationController(vsync: this, duration: Duration(seconds: 1))
+          ..forward()
+          ..repeat(reverse: true);
     startApp();
   }
 
@@ -50,6 +58,8 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
     final h = MediaQuery.of(context).size.height;
     return loading
         ? Scaffold(
+            resizeToAvoidBottomInset: false,
+
             body: SizedBox(
               width: 100,
               height: 100,
@@ -57,6 +67,8 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
             ),
           )
         : Scaffold(
+            resizeToAvoidBottomInset: false,
+
             body: Container(
               width: w,
               height: h,
@@ -92,97 +104,121 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                             child: Row(
                               children: [
                                 Expanded(
-                                  child: Card(
-                                    child: Column(
-                                      children: [
-                                        Padding(
-                                          padding: const EdgeInsets.all(20),
-                                          child: Row(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.spaceBetween,
-                                            children: [
-                                              Text("Pedidos do dia"),
-                                              Icon(Icons.shopping_bag),
-                                            ],
-                                          ),
-                                        ),
-                                        Center(
-                                          child: Text(
-                                            "16",
-                                            style: TextStyle(
-                                              fontWeight: FontWeight.bold,
-                                              fontSize: 80,
+                                  child: FadeTransition(
+                                    opacity: _controller,
+                                    child: Card(
+                                      child: Column(
+                                        children: [
+                                          Padding(
+                                            padding: const EdgeInsets.all(20),
+                                            child: Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment
+                                                      .spaceBetween,
+                                              children: [
+                                                Text("Pedidos do dia"),
+                                                Icon(Icons.shopping_bag),
+                                              ],
                                             ),
                                           ),
-                                        ),
-                                      ],
+                                          Center(
+                                            child: Text(
+                                              search.text.isNotEmpty
+                                                  ? orders
+                                                        .where(
+                                                          (element) =>
+                                                              element['cliente']
+                                                                  .toString()
+                                                                  .contains(
+                                                                    search.text,
+                                                                  ),
+                                                        )
+                                                        .length
+                                                        .toString()
+                                                  : "16",
+                                              style: TextStyle(
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 80,
+                                              ),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
                                     ),
                                   ),
                                 ),
                                 Expanded(
-                                  child: Card(
-                                    child: Column(
-                                      children: [
-                                        Padding(
-                                          padding: const EdgeInsets.all(20),
-                                          child: Row(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.spaceBetween,
-                                            children: [
-                                              Text("Faturamento"),
-                                              Container(
-                                                padding: EdgeInsets.all(5),
-                                                decoration: BoxDecoration(
-                                                  border: Border.all(),
-                                                  shape: BoxShape.circle,
-                                                ),
-                                                child: Center(
-                                                  child: Icon(
-                                                    Icons.attach_money,
+                                  child: FadeTransition(
+                                    opacity: _controller,
+                                    child: Card(
+                                      child: Column(
+                                        children: [
+                                          Padding(
+                                            padding: const EdgeInsets.all(20),
+                                            child: Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment
+                                                      .spaceBetween,
+                                              children: [
+                                                Text("Faturamento"),
+                                                Container(
+                                                  padding: EdgeInsets.all(5),
+                                                  decoration: BoxDecoration(
+                                                    border: Border.all(),
+                                                    shape: BoxShape.circle,
+                                                  ),
+                                                  child: Center(
+                                                    child: Icon(
+                                                      Icons.attach_money,
+                                                    ),
                                                   ),
                                                 ),
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                        Center(
-                                          child: Text(
-                                            "R\$ 809, 57",
-                                            style: TextStyle(
-                                              fontWeight: FontWeight.bold,
-                                              fontSize: 80,
+                                              ],
                                             ),
                                           ),
-                                        ),
-                                      ],
+                                          Center(
+                                            child: Text(
+                                              "R\$ 809, 57",
+                                              style: TextStyle(
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 80,
+                                              ),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
                                     ),
                                   ),
                                 ),
                                 Expanded(
-                                  child: Card(
-                                    child: Column(
-                                      children: [
-                                        Padding(
-                                          padding: const EdgeInsets.all(20),
-                                          child: Row(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.spaceBetween,
-                                            children: [
-                                              Text("Pedidos em andamento"),
-                                              Icon(Icons.bike_scooter),
-                                            ],
-                                          ),
-                                        ),
-                                        Center(
-                                          child: Text(
-                                            "4",
-                                            style: TextStyle(
-                                              fontWeight: FontWeight.bold,
-                                              fontSize: 80,
+                                  child: FadeTransition(
+                                    opacity: _controller,
+                                    child: Card(
+                                      child: Column(
+                                        children: [
+                                          Padding(
+                                            padding: const EdgeInsets.all(20),
+                                            child: Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment
+                                                      .spaceBetween,
+                                              children: [
+                                                Text("Pedidos em andamento"),
+                                                Icon(Icons.bike_scooter),
+                                              ],
                                             ),
                                           ),
-                                        ),
-                                      ],
+                                          Center(
+                                            child: Text(
+                                              "4",
+                                              style: TextStyle(
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 80,
+                                              ),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
                                     ),
                                   ),
                                 ),
@@ -194,101 +230,107 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                               children: [
                                 Expanded(
                                   flex: 4,
-                                  child: Card(
-                                    child: Padding(
-                                      padding: const EdgeInsets.all(20.0),
-                                      child: Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        spacing: 20,
-                                        children: [
-                                          Text(
-                                            "Faturamento dos últimos 7 dias",
-                                          ),
-                                          Expanded(
-                                            child: Row(
-                                              spacing: 30,
-                                              children: [
-                                                SizedBox(
-                                                  height: double.infinity,
-                                                  child: Column(
-                                                    mainAxisSize:
-                                                        MainAxisSize.min,
-                                                    mainAxisAlignment:
-                                                        MainAxisAlignment
-                                                            .spaceBetween,
-                                                    children: [
-                                                      ...[
-                                                        0,
-                                                        1,
-                                                        2,
-                                                        3,
-                                                        4,
-                                                        5,
-                                                        6,
-                                                        7,
-                                                        8,
-                                                      ].reversed.map(
-                                                        (e) => Text(
-                                                          "R\$ $e${e + e == 0 ? "" : "K"} ",
-                                                        ),
-                                                      ),
-                                                    ],
-                                                  ),
-                                                ),
-                                                Expanded(
-                                                  child: Builder(
-                                                    builder: (context) {
-                                                      return LayoutBuilder(
-                                                        builder: (context, constraints) {
-                                                          final wB = constraints
-                                                              .maxWidth;
-                                                          final hB = constraints
-                                                              .maxHeight;
-                                                          return Row(
-                                                            mainAxisAlignment:
-                                                                MainAxisAlignment
-                                                                    .spaceBetween,
-                                                            spacing: 20,
-                                                            children: [
-                                                              ...fat.map((e) {
-                                                                return Column(
-                                                                  mainAxisAlignment:
-                                                                      MainAxisAlignment
-                                                                          .end,
-
-                                                                  children: [
-                                                                    Container(
-                                                                      decoration: BoxDecoration(
-                                                                        color: Colors
-                                                                            .deepOrangeAccent,
-                                                                      ),
-                                                                      width: 20,
-                                                                      height:
-                                                                          hB *
-                                                                          (((e['valor']
-                                                                                      as int) /
-                                                                                  8000) *
-                                                                              .85),
-                                                                    ),
-                                                                    Text(
-                                                                      e['dia']
-                                                                          .toString(),
-                                                                    ),
-                                                                  ],
-                                                                );
-                                                              }),
-                                                            ],
-                                                          );
-                                                        },
-                                                      );
-                                                    },
-                                                  ),
-                                                ),
-                                              ],
+                                  child: FadeTransition(
+                                    opacity: _controller,
+                                    child: Card(
+                                      child: Padding(
+                                        padding: const EdgeInsets.all(20.0),
+                                        child: Column(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          spacing: 20,
+                                          children: [
+                                            Text(
+                                              "Faturamento dos últimos 7 dias",
                                             ),
-                                          ),
-                                        ],
+                                            Expanded(
+                                              child: Row(
+                                                spacing: 30,
+                                                children: [
+                                                  SizedBox(
+                                                    height: double.infinity,
+                                                    child: Column(
+                                                      mainAxisSize:
+                                                          MainAxisSize.min,
+                                                      mainAxisAlignment:
+                                                          MainAxisAlignment
+                                                              .spaceBetween,
+                                                      children: [
+                                                        ...[
+                                                          0,
+                                                          1,
+                                                          2,
+                                                          3,
+                                                          4,
+                                                          5,
+                                                          6,
+                                                          7,
+                                                          8,
+                                                        ].reversed.map(
+                                                          (e) => Text(
+                                                            "R\$ $e${e + e == 0 ? "" : "K"} ",
+                                                          ),
+                                                        ),
+                                                      ],
+                                                    ),
+                                                  ),
+                                                  Expanded(
+                                                    child: Builder(
+                                                      builder: (context) {
+                                                        return LayoutBuilder(
+                                                          builder: (context, constraints) {
+                                                            final wB =
+                                                                constraints
+                                                                    .maxWidth;
+                                                            final hB =
+                                                                constraints
+                                                                    .maxHeight;
+                                                            return Row(
+                                                              mainAxisAlignment:
+                                                                  MainAxisAlignment
+                                                                      .spaceBetween,
+                                                              spacing: 20,
+                                                              children: [
+                                                                ...fat.map((e) {
+                                                                  return Column(
+                                                                    mainAxisAlignment:
+                                                                        MainAxisAlignment
+                                                                            .end,
+
+                                                                    children: [
+                                                                      Container(
+                                                                        decoration: BoxDecoration(
+                                                                          color:
+                                                                              Colors.deepOrangeAccent,
+                                                                        ),
+                                                                        width:
+                                                                            20,
+                                                                        height:
+                                                                            hB *
+                                                                            (((e['valor']
+                                                                                        as int) /
+                                                                                    8000) *
+                                                                                .85),
+                                                                      ),
+                                                                      Text(
+                                                                        e['dia']
+                                                                            .toString(),
+                                                                      ),
+                                                                    ],
+                                                                  );
+                                                                }),
+                                                              ],
+                                                            );
+                                                          },
+                                                        );
+                                                      },
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                          ],
+                                        ),
                                       ),
                                     ),
                                   ),
@@ -322,7 +364,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                                             },
                                           ),
                                           Expanded(
-                                            child: ListView.builder(
+                                            child: ReorderableListView.builder(
                                               itemBuilder: (context, index) {
                                                 final o = orders
                                                     .where(
@@ -347,15 +389,34 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                                                     };
 
                                                 return ListTile(
+                                                  key: Key(o['id'].toString()),
                                                   leading: icon,
                                                   title: Text("#${o['id']}"),
                                                   subtitle: Text(
                                                     "${o['cliente']}",
                                                   ),
-                                                  trailing: Chip(
-                                                    label: Text(
-                                                      o['status'].toString(),
-                                                    ),
+                                                  trailing: AnimatedBuilder(
+                                                    animation: _controller1,
+                                                    builder: (context, c) {
+                                                      return Chip(
+                                                        backgroundColor:
+                                                            o['status'] ==
+                                                                "Novo"
+                                                            ? Color.lerp(
+                                                                Colors.white,
+                                                                Colors
+                                                                    .red
+                                                                    .shade100,
+                                                                _controller1
+                                                                    .value,
+                                                              )
+                                                            : null,
+                                                        label: Text(
+                                                          o['status']
+                                                              .toString(),
+                                                        ),
+                                                      );
+                                                    },
                                                   ),
                                                 );
                                               },
@@ -369,6 +430,17 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                                                             ),
                                                   )
                                                   .length,
+                                              onReorder: (oldIndex, newIndex) {
+                                                if (newIndex > oldIndex) {
+                                                  newIndex--;
+                                                }
+                                                final item = orders.removeAt(
+                                                  oldIndex,
+                                                );
+                                                setState(() {
+                                                  orders.insert(newIndex, item);
+                                                });
+                                              },
                                               shrinkWrap: true,
                                             ),
                                           ),

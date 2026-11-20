@@ -25,13 +25,20 @@ class _LoginState extends State<Login> with SingleTickerProviderStateMixin {
     }
     setState(() {
       erros++;
+      email.clear();
+      pass.clear();
     });
 
     if (erros == 3) {
+      Fluttertoast.showToast(
+        msg: 'Aguarde 10 segundos! 3 tentativas incorretas',
+        backgroundColor: Colors.red,
+      );
       setState(() {
         blocked = true;
         email.clear();
         pass.clear();
+        erros = 0;
       });
 
       await Future.delayed(Duration(seconds: 10));
@@ -71,7 +78,9 @@ class _LoginState extends State<Login> with SingleTickerProviderStateMixin {
       return;
     }
 
-    if (!RegExp(r'^[a-zA-Z0-9]+@vaptfood.com.br').hasMatch(email.text)) {
+    if (!RegExp(
+      r'^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z0-9\.]+',
+    ).hasMatch(email.text)) {
       Fluttertoast.showToast(
         msg: 'E-mail no formato inválido!',
         backgroundColor: Colors.red,
@@ -146,6 +155,8 @@ class _LoginState extends State<Login> with SingleTickerProviderStateMixin {
     final h = MediaQuery.of(context).size.height;
     return loading
         ? Scaffold(
+            resizeToAvoidBottomInset: false,
+
             body: SizedBox(
               width: 100,
               height: 100,
@@ -153,6 +164,8 @@ class _LoginState extends State<Login> with SingleTickerProviderStateMixin {
             ),
           )
         : Scaffold(
+            resizeToAvoidBottomInset: false,
+
             body: Container(
               width: w,
               height: h,
@@ -163,7 +176,7 @@ class _LoginState extends State<Login> with SingleTickerProviderStateMixin {
                   _animatedItem(
                     0,
                     Image.asset(
-                      'assets/images/login.png',
+                      'assets/ic_launcher.png',
                       width: w * .5,
                       height: h,
                       fit: BoxFit.cover,
@@ -178,20 +191,30 @@ class _LoginState extends State<Login> with SingleTickerProviderStateMixin {
                         children: [
                           _animatedItem(
                             1,
-                            ListTile(
-                              contentPadding: EdgeInsets.all(0),
-                              title: Text(
-                                "Bem-vindo ao VaptFood",
-                                style: TextStyle(
-                                  fontSize: 40,
-                                  fontWeight: FontWeight.bold,
+                            GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => MainPage(),
+                                  ),
+                                );
+                              },
+                              child: ListTile(
+                                contentPadding: EdgeInsets.all(0),
+                                title: Text(
+                                  "Bem-vindo ao VaptFood",
+                                  style: TextStyle(
+                                    fontSize: 40,
+                                    fontWeight: FontWeight.bold,
+                                  ),
                                 ),
-                              ),
-                              subtitle: Text(
-                                "Entre para gerenciar seus pedidos",
-                                style: TextStyle(
-                                  fontSize: 26,
-                                  fontWeight: FontWeight.bold,
+                                subtitle: Text(
+                                  "Entre para gerenciar seus pedidos",
+                                  style: TextStyle(
+                                    fontSize: 26,
+                                    fontWeight: FontWeight.bold,
+                                  ),
                                 ),
                               ),
                             ),
@@ -290,7 +313,7 @@ class _LoginState extends State<Login> with SingleTickerProviderStateMixin {
                             Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                Text("Problemas para acessar?"),
+                                Text("Problemas para acessar ¿"),
                                 TextButton(
                                   onPressed: () {
                                     showDialog(

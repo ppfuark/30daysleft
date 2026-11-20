@@ -51,6 +51,8 @@ class _OrdersState extends State<Orders> with TickerProviderStateMixin {
     final h = MediaQuery.of(context).size.height;
     return loading
         ? Scaffold(
+            resizeToAvoidBottomInset: false,
+
             body: SizedBox(
               width: 100,
               height: 100,
@@ -58,6 +60,8 @@ class _OrdersState extends State<Orders> with TickerProviderStateMixin {
             ),
           )
         : Scaffold(
+            resizeToAvoidBottomInset: false,
+
             body: Container(
               width: w,
               height: h,
@@ -74,7 +78,7 @@ class _OrdersState extends State<Orders> with TickerProviderStateMixin {
                       ),
                     ),
                     subtitle: Text(
-                      'Segure e arrastre os itens para move-los entre as colunas.',
+                      'Segure e arrastre os itens para movê-los entre as colunas.',
                       style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
@@ -88,7 +92,7 @@ class _OrdersState extends State<Orders> with TickerProviderStateMixin {
                       Expanded(
                         child: TextField(
                           decoration: InputDecoration(
-                            hintText: "Busque por número ou cliente",
+                            hintText: "Buscar por número ou cliente",
                             suffixIcon: IconButton(
                               key: Key('ord_clear'),
                               onPressed: () => setState(() {
@@ -99,7 +103,7 @@ class _OrdersState extends State<Orders> with TickerProviderStateMixin {
                           ),
                           controller: search,
                           key: Key('ord_search'),
-
+              
                           onChanged: (value) {
                             setState(() {});
                           },
@@ -112,9 +116,31 @@ class _OrdersState extends State<Orders> with TickerProviderStateMixin {
                             (e) => GestureDetector(
                               key: Key('chip_$e'),
                               onTap: () {
-                                setState(() {
-                                  selected = e;
-                                });
+                                showDialog(
+                                  context: context,
+                                  builder: (context) {
+                                    return AlertDialog(
+                                      title: Text('Mudar status?'),
+                                      actions: [
+                                        TextButton(
+                                          onPressed: () {
+                                            Navigator.pop(context);
+                                          },
+                                          child: Text('Não'),
+                                        ),
+                                        TextButton(
+                                          onPressed: () {
+                                            Navigator.pop(context);
+                                            setState(() {
+                                              selected = e;
+                                            });
+                                          },
+                                          child: Text('Sim'),
+                                        ),
+                                      ],
+                                    );
+                                  },
+                                );
                               },
                               child: Chip(
                                 backgroundColor: selected != e
@@ -129,7 +155,7 @@ class _OrdersState extends State<Orders> with TickerProviderStateMixin {
                                   e == "Novo"
                                       ? "Novo"
                                       : e == "Pronto para retirada"
-                                      ? "Prontos para Retirada"
+                                      ? "Pronto para Retirada"
                                       : e == "Em preparo"
                                       ? "Em Preparo"
                                       : e,
@@ -154,28 +180,233 @@ class _OrdersState extends State<Orders> with TickerProviderStateMixin {
                             .reversed
                             .map(
                               (e) => Expanded(
-                                child: Card(
-                                  child: Padding(
-                                    padding: const EdgeInsets.all(20.0),
-                                    child: Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Text(
-                                          e == "Novo"
-                                              ? "Novos Pedidos"
-                                              : e == "Pronto para retirada"
-                                              ? "Prontos para a Retirada"
-                                              : e,
-                                        ),
-                                        Expanded(
-                                          child: ListView.builder(
-                                            shrinkWrap: true,
-                                            itemBuilder: (context, index) {
-                                              final o = orders
+                                child: DragTarget<Map>(
+                                  onWillAcceptWithDetails: (details) {
+                                    return details.data['status'] != e;
+                                  },
+                                  onAcceptWithDetails: (details) {
+                                    showDialog(
+                                      context: context,
+                                      builder: (context) {
+                                        return AlertDialog(
+                                          title: Text('Mudar status?'),
+                                          actions: [
+                                            TextButton(
+                                              onPressed: () {
+                                                Navigator.pop(context);
+                                              },
+                                              child: Text('Não'),
+                                            ),
+                                            TextButton(
+                                              onPressed: () {
+                                                Navigator.pop(context);
+                                                setState(() {
+                                                  details.data['status'] = e;
+                                                });
+                                              },
+                                              child: Text('Sim'),
+                                            ),
+                                          ],
+                                        );
+                                      },
+                                    );
+                                  },
+                                  builder: (context, candidateData, rejectedData) => Card(
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(20.0),
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Text(
+                                            e == "Novo"
+                                                ? "Novos Pedidos"
+                                                : e == "Pronto para retirada"
+                                                ? "Prontos para a Retirada"
+                                                : e,
+                                          ),
+                                          Expanded(
+                                            child: ListView.builder(
+                                              shrinkWrap: true,
+                                              itemBuilder: (context, index) {
+                                                final o = orders
+                                                    .where(
+                                                      (element) =>
+                                                          element['status'] ==
+                                                          e,
+                                                    )
+                                                    .where(
+                                                      (element) =>
+                                                          element['id']
+                                                              .toString()
+                                                              .contains(
+                                                                search.text,
+                                                              ) ||
+                                                          element['cliente']
+                                                              .toString()
+                                                              .toLowerCase()
+                                                              .contains(
+                                                                search.text
+                                                                    .toLowerCase(),
+                                                              ),
+                                                    )
+                                                    .toList()[index];
+              
+                                                return LongPressDraggable(
+                                                  key: Key(
+                                                    o['id'].toString(),
+                                                  ),
+                                                  data: o,
+                                                  childWhenDragging:
+                                                      Container(height: 200),
+                                                  feedback: Material(
+                                                    child: SizedBox(
+                                                      width: 350,
+                                                      height: 200,
+                                                      child: Card(
+                                                        child: Column(
+                                                          children: [
+                                                            Expanded(
+                                                              child: ListTile(
+                                                                title: Text(
+                                                                  "#${o['id']}",
+                                                                ),
+                                                                subtitle: Text(
+                                                                  o['cliente']
+                                                                      .toString(),
+                                                                ),
+                                                              ),
+                                                            ),
+                                                            Padding(
+                                                              padding:
+                                                                  const EdgeInsets.all(
+                                                                    10.0,
+                                                                  ),
+                                                              child: Row(
+                                                                mainAxisAlignment:
+                                                                    MainAxisAlignment
+                                                                        .end,
+                                                                children: [
+                                                                  Text(
+                                                                    "R\$ ${o['valor'].toString().replaceAll('.', ',')}",
+                                                                  ),
+                                                                ],
+                                                              ),
+                                                            ),
+                                                          ],
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ),
+                                                  child: SizedBox(
+                                                    height: 200,
+                                                    child: GestureDetector(
+                                                      onTap: () {
+                                                        showDialog(
+                                                          context: context,
+                                                          builder: (context) {
+                                                            return AlertDialog(
+                                                              content: Column(
+                                                                crossAxisAlignment:
+                                                                    CrossAxisAlignment
+                                                                        .start,
+                                                                mainAxisSize:
+                                                                    MainAxisSize
+                                                                        .min,
+                                                                children: [
+                                                                  CircleAvatar(
+                                                                    radius:
+                                                                        40,
+                                                                    backgroundImage:
+                                                                        AssetImage(
+                                                                          'assets/images/${o['cliente'].toString().split(' ').first.toLowerCase().replaceAll('í', "i")}.jpg',
+                                                                        ),
+                                                                  ),
+                                                                  ListTile(
+                                                                    contentPadding:
+                                                                        EdgeInsets.all(
+                                                                          0,
+                                                                        ),
+                                                                    title: Text(
+                                                                      "#${o['id']}",
+                                                                    ),
+                                                                    subtitle: Text(
+                                                                      o['cliente']
+                                                                          .toString(),
+                                                                    ),
+                                                                    trailing: Chip(
+                                                                      label: Text(
+                                                                        "${o['status']}",
+                                                                      ),
+                                                                    ),
+                                                                  ),
+                                                                  Text(
+                                                                    style: TextStyle(
+                                                                      fontWeight:
+                                                                          FontWeight.bold,
+                                                                    ),
+                                                                    "R\$ ${o['valor']}",
+                                                                  ),
+                                                                ],
+                                                              ),
+                                                              actions: [
+                                                                TextButton(
+                                                                  onPressed: () {
+                                                                    Navigator.pop(
+                                                                      context,
+                                                                    );
+                                                                  },
+                                                                  child: Text(
+                                                                    'Ok!',
+                                                                  ),
+                                                                ),
+                                                              ],
+                                                            );
+                                                          },
+                                                        );
+                                                      },
+                                                      child: Card(
+                                                        child: Column(
+                                                          children: [
+                                                            Expanded(
+                                                              child: ListTile(
+                                                                title: Text(
+                                                                  "#${o['id']}",
+                                                                ),
+                                                                subtitle: Text(
+                                                                  o['cliente']
+                                                                      .toString(),
+                                                                ),
+                                                              ),
+                                                            ),
+                                                            Padding(
+                                                              padding:
+                                                                  const EdgeInsets.all(
+                                                                    10.0,
+                                                                  ),
+                                                              child: Row(
+                                                                mainAxisAlignment:
+                                                                    MainAxisAlignment
+                                                                        .end,
+                                                                children: [
+                                                                  Text(
+                                                                    "R\$ ${o['valor'].toString().replaceAll('.', ',')}",
+                                                                  ),
+                                                                ],
+                                                              ),
+                                                            ),
+                                                          ],
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ),
+                                                );
+                                              },
+                                              itemCount: orders
                                                   .where(
                                                     (element) =>
-                                                        element['status'] == e,
+                                                        element['status'] ==
+                                                        e,
                                                   )
                                                   .where(
                                                     (element) =>
@@ -192,70 +423,12 @@ class _OrdersState extends State<Orders> with TickerProviderStateMixin {
                                                                   .toLowerCase(),
                                                             ),
                                                   )
-                                                  .toList()[index];
-
-                                              return SizedBox(
-                                                height: 200,
-                                                child: Card(
-                                                  child: Column(
-                                                    children: [
-                                                      Expanded(
-                                                        child: ListTile(
-                                                          title: Text(
-                                                            "#${o['id']}",
-                                                          ),
-                                                          subtitle: Text(
-                                                            o['cliente']
-                                                                .toString(),
-                                                          ),
-                                                        ),
-                                                      ),
-                                                      Padding(
-                                                        padding:
-                                                            const EdgeInsets.all(
-                                                              10.0,
-                                                            ),
-                                                        child: Row(
-                                                          mainAxisAlignment:
-                                                              MainAxisAlignment
-                                                                  .end,
-                                                          children: [
-                                                            Text(
-                                                              "R\$ ${o['valor'].toString().replaceAll('.', ',')}",
-                                                            ),
-                                                          ],
-                                                        ),
-                                                      ),
-                                                    ],
-                                                  ),
-                                                ),
-                                              );
-                                            },
-                                            itemCount: orders
-                                                .where(
-                                                  (element) =>
-                                                      element['status'] == e,
-                                                )
-                                                .where(
-                                                  (element) =>
-                                                      element['id']
-                                                          .toString()
-                                                          .contains(
-                                                            search.text,
-                                                          ) ||
-                                                      element['cliente']
-                                                          .toString()
-                                                          .toLowerCase()
-                                                          .contains(
-                                                            search.text
-                                                                .toLowerCase(),
-                                                          ),
-                                                )
-                                                .toList()
-                                                .length,
+                                                  .toList()
+                                                  .length,
+                                            ),
                                           ),
-                                        ),
-                                      ],
+                                        ],
+                                      ),
                                     ),
                                   ),
                                 ),

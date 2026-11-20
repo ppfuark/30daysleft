@@ -15,8 +15,6 @@ class _MainPageState extends State<MainPage> with TickerProviderStateMixin {
   late AnimationController _controller;
   bool loading = true;
 
-  
-
   Future<void> startApp() async {
     try {
       setState(() {
@@ -60,6 +58,8 @@ class _MainPageState extends State<MainPage> with TickerProviderStateMixin {
 
     return loading
         ? Scaffold(
+            resizeToAvoidBottomInset: false,
+
             body: SizedBox(
               width: 100,
               height: 100,
@@ -67,6 +67,8 @@ class _MainPageState extends State<MainPage> with TickerProviderStateMixin {
             ),
           )
         : Scaffold(
+            resizeToAvoidBottomInset: false,
+
             appBar: AppBar(),
             body: Container(
               width: w,

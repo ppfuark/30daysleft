@@ -50,6 +50,8 @@ class _DeliveryState extends State<Delivery> with TickerProviderStateMixin {
     final h = MediaQuery.of(context).size.height;
     return loading
         ? Scaffold(
+            resizeToAvoidBottomInset: false,
+
             body: SizedBox(
               width: 100,
               height: 100,
@@ -57,6 +59,8 @@ class _DeliveryState extends State<Delivery> with TickerProviderStateMixin {
             ),
           )
         : Scaffold(
+            resizeToAvoidBottomInset: false,
+
             body: Container(
               width: w,
               height: h,
@@ -220,9 +224,11 @@ class _DeliveryState extends State<Delivery> with TickerProviderStateMixin {
                                   subtitle: LinearProgressIndicator(
                                     backgroundColor: Colors.grey.shade200,
                                     minHeight: 10,
-                                    color: Colors.deepOrangeAccent,
+                                    color: selected['status'] == "Em rota"
+                                        ? Colors.grey
+                                        : Colors.red,
                                     value: selected['status'] == "Em rota"
-                                        ? 0.6
+                                        ? 0.45
                                         : 1.0,
                                   ),
                                 ),

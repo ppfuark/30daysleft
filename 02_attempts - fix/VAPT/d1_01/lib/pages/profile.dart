@@ -1,5 +1,6 @@
 import 'package:d1_01/app.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class Profile extends StatefulWidget {
   const Profile({super.key});
@@ -12,6 +13,16 @@ class _ProfileState extends State<Profile> with TickerProviderStateMixin {
   bool loading = true;
 
   final search = TextEditingController();
+
+  late final nome = TextEditingController(
+    text: me['nome_estabelecimento'].toString(),
+  );
+  late final telefone = TextEditingController(
+    text: me['contato']['telefone'].toString(),
+  );
+  late final email = TextEditingController(
+    text: me['contato']['email'].toString(),
+  );
 
   Future<void> startApp() async {
     try {
@@ -51,6 +62,8 @@ class _ProfileState extends State<Profile> with TickerProviderStateMixin {
     final h = MediaQuery.of(context).size.height;
     return loading
         ? Scaffold(
+            resizeToAvoidBottomInset: false,
+
             body: SizedBox(
               width: 100,
               height: 100,
@@ -58,6 +71,8 @@ class _ProfileState extends State<Profile> with TickerProviderStateMixin {
             ),
           )
         : Scaffold(
+            resizeToAvoidBottomInset: false,
+
             body: Container(
               width: w,
               height: h,
@@ -102,24 +117,44 @@ class _ProfileState extends State<Profile> with TickerProviderStateMixin {
                         Expanded(
                           flex: 2,
                           child: Column(
+                            spacing: 10,
                             children: [
                               Expanded(
-                                child: Image.network(
-                                  me['imagem_real_url'].toString(),
-                                  errorBuilder: (context, error, stackTrace) =>
-                                      Center(child: Icon(Icons.broken_image)),
-                                  height: double.infinity,
-                                  width: double.infinity,
-                                  fit: BoxFit.cover,
+                                child: InteractiveViewer(
+                                  key: Key('prof_image'),
+                                  minScale: 1,
+                                  maxScale: 5,
+                                  boundaryMargin: EdgeInsets.all(100),
+                                  child: Image.asset(
+                                    "assets/ic_launcher.png",
+                                    errorBuilder:
+                                        (context, error, stackTrace) => Center(
+                                          child: Icon(Icons.broken_image),
+                                        ),
+                                    height: double.infinity,
+                                    width: double.infinity,
+                                    fit: BoxFit.cover,
+                                  ),
                                 ),
                               ),
                               ListTile(
-                                title: Text(
-                                  me['nome_estabelecimento'].toString(),
+                                title: TextField(
+                                  controller: nome,
                                   style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                     fontSize: 40,
                                   ),
+                                  onChanged: (value) {
+                                    if (!RegExp(
+                                      r'^[a-zA-Z0-9 ]+$',
+                                    ).hasMatch(nome.text)) {
+                                      Fluttertoast.showToast(
+                                        msg:
+                                            'Nome não pode conter caracteres especiais',
+                                        backgroundColor: Colors.red,
+                                      );
+                                    }
+                                  },
                                 ),
                                 subtitle: Row(
                                   mainAxisAlignment:
@@ -155,14 +190,38 @@ class _ProfileState extends State<Profile> with TickerProviderStateMixin {
                               ),
                               ListTile(
                                 leading: Icon(Icons.phone),
-                                title: Text(
-                                  "TEL: ${me['contato']['telefone']}",
+                                title: TextField(
+                                  controller: telefone,
+                                  key: Key('prof_tel'),
+                                  onChanged: (value) {
+                                    if (!RegExp(
+                                      r'^\(\d{2}\) \d{5}-\d{4}$',
+                                    ).hasMatch(telefone.text)) {
+                                      Fluttertoast.showToast(
+                                        msg:
+                                            'Telefone fora do padrão (XX) XXXXX-XXXX',
+                                        backgroundColor: Colors.red,
+                                      );
+                                    }
+                                  },
                                 ),
                               ),
                               ListTile(
                                 leading: Icon(Icons.email),
-                                title: Text(
-                                  "E-MAIL: ${me['contato']['email']}",
+                                title: TextField(
+                                  key: Key('prof_email'),
+                                  controller: email,
+                                  onChanged: (value) {
+                                    if (!RegExp(
+                                      r'^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z0-9]+$',
+                                    ).hasMatch(email.text)) {
+                                      Fluttertoast.showToast(
+                                        msg:
+                                            'Email com foramto invalido tente xxx@xxx.com',
+                                        backgroundColor: Colors.red,
+                                      );
+                                    }
+                                  },
                                 ),
                               ),
                               ListTile(
@@ -262,6 +321,10 @@ class _ProfileState extends State<Profile> with TickerProviderStateMixin {
                                                 title: Text(
                                                   c['nome'].toString(),
                                                 ),
+                                                tileColor: filled < 3
+                                                    ? null
+                                                    : Colors.amber,
+
                                                 subtitle: ListTile(
                                                   contentPadding:
                                                       EdgeInsets.all(0),
