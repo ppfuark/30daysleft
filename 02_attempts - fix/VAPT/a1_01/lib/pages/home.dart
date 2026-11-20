@@ -307,7 +307,10 @@ class _DetailsState extends State<Details> with TickerProviderStateMixin {
   @override
   void initState() {
     super.initState();
-    _controller = AnimationController(vsync: this);
+    _controller = AnimationController(
+      vsync: this,
+      duration: Duration(seconds: 2),
+    )..forward();
     startApp();
   }
 
@@ -331,124 +334,130 @@ class _DetailsState extends State<Details> with TickerProviderStateMixin {
           )
         : Scaffold(
             appBar: AppBar(title: Text(widget.product['name'].toString())),
-            body: Container(
-              width: w,
-              height: h,
-              decoration: BoxDecoration(),
-              padding: EdgeInsets.all(0),
-              child: SingleChildScrollView(
-                child: Column(
-                  spacing: 20,
-                  children: [
-                    Image.asset(
-                      'assets/${widget.product['image']}',
-                      height: 200,
-                    ),
-                    ListTile(
-                      title: Text("Descrição Longa:"),
-                      subtitle: Text(
-                        widget.product['description'] ??
-                            "KAMKANKAMNAKNAKNKANKANKANKANkNAKNKANKAN" * 10,
+            body: SlideTransition(
+              position: Tween(
+                begin: Offset(1, 0),
+                end: Offset.zero,
+              ).animate(_controller),
+              child: Container(
+                width: w,
+                height: h,
+                decoration: BoxDecoration(),
+                padding: EdgeInsets.all(0),
+                child: SingleChildScrollView(
+                  child: Column(
+                    spacing: 20,
+                    children: [
+                      Image.asset(
+                        'assets/${widget.product['image']}',
+                        height: 200,
                       ),
-                    ),
-                    RadioGroup(
-                      onChanged: (value) {
-                        setState(() {
-                          bebida = value.toString();
-                        });
-                      },
-                      groupValue: bebida,
-                      child: Column(
+                      ListTile(
+                        title: Text("Descrição Longa:"),
+                        subtitle: Text(
+                          widget.product['description'] ??
+                              "KAMKANKAMNAKNAKNKANKANKANKANkNAKNKANKAN" * 10,
+                        ),
+                      ),
+                      RadioGroup(
+                        onChanged: (value) {
+                          setState(() {
+                            bebida = value.toString();
+                          });
+                        },
+                        groupValue: bebida,
+                        child: Column(
+                          children: [
+                            RadioListTile(
+                              value: 'lara',
+                              title: Text("Suco de Laranja"),
+                            ),
+                            RadioListTile(
+                              value: 'cola',
+                              title: Text("Coca-Cola"),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
-                          RadioListTile(
-                            value: 'lara',
-                            title: Text("Suco de Laranja"),
+                          ElevatedButton(
+                            onPressed: () {
+                              setState(() {
+                                qnt++;
+                              });
+                            },
+                            child: Icon(Icons.add),
                           ),
-                          RadioListTile(
-                            value: 'cola',
-                            title: Text("Coca-Cola"),
+                          Text((qnt * price).toStringAsFixed(2)),
+                          ElevatedButton(
+                            onPressed: () {
+                              if (qnt == 0) {
+                                return;
+                              }
+
+                              setState(() {
+                                qnt--;
+                              });
+                            },
+                            child: Icon(Icons.minimize),
                           ),
                         ],
                       ),
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        ElevatedButton(
-                          onPressed: () {
-                            setState(() {
-                              qnt++;
-                            });
-                          },
-                          child: Icon(Icons.add),
-                        ),
-                        Text((qnt * price).toStringAsFixed(2)),
-                        ElevatedButton(
-                          onPressed: () {
-                            if (qnt == 0) {
-                              return;
-                            }
-
-                            setState(() {
-                              qnt--;
-                            });
-                          },
-                          child: Icon(Icons.minimize),
-                        ),
-                      ],
-                    ),
-                    ElevatedButton(
-                      onPressed: () async {
-                        try {
-                          final share = await SharedPreferences.getInstance();
-                          final t = share.getString('token') ?? '';
-                          final res = await http.post(
-                            Uri.parse('http://10.109.66.126:3000/cart'),
-                            headers: {
-                              'Content-Type': 'application/json',
-                              'Authorization': 'Bearer $t',
-                            },
-                            body: jsonEncode({
-                              "productId": widget.product['id'],
-                              "quantity": qnt,
-                            }),
-                          );
-                          if (res.statusCode == 201) {
-                            setState(() {
+                      ElevatedButton(
+                        onPressed: () async {
+                          try {
+                            final share = await SharedPreferences.getInstance();
+                            final t = share.getString('token') ?? '';
+                            final res = await http.post(
+                              Uri.parse('http://10.109.66.126:3000/cart'),
+                              headers: {
+                                'Content-Type': 'application/json',
+                                'Authorization': 'Bearer $t',
+                              },
+                              body: jsonEncode({
+                                "productId": widget.product['id'],
+                                "quantity": qnt,
+                              }),
+                            );
+                            if (res.statusCode == 201) {
+                              setState(() {
+                                Fluttertoast.showToast(
+                                  msg: 'Adicionado ao carrinho!',
+                                  backgroundColor: Colors.green,
+                                );
+                                Navigator.pop(context);
+                              });
+                            } else {
                               Fluttertoast.showToast(
-                                msg: 'Adicionado ao carrinho!',
-                                backgroundColor: Colors.green,
+                                msg: 'Erro: ${res.body}',
+                                backgroundColor: Colors.red,
                               );
-                              Navigator.pop(context);
-                            });
-                          } else {
-                            Fluttertoast.showToast(
-                              msg: 'Erro: ${res.body}',
-                              backgroundColor: Colors.red,
+                            }
+                          } catch (e) {
+                            showDialog(
+                              context: context,
+                              builder: (context) {
+                                return AlertDialog(
+                                  title: Text('Erro ao realizar post: $e'),
+                                  actions: [
+                                    TextButton(
+                                      onPressed: () {
+                                        Navigator.pop(context);
+                                      },
+                                      child: Text('Ok!'),
+                                    ),
+                                  ],
+                                );
+                              },
                             );
                           }
-                        } catch (e) {
-                          showDialog(
-                            context: context,
-                            builder: (context) {
-                              return AlertDialog(
-                                title: Text('Erro ao realizar post: $e'),
-                                actions: [
-                                  TextButton(
-                                    onPressed: () {
-                                      Navigator.pop(context);
-                                    },
-                                    child: Text('Ok!'),
-                                  ),
-                                ],
-                              );
-                            },
-                          );
-                        }
-                      },
-                      child: Text("Adicionar ao Carrinho"),
-                    ),
-                  ],
+                        },
+                        child: Text("Adicionar ao Carrinho"),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),

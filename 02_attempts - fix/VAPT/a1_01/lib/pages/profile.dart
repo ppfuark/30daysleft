@@ -105,10 +105,12 @@ class _ProfileState extends State<Profile> with TickerProviderStateMixin {
     final h = MediaQuery.of(context).size.height;
     return loading
         ? Scaffold(
-            body: SizedBox(
-              width: 100,
-              height: 100,
-              child: CircularProgressIndicator(),
+            body: Center(
+              child: SizedBox(
+                width: 100,
+                height: 100,
+                child: CircularProgressIndicator(),
+              ),
             ),
           )
         : Scaffold(
@@ -126,19 +128,16 @@ class _ProfileState extends State<Profile> with TickerProviderStateMixin {
                     : Image.asset('assets/icones/Bell off.png'),
               ],
             ),
-            body: Container(
-              width: w,
-              height: h,
-              decoration: BoxDecoration(),
-              padding: EdgeInsets.all(10),
-              child: RefreshIndicator(
-                onRefresh: () async {
-                  setState(() {
-                    loading = true;
-                  });
-                  await Future.delayed(Duration(seconds: 1));
-                  startApp();
-                },
+            body: RefreshIndicator(
+              onRefresh: () async {
+                setState(() {
+                  loading = true;
+                });
+                await Future.delayed(Duration(seconds: 1));
+                startApp();
+              },
+              child: SingleChildScrollView(
+                physics: AlwaysScrollableScrollPhysics(),
                 child: Column(
                   spacing: 20,
                   children: [

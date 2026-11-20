@@ -288,6 +288,9 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                               msg: 'Dados de acesso inválidos',
                               backgroundColor: Colors.red,
                             );
+                            setState(() {
+                              loading2 = false;
+                            });
                           }
                         } catch (e) {
                           showDialog(

@@ -1,5 +1,7 @@
 import 'dart:convert';
 
+import 'package:a1_01/pages/home.dart';
+import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
@@ -117,9 +119,19 @@ class _SearchState extends State<Search> with TickerProviderStateMixin {
 
   final search = TextEditingController();
 
+  final key = GlobalKey<NavigatorState>();
+  bool off = false;
   @override
   void initState() {
     super.initState();
+    Connectivity().onConnectivityChanged.listen((event) {
+      if (event.contains(ConnectivityResult.none)) {
+        Fluttertoast.showToast(
+          msg: 'Falha de conexão. Verifique sua internet e tente novamente.',
+          backgroundColor: Colors.red,
+        );
+      }
+    });
     _controller = AnimationController(vsync: this);
     startApp();
   }
@@ -268,159 +280,174 @@ class _SearchState extends State<Search> with TickerProviderStateMixin {
                                 //   "image": null,
                                 //   "available": false,
                                 // },
-                                return Card(
-                                  child: Padding(
-                                    padding: const EdgeInsets.all(8.0),
-                                    child: Column(
-                                      mainAxisSize: MainAxisSize.min,
-                                      children: [
-                                        SizedBox(
-                                          width: w,
-                                          height: 100,
-                                          child: p['image'] == null
-                                              ? Center(child: Icon(Icons.image))
-                                              : Image.asset(
-                                                  'assets/${p['image']}',
-                                                  fit: BoxFit.cover,
-                                                  height: double.infinity,
-                                                  width: double.infinity,
-                                                  errorBuilder:
-                                                      (
-                                                        context,
-                                                        error,
-                                                        stackTrace,
-                                                      ) => Icon(
-                                                        Icons.broken_image,
-                                                      ),
-                                                ),
-                                        ),
-                                        Divider(),
-                                        if (p['available'] == false)
-                                          Text(
-                                            p['description'].toString(),
-                                            style: TextStyle(
-                                              color: Colors.grey,
-                                            ),
-                                          ),
-                                        ListTile(
-                                          trailing: p['available'] == true
-                                              ? Text(
-                                                  "R\$ ${p['price'].toStringAsFixed(2).replaceAll('.', ',')}",
-                                                  style: TextStyle(
-                                                    fontWeight: FontWeight.bold,
-                                                    fontSize: 18,
+                                return GestureDetector(
+                                  onTap: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) =>
+                                            Details(product: p),
+                                      ),
+                                    );
+                                  },
+                                  child: Card(
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Column(
+                                        mainAxisSize: MainAxisSize.min,
+                                        children: [
+                                          SizedBox(
+                                            width: w,
+                                            height: 100,
+                                            child: p['image'] == null
+                                                ? Center(
+                                                    child: Icon(Icons.image),
+                                                  )
+                                                : Image.asset(
+                                                    'assets/${p['image']}',
+                                                    fit: BoxFit.cover,
+                                                    height: double.infinity,
+                                                    width: double.infinity,
+                                                    errorBuilder:
+                                                        (
+                                                          context,
+                                                          error,
+                                                          stackTrace,
+                                                        ) => Icon(
+                                                          Icons.broken_image,
+                                                        ),
                                                   ),
-                                                )
-                                              : Text(""),
-                                          title: Text(
-                                            p['name'].toString(),
-                                            style: TextStyle(
-                                              fontWeight: FontWeight.bold,
-                                            ),
                                           ),
-                                          subtitle: p['available'] == false
-                                              ? Text(p['price'].toString())
-                                              : Text(
-                                                  p['description'].toString(),
-                                                ),
-                                        ),
-                                        p['available'] == true
-                                            ? GestureDetector(
-                                                onTap: () async {
-                                                  try {
-                                                    final share =
-                                                        await SharedPreferences.getInstance();
-                                                    final t =
-                                                        share.getString(
-                                                          'token',
-                                                        ) ??
-                                                        '';
-                                                    final res = await http.post(
-                                                      Uri.parse(
-                                                        'http://10.109.66.126:3000/cart',
-                                                      ),
-                                                      headers: {
-                                                        'Content-Type':
-                                                            'application/json',
-                                                        'Authorization':
-                                                            'Bearer $t',
-                                                      },
-                                                      body: jsonEncode({
-                                                        "productId": p['id'],
-                                                        "quantity": 1,
-                                                      }),
-                                                    );
-                                                    if (res.statusCode == 201) {
-                                                      setState(() {
+                                          Divider(),
+                                          if (p['available'] == false)
+                                            Text(
+                                              p['description'].toString(),
+                                              style: TextStyle(
+                                                color: Colors.grey,
+                                              ),
+                                            ),
+                                          ListTile(
+                                            trailing: p['available'] == true
+                                                ? Text(
+                                                    "R\$ ${p['price'].toStringAsFixed(2).replaceAll('.', ',')}",
+                                                    style: TextStyle(
+                                                      fontWeight:
+                                                          FontWeight.bold,
+                                                      fontSize: 18,
+                                                    ),
+                                                  )
+                                                : Text(""),
+                                            title: Text(
+                                              p['name'].toString(),
+                                              style: TextStyle(
+                                                fontWeight: FontWeight.bold,
+                                              ),
+                                            ),
+                                            subtitle: p['available'] == false
+                                                ? Text(p['price'].toString())
+                                                : Text(
+                                                    p['description'].toString(),
+                                                  ),
+                                          ),
+                                          p['available'] == true
+                                              ? GestureDetector(
+                                                  onTap: () async {
+                                                    try {
+                                                      final share =
+                                                          await SharedPreferences.getInstance();
+                                                      final t =
+                                                          share.getString(
+                                                            'token',
+                                                          ) ??
+                                                          '';
+                                                      final res = await http.post(
+                                                        Uri.parse(
+                                                          'http://10.109.66.126:3000/cart',
+                                                        ),
+                                                        headers: {
+                                                          'Content-Type':
+                                                              'application/json',
+                                                          'Authorization':
+                                                              'Bearer $t',
+                                                        },
+                                                        body: jsonEncode({
+                                                          "productId": p['id'],
+                                                          "quantity": 1,
+                                                        }),
+                                                      );
+                                                      if (res.statusCode ==
+                                                          201) {
+                                                        setState(() {
+                                                          Fluttertoast.showToast(
+                                                            msg:
+                                                                'Prato adicionado ao carrinho!',
+                                                            backgroundColor:
+                                                                Colors.green,
+                                                          );
+                                                        });
+                                                      } else {
                                                         Fluttertoast.showToast(
                                                           msg:
-                                                              'Adicionado ao carrinho!',
+                                                              'Erro: ${res.body}',
                                                           backgroundColor:
-                                                              Colors.green,
+                                                              Colors.red,
                                                         );
-                                                      });
-                                                    } else {
-                                                      Fluttertoast.showToast(
-                                                        msg:
-                                                            'Erro: ${res.body}',
-                                                        backgroundColor:
-                                                            Colors.red,
+                                                      }
+                                                    } catch (e) {
+                                                      showDialog(
+                                                        context: context,
+                                                        builder: (context) {
+                                                          return AlertDialog(
+                                                            title: Text(
+                                                              'Erro ao realizar post: $e',
+                                                            ),
+                                                            actions: [
+                                                              TextButton(
+                                                                onPressed: () {
+                                                                  Navigator.pop(
+                                                                    context,
+                                                                  );
+                                                                },
+                                                                child: Text(
+                                                                  'Ok!',
+                                                                ),
+                                                              ),
+                                                            ],
+                                                          );
+                                                        },
                                                       );
                                                     }
-                                                  } catch (e) {
-                                                    showDialog(
-                                                      context: context,
-                                                      builder: (context) {
-                                                        return AlertDialog(
-                                                          title: Text(
-                                                            'Erro ao realizar post: $e',
-                                                          ),
-                                                          actions: [
-                                                            TextButton(
-                                                              onPressed: () {
-                                                                Navigator.pop(
-                                                                  context,
-                                                                );
-                                                              },
-                                                              child: Text(
-                                                                'Ok!',
-                                                              ),
-                                                            ),
-                                                          ],
-                                                        );
-                                                      },
-                                                    );
-                                                  }
-                                                },
-                                                child: Container(
+                                                  },
+                                                  child: Container(
+                                                    width: double.infinity,
+                                                    height: 50,
+                                                    decoration: BoxDecoration(
+                                                      color: Colors.black,
+                                                    ),
+                                                    child: Center(
+                                                      child: Text(
+                                                        "Adicionar ao Carrinho",
+                                                        style: TextStyle(
+                                                          color: Colors.white,
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ),
+                                                )
+                                              : Container(
                                                   width: double.infinity,
                                                   height: 50,
                                                   decoration: BoxDecoration(
-                                                    color: Colors.black,
+                                                    border: Border.all(),
                                                   ),
                                                   child: Center(
                                                     child: Text(
                                                       "Adicionar ao Carrinho",
-                                                      style: TextStyle(
-                                                        color: Colors.white,
-                                                      ),
                                                     ),
                                                   ),
                                                 ),
-                                              )
-                                            : Container(
-                                                width: double.infinity,
-                                                height: 50,
-                                                decoration: BoxDecoration(
-                                                  border: Border.all(),
-                                                ),
-                                                child: Center(
-                                                  child: Text(
-                                                    "Adicionar ao Carrinho",
-                                                  ),
-                                                ),
-                                              ),
-                                      ],
+                                        ],
+                                      ),
                                     ),
                                   ),
                                 );
