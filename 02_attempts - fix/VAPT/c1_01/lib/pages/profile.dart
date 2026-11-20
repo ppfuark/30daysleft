@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:c1_01/app.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:image_picker/image_picker.dart';
 
@@ -11,7 +12,12 @@ class Profile extends StatefulWidget {
   State<Profile> createState() => _ProfileState();
 }
 
-class _ProfileState extends State<Profile> {
+class _ProfileState extends State<Profile> with TickerProviderStateMixin {
+  late final controller = AnimationController(
+    vsync: this,
+    duration: Duration(seconds: 3),
+  )..forward();
+
   File? file;
 
   bool not = false;
@@ -60,6 +66,24 @@ class _ProfileState extends State<Profile> {
                         );
 
                         if (image != null) {
+                          final imagePath = image.path.toLowerCase();
+                          final isJpeg =
+                              imagePath.endsWith(".jpg") ||
+                              imagePath.endsWith(".jpeg");
+
+                          if (!isJpeg) {
+                            Fluttertoast.showToast(
+                              msg: 'Só são aceitas imagens JPEG ou JPG.',
+                              backgroundColor: Colors.red,
+                            );
+                            return;
+                          } else {
+                            Fluttertoast.showToast(
+                              msg: imagePath,
+                              backgroundColor: Colors.green,
+                            );
+                          }
+
                           setState(() {
                             file = File(image.path);
                           });
@@ -72,15 +96,37 @@ class _ProfileState extends State<Profile> {
               ),
             ),
             ElevatedButton.icon(
-              onPressed: () {},
+              onPressed: () {
+                showDialog(
+                  context: context,
+                  builder: (context) {
+                    return AlertDialog(
+                      title: Text(
+                        'Dados indisponíveis no momento, volte mais tarde',
+                      ),
+                      actions: [
+                        TextButton(
+                          onPressed: () {
+                            Navigator.pop(context);
+                          },
+                          child: Text('Ok!'),
+                        ),
+                      ],
+                    );
+                  },
+                );
+              },
               label: Text("Editar Perfil"),
               icon: Icon(Icons.edit),
             ),
             ListTile(
               title: Text("PEDIDOS FINALIZADOS"),
-              subtitle: Text(
-                "42",
-                style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+              subtitle: FadeTransition(
+                opacity: controller,
+                child: Text(
+                  "42",
+                  style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+                ),
               ),
               trailing: FaIcon(FontAwesomeIcons.checkDouble),
             ),
@@ -88,9 +134,15 @@ class _ProfileState extends State<Profile> {
               children: [
                 ListTile(
                   title: Text("KM PERCORRIDOS"),
-                  subtitle: Text(
-                    "128,5",
-                    style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+                  subtitle: FadeTransition(
+                    opacity: controller,
+                    child: Text(
+                      "128,5",
+                      style: TextStyle(
+                        fontSize: 30,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
                   ),
                   trailing: Icon(Icons.route),
                 ),

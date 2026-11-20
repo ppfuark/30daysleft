@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:io';
 
 import 'package:audioplayers/audioplayers.dart';
 import 'package:c1_01/pages/main_page.dart';
@@ -6,6 +7,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_sound/flutter_sound.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:path_provider/path_provider.dart';
 
 class Chat extends StatefulWidget {
@@ -36,7 +38,33 @@ class _ChatState extends State<Chat> {
 
   bool lastWasAudio = false;
 
-  Future<void> startApp() async {}
+  final List<String> offensiveWords = [
+    "idiota",
+    "burro",
+    "imbecil",
+    "babaca",
+    "otario",
+    "merda",
+    "porra",
+    "caralho",
+    "lixo",
+  ];
+
+  Future<void> startApp() async {
+    audioPlayer.onPositionChanged.listen((event) {
+      setState(() {
+        currentPosition = event.inSeconds;
+      });
+    });
+    audioPlayer.onPlayerComplete.listen((event) {
+      setState(() {
+        listening = false;
+        currentPosition = 0;
+        audio = null;
+      });
+    });
+  }
+
   @override
   void initState() {
     super.initState();
@@ -74,7 +102,10 @@ class _ChatState extends State<Chat> {
                         mainAxisSize: MainAxisSize.min,
                         children: [
                           Container(
-                            decoration: BoxDecoration(border: Border.all()),
+                            decoration: BoxDecoration(
+                              border: Border.all(),
+                              color: m['chef'] ? Colors.orange.shade100 : null,
+                            ),
                             constraints: BoxConstraints(maxWidth: w * .75),
                             child: m['text']
                                 ? ListTile(
@@ -116,56 +147,91 @@ class _ChatState extends State<Chat> {
                                             icon: Icon(Icons.more_vert),
                                           ),
                                   )
+                                : m['image'] ?? false
+                                ? ListTile(
+                                    title: Image.file(
+                                      File(m['content'].toString()),
+                                      height: 100,
+                                    ),
+                                    trailing: IconButton(
+                                      onPressed: () {
+                                        showModalBottomSheet(
+                                          context: context,
+                                          builder: (context) {
+                                            return CupertinoActionSheet(
+                                              actions: [
+                                                ElevatedButton(
+                                                  onPressed: () {
+                                                    setState(() {
+                                                      messages.remove(m);
+                                                    });
+                                                  },
+                                                  child: Text(
+                                                    "Apagar para mim",
+                                                  ),
+                                                ),
+                                                ElevatedButton(
+                                                  onPressed: () {
+                                                    setState(() {
+                                                      messages.remove(m);
+                                                    });
+                                                  },
+                                                  child: Text(
+                                                    "Apagar para todos",
+                                                  ),
+                                                ),
+                                              ],
+                                            );
+                                          },
+                                        );
+                                      },
+                                      icon: Icon(Icons.more_vert),
+                                    ),
+                                  )
                                 : ListTile(
                                     leading: IconButton(
                                       onPressed: () async {
                                         try {
-                                          print("op");
-                                          print(m['content']);
                                           setState(() {
                                             audio = m['content'];
-                                            timer?.cancel();
                                             currentPosition = 0;
                                             listening = true;
                                           });
+                                          await audioPlayer.stop();
                                           await audioPlayer.play(
                                             DeviceFileSource(audio!),
                                           );
-                                          print("op");
-                                          timer = Timer.periodic(
-                                            Duration(seconds: 1),
-                                            (timer) {
-                                              () async {
-                                                setState(() {
-                                                  currentPosition++;
-                                                  print(currentPosition);
-
-                                                  if (currentPosition ==
-                                                      m['maxDuration']) {
-                                                    timer.cancel();
-                                                    audio == null;
-                                                    listening = false;
-                                                    currentPosition = 0;
-                                                  }
-                                                });
-                                                await audioPlayer.stop();
-                                              };
-                                            },
+                                          await audioPlayer.setPlaybackRate(
+                                            is2x ? 2 : 1,
                                           );
-
-                                          print("op");
                                         } catch (e) {
                                           Fluttertoast.showToast(
-                                            msg: "Erro: $e",
+                                            msg: 'Erro: $e',
                                             backgroundColor: Colors.red,
                                           );
                                         }
                                       },
                                       icon: Icon(Icons.play_arrow),
                                     ),
-                                    title: LinearProgressIndicator(
-                                      value: currentPosition / m['maxDuration'],
-                                      color: Colors.deepOrange,
+                                    title: SizedBox(
+                                      width: double.infinity,
+                                      child: Slider(
+                                        max: 1.0,
+                                        value:
+                                            (currentPosition / m['maxDuration'])
+                                                .clamp(0.0, 1.0),
+                                        onChanged: (value) {
+                                          setState(() {
+                                            audioPlayer.seek(
+                                              Duration(
+                                                seconds:
+                                                    (m['maxDuration'] * value)
+                                                        .round(),
+                                              ),
+                                            );
+                                          });
+                                        },
+                                      ),
                                     ),
                                     subtitle: Row(
                                       mainAxisAlignment:
@@ -238,7 +304,15 @@ class _ChatState extends State<Chat> {
                                           ),
                                   ),
                           ),
-                          Text(m['time'].toString()),
+                          Row(
+                            mainAxisSize: MainAxisSize.min,
+                            spacing: 5,
+                            children: [
+                              Text(m['time'].toString()),
+                              if (m['off'] ?? false)
+                                Icon(Icons.warning, color: Colors.red),
+                            ],
+                          ),
                         ],
                       ),
                     ),
@@ -250,7 +324,7 @@ class _ChatState extends State<Chat> {
             Divider(),
             Container(
               width: double.infinity,
-              height: 70,
+              height: 100,
               padding: EdgeInsets.all(10),
               child: Row(
                 children: [
@@ -261,6 +335,41 @@ class _ChatState extends State<Chat> {
                         enabledBorder: OutlineInputBorder(),
                         focusedBorder: OutlineInputBorder(),
                         hintText: "Digite uma mensagem",
+                        helperText:
+                            "Não permitido: ${offensiveWords.join(", ")}",
+                        prefixIcon: IconButton(
+                          onPressed: () async {
+                            final picked = await ImagePicker().pickImage(
+                              source: ImageSource.gallery,
+                            );
+
+                            if (picked == null) return;
+
+                            if (File(picked.path).lengthSync() > 1024 * 1024) {
+                              Fluttertoast.showToast(
+                                msg: 'Imagem acima de 1 MB',
+                                backgroundColor: Colors.red,
+                              );
+                              return;
+                            }
+
+                            setState(() {
+                              lastWasAudio = false;
+                              messages.add({
+                                "time":
+                                    "${DateTime.now().hour.toString().padLeft(2, '0')}:${DateTime.now().minute.toString().padLeft(2, '0')}",
+                                "content": picked.path,
+                                "chef": false,
+                                "text": false,
+                                "image": true,
+                                "off":
+                                    DateTime.now().hour > 17 ||
+                                    DateTime.now().hour < 8,
+                              });
+                            });
+                          },
+                          icon: Icon(Icons.image),
+                        ),
                         suffixIcon: IconButton(
                           onPressed: () async {
                             try {
@@ -285,6 +394,9 @@ class _ChatState extends State<Chat> {
                                       "content": path,
                                       "chef": false,
                                       "text": false,
+                                      "off":
+                                          DateTime.now().hour > 17 ||
+                                          DateTime.now().hour < 8,
                                       "maxDuration": duration,
                                     });
                                     setState(() {
@@ -339,10 +451,14 @@ class _ChatState extends State<Chat> {
                         messages.add({
                           "time":
                               "${DateTime.now().hour.toString().padLeft(2, '0')}:${DateTime.now().minute.toString().padLeft(2, '0')}",
-                          "content": text.text,
+                          "content": censor(text.text),
                           "chef": false,
                           "text": true,
+                          "off":
+                              DateTime.now().hour > 17 ||
+                              DateTime.now().hour < 8,
                         });
+                        text.clear();
                       });
                     },
                     icon: Icon(Icons.send),
@@ -354,5 +470,16 @@ class _ChatState extends State<Chat> {
         ),
       ),
     );
+  }
+
+  String censor(String text) {
+    String result = text;
+    for (final word in offensiveWords) {
+      result = result.replaceAllMapped(
+        RegExp(word, caseSensitive: false),
+        (match) => "*" * match.group(0)!.length,
+      );
+    }
+    return result;
   }
 }

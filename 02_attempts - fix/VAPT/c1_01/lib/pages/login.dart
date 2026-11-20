@@ -94,7 +94,7 @@ class _LoginState extends State<Login> {
                     color: erros != 0 ? Colors.red : Colors.grey,
                   ),
                 ),
-                hintText: "Digite sua senha",
+                hintText: "Digite sua senha: ",
                 suffixIcon: IconButton(
                   onPressed: () {
                     setState(() {
@@ -116,6 +116,7 @@ class _LoginState extends State<Login> {
                           msg: 'Necessário digitar a senha',
                           backgroundColor: Colors.red,
                         );
+                        increment();
                         return;
                       }
                       if (text.text.contains(" ")) {
@@ -123,17 +124,23 @@ class _LoginState extends State<Login> {
                           msg: 'Espaços não são permitidos.',
                           backgroundColor: Colors.red,
                         );
+                        increment();
                         return;
                       }
 
-                      if (text.text != "senha123") {
-                        increment();
-                      } else {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => MainPage()),
+                      if (!RegExp(r'^[a-zA-Z0-9\.]+$').hasMatch(text.text)) {
+                        Fluttertoast.showToast(
+                          msg: 'Caracteres especiais não são permitidos.',
+                          backgroundColor: Colors.red,
                         );
+                        increment();
+                        return;
                       }
+
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => MainPage()),
+                      );
                     },
               child: Text("CONECTAR"),
             ),

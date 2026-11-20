@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:battery_plus/battery_plus.dart';
 import 'package:c1_01/app.dart';
 import 'package:c1_01/pages/login.dart';
@@ -42,13 +44,39 @@ class _MyAppState extends State<MyApp> {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return ValueListenableBuilder(
+    return ValueListenableBuilder<ThemeData>(
       valueListenable: App.theme,
-      builder: (context, value, child) {
+      builder: (context, theme, child) {
         return MaterialApp(
-          navigatorKey: key,
-          title: 'Flutter Demo',
-          theme: value,
+          theme: theme,
+          builder: (context, child) {
+            if (!App.cont) return child!;
+            return ColorFiltered(
+              colorFilter: const ColorFilter.matrix([
+                54.2,
+                182.4,
+                18.4,
+                0,
+                -32640,
+                54.2,
+                182.4,
+                18.4,
+                0,
+                -32640,
+                54.2,
+                182.4,
+                18.4,
+                0,
+                -32640,
+                0,
+                0,
+                0,
+                1,
+                0,
+              ]),
+              child: child!,
+            );
+          },
           home: const MyHomePage(),
         );
       },
@@ -107,20 +135,40 @@ class _MyHomePageState extends State<MyHomePage> {
           children: [
             SizedBox(
               height: h * .4,
-              child: Stack(
-                children: [
-                  ...[0, 1, 2, 3].map(
-                    (e) => Positioned(
-                      left: e % 2 == 0 ? null : 100,
-                      right: e % 2 != 0 ? null : 100,
-                      top: e * 100,
-                      child: Icon(
-                        Icons.circle,
-                        color: index == e ? colors[index] : Colors.grey,
-                      ),
-                    ),
-                  ),
-                ],
+              child: LayoutBuilder(
+                builder: (context, c) {
+                  // centro de cada bolinha (ícone tem 24px, então +12)
+                  final pontos = [0, 1, 2, 3]
+                      .map(
+                        (e) => Offset(
+                          e % 2 == 0 ? c.maxWidth - 100 - 12 : 100 + 12,
+                          e * 100 + 12,
+                        ),
+                      )
+                      .toList();
+
+                  return Stack(
+                    children: [
+                      // linhas primeiro, para ficarem atrás das bolinhas
+                      for (var i = 0; i < 3; i++)
+                        linha(
+                          pontos[i],
+                          pontos[i + 1],
+                          index > i ? colors[index] : Colors.grey.shade300,
+                        ),
+
+                      for (var e = 0; e < 4; e++)
+                        Positioned(
+                          left: pontos[e].dx - 12,
+                          top: pontos[e].dy - 12,
+                          child: Icon(
+                            Icons.circle,
+                            color: index >= e ? colors[index] : Colors.grey,
+                          ),
+                        ),
+                    ],
+                  );
+                },
               ),
             ),
             Divider(),
@@ -130,6 +178,23 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
     );
   }
+}
+
+Widget linha(Offset a, Offset b, Color cor) {
+  final dx = b.dx - a.dx;
+  final dy = b.dy - a.dy;
+  final comprimento = sqrt(dx * dx + dy * dy);
+  final angulo = atan2(dy, dx);
+
+  return Positioned(
+    left: a.dx,
+    top: a.dy,
+    child: Transform.rotate(
+      angle: angulo,
+      alignment: Alignment.topLeft, // gira em volta do ponto inicial
+      child: Container(width: comprimento, height: 4, color: cor),
+    ),
+  );
 }
 
 final steps = [

@@ -1,8 +1,12 @@
+import 'dart:async';
+
 import 'package:c1_01/pages/chat.dart';
 import 'package:c1_01/pages/home.dart';
+import 'package:c1_01/pages/login.dart';
 import 'package:c1_01/pages/orders.dart';
 import 'package:c1_01/pages/profile.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
@@ -12,8 +16,27 @@ class MainPage extends StatefulWidget {
 
 class _MainPageState extends State<MainPage> {
   int index = 0;
+  Timer? inatividade;
 
-  Future<void> startApp() async {}
+  void reset() {
+    inatividade?.cancel();
+    inatividade = Timer.periodic(Duration(seconds: 60), (timer) {
+      Fluttertoast.showToast(
+        msg: 'Deslogando por inatividade...',
+        backgroundColor: Colors.red,
+      );
+      Navigator.pushAndRemoveUntil(
+        context,
+        MaterialPageRoute(builder: (context) => Login()),
+        (route) => false,
+      );
+    });
+  }
+
+  Future<void> startApp() async {
+    reset();
+  }
+
   @override
   void initState() {
     super.initState();
@@ -49,30 +72,42 @@ class _MainPageState extends State<MainPage> {
         unselectedItemColor: Colors.grey,
         selectedItemColor: ColorScheme.of(context).primary,
       ),
-      body: SizedBox(width: w, height: h, child: pages[index]),
+      body: Listener(
+        behavior: HitTestBehavior.translucent,
+        onPointerDown: (event) {
+          reset();
+        },
+        onPointerHover: (event) {
+          reset();
+        },
+        child: SizedBox(width: w, height: h, child: pages[index]),
+      ),
     );
   }
 }
 
 List messages = [
-  {"time": "10:42", "content": "Olá", "chef": true, "text": true},
+  {"time": "10:42", "content": "Olá", "chef": true, "text": true, "off": false},
   {
     "time": "10:43",
     "content": "Como foi o pedido?",
     "chef": true,
     "text": true,
+    "off": false,
   },
   {
     "time": "10:45",
     "content": "Tudo certo, entrega finalizada.",
     "chef": false,
     "text": true,
+    "off": false,
   },
   {
     "time": "10:46",
     "content": "Olá",
     "chef": false,
     "text": false,
+    "off": false,
     "maxDuration": 10,
   },
 ];

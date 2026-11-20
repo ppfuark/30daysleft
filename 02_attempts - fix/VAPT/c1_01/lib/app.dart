@@ -10,30 +10,6 @@ class App {
     colorScheme: ColorScheme.light(primary: Colors.deepOrange),
     textTheme: GoogleFonts.montserratTextTheme(ThemeData.light().textTheme),
   );
-  static ThemeData darkC = ThemeData(
-    scaffoldBackgroundColor: Colors.black,
-    colorScheme: ColorScheme.dark(
-      primary: Colors.white,
-      onPrimary: Colors.black,
-      surface: Colors.black,
-      onSurface: Colors.white,
-    ),
-    textTheme: GoogleFonts.montserratTextTheme(ThemeData.dark().textTheme),
-    iconTheme: IconThemeData(color: Colors.white),
-  );
-
-  static ThemeData lightC = ThemeData(
-    scaffoldBackgroundColor: Colors.white,
-    colorScheme: ColorScheme.light(
-      primary: Colors.black,
-      onPrimary: Colors.white,
-      surface: Colors.white,
-      onSurface: Colors.black,
-    ),
-    textTheme: GoogleFonts.montserratTextTheme(ThemeData.light().textTheme),
-    iconTheme: IconThemeData(color: Colors.black),
-    
-  );
 
   static ValueNotifier<ThemeData> theme = ValueNotifier(light);
 
@@ -41,11 +17,7 @@ class App {
   static bool isDark = false;
 
   static void themeT() {
-    if (isDark) {
-      theme.value = cont ? darkC : dark;
-    } else {
-      theme.value = cont ? lightC : light;
-    }
+    theme.value = isDark ? light : dark;
   }
 
   static void toogleT() {
@@ -55,6 +27,7 @@ class App {
 
   static void toogleC() {
     cont = !cont;
-    themeT();
+    theme.value = theme.value;
+    
   }
 }
