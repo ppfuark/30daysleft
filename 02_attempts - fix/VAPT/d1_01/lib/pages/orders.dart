@@ -103,7 +103,7 @@ class _OrdersState extends State<Orders> with TickerProviderStateMixin {
                           ),
                           controller: search,
                           key: Key('ord_search'),
-              
+
                           onChanged: (value) {
                             setState(() {});
                           },
@@ -116,31 +116,9 @@ class _OrdersState extends State<Orders> with TickerProviderStateMixin {
                             (e) => GestureDetector(
                               key: Key('chip_$e'),
                               onTap: () {
-                                showDialog(
-                                  context: context,
-                                  builder: (context) {
-                                    return AlertDialog(
-                                      title: Text('Mudar status?'),
-                                      actions: [
-                                        TextButton(
-                                          onPressed: () {
-                                            Navigator.pop(context);
-                                          },
-                                          child: Text('Não'),
-                                        ),
-                                        TextButton(
-                                          onPressed: () {
-                                            Navigator.pop(context);
-                                            setState(() {
-                                              selected = e;
-                                            });
-                                          },
-                                          child: Text('Sim'),
-                                        ),
-                                      ],
-                                    );
-                                  },
-                                );
+                                setState(() {
+                                  selected = e;
+                                });
                               },
                               child: Chip(
                                 backgroundColor: selected != e
@@ -251,56 +229,39 @@ class _OrdersState extends State<Orders> with TickerProviderStateMixin {
                                                               ),
                                                     )
                                                     .toList()[index];
-              
+
                                                 return LongPressDraggable(
-                                                  key: Key(
-                                                    o['id'].toString(),
-                                                  ),
+                                                  key: Key(o['id'].toString()),
                                                   data: o,
-                                                  childWhenDragging:
-                                                      Container(height: 200),
+                                                  childWhenDragging: Container(
+                                                    height: 200,
+                                                    decoration: BoxDecoration(
+                                                      border: Border.all(),
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                            32,
+                                                          ),
+                                                    ),
+                                                  ),
                                                   feedback: Material(
-                                                    child: SizedBox(
+                                                    child: Container(
+                                                      decoration: BoxDecoration(
+                                                        border: Border.all(),
+                                                        borderRadius:
+                                                            BorderRadius.circular(
+                                                              32,
+                                                            ),
+                                                      ),
                                                       width: 350,
                                                       height: 200,
-                                                      child: Card(
-                                                        child: Column(
-                                                          children: [
-                                                            Expanded(
-                                                              child: ListTile(
-                                                                title: Text(
-                                                                  "#${o['id']}",
-                                                                ),
-                                                                subtitle: Text(
-                                                                  o['cliente']
-                                                                      .toString(),
-                                                                ),
-                                                              ),
-                                                            ),
-                                                            Padding(
-                                                              padding:
-                                                                  const EdgeInsets.all(
-                                                                    10.0,
-                                                                  ),
-                                                              child: Row(
-                                                                mainAxisAlignment:
-                                                                    MainAxisAlignment
-                                                                        .end,
-                                                                children: [
-                                                                  Text(
-                                                                    "R\$ ${o['valor'].toString().replaceAll('.', ',')}",
-                                                                  ),
-                                                                ],
-                                                              ),
-                                                            ),
-                                                          ],
-                                                        ),
-                                                      ),
                                                     ),
                                                   ),
                                                   child: SizedBox(
                                                     height: 200,
                                                     child: GestureDetector(
+                                                      key: Key(
+                                                        'ord_card_${o['id'].toString()}',
+                                                      ),
                                                       onTap: () {
                                                         showDialog(
                                                           context: context,
@@ -315,8 +276,7 @@ class _OrdersState extends State<Orders> with TickerProviderStateMixin {
                                                                         .min,
                                                                 children: [
                                                                   CircleAvatar(
-                                                                    radius:
-                                                                        40,
+                                                                    radius: 40,
                                                                     backgroundImage:
                                                                         AssetImage(
                                                                           'assets/images/${o['cliente'].toString().split(' ').first.toLowerCase().replaceAll('í', "i")}.jpg',
@@ -343,7 +303,8 @@ class _OrdersState extends State<Orders> with TickerProviderStateMixin {
                                                                   Text(
                                                                     style: TextStyle(
                                                                       fontWeight:
-                                                                          FontWeight.bold,
+                                                                          FontWeight
+                                                                              .bold,
                                                                     ),
                                                                     "R\$ ${o['valor']}",
                                                                   ),
@@ -405,8 +366,7 @@ class _OrdersState extends State<Orders> with TickerProviderStateMixin {
                                               itemCount: orders
                                                   .where(
                                                     (element) =>
-                                                        element['status'] ==
-                                                        e,
+                                                        element['status'] == e,
                                                   )
                                                   .where(
                                                     (element) =>
